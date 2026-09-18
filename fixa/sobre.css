@@ -1,0 +1,794 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #F9F7FF;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+  background-color: rgba(249, 247, 255, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 2px 12px rgba(13, 5, 51, 0.08);
+  z-index: 1000;
+}
+
+nav > img {
+  width: 118px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-left: auto;
+  margin-right: 70px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 18px;
+}
+
+.normal,
+.sobre-link {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.normal {
+  color: #606670;
+  font-weight: 400;
+}
+
+.sobre-link {
+  color: #153D7D;
+  font-weight: 700;
+}
+
+.normal:hover,
+.sobre-link:hover {
+  color: #153D7D;
+  text-decoration: underline;
+}
+
+button {
+  height: 48px;
+  padding: 0 34px;
+  border-radius: 13px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.entrar {
+  width: 150px;
+  background-color: transparent;
+  color: #0B013C;
+  border: 1px solid #8A93A2;
+}
+
+.cadastrar {
+  width: 152px;
+  background-color: #0B013C;
+  color: white;
+  border: 1px solid #0B013C;
+}
+
+.entrar:hover {
+  color: #153D7D;
+  border-color: #153D7D;
+}
+
+.cadastrar:hover {
+  background-color: #153D7D;
+  border-color: #153D7D;
+}
+
+.sobre-inicio {
+  width: 100%;
+  padding: 180px 70px 70px;
+}
+
+.sobre-inicio-conteudo {
+  width: 100%;
+  max-width: 1320px;
+  margin: auto;
+}
+
+.titulo-pequeno {
+  margin: 0 0 10px;
+  color: #153D7D;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sobre-inicio h1 {
+  margin: 0 0 20px;
+  color: #0B013C;
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  line-height: 1.15;
+}
+
+.descricao-sobre {
+  margin: 0;
+  color: #606670;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.historia {
+  width: 100%;
+  padding: 70px;
+}
+
+.historia-conteudo {
+  width: 100%;
+  max-width: 1320px;
+  margin: auto;
+}
+
+.historia h2 {
+  margin: 0 0 55px;
+  color: #0B013C;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.linha-historia {
+  display: flex;
+}
+
+.marcadores {
+  width: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marcador {
+  width: 21px;
+  height: 21px;
+  background-color: #153D7D;
+  transform: rotate(45deg);
+  margin-top: 4px;
+}
+
+.linha {
+  width: 2px;
+  height: 85px;
+  background-color: #E1DFEB;
+}
+
+.textos-historia {
+  width: 100%;
+  padding-left: 25px;
+}
+
+.textos-historia p {
+  min-height: 105px;
+  margin: 0;
+  color: #8A93A2;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.textos-historia .texto-destaque {
+  color: #0B013C;
+  font-weight: 500;
+}
+
+.missao-visao {
+  width: 100%;
+  padding: 25px 70px 100px;
+}
+
+.cards-missao-visao {
+  width: 100%;
+  max-width: 1320px;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.card-missao,
+.card-visao {
+  width: 50%;
+  min-height: 180px;
+  padding: 30px;
+  border-radius: 18px;
+}
+
+.card-missao {
+  background-color: #0B013C;
+}
+
+.card-visao {
+  background-color: white;
+  border: 1px solid #E4E2F1;
+}
+
+.icone-card {
+  margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.card-missao .icone-card {
+  color: white;
+}
+
+.card-visao .icone-card {
+  color: #0B013C;
+}
+
+.card-missao h3,
+.card-visao h3 {
+  margin: 0 0 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+}
+
+.card-missao h3 {
+  color: white;
+}
+
+.card-visao h3 {
+  color: #0B013C;
+}
+
+.card-missao p,
+.card-visao p {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.card-missao p {
+  color: #E1DFEB;
+}
+
+.card-visao p {
+  color: #8A93A2;
+}
+
+.valores {
+  width: 100%;
+  padding: 70px 60px 110px;
+}
+
+.valores-conteudo {
+  width: 100%;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.valores h2 {
+  margin: 0;
+  color: #0B013C;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.cards-valores {
+  display: flex;
+  gap: 18px;
+  margin-top: 65px;
+}
+
+.card-valor {
+  width: 25%;
+  min-height: 215px;
+  padding: 30px 35px;
+  background-color: white;
+  border: 1px solid #E4E2F1;
+  border-radius: 18px;
+}
+
+.icone-valor {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F0EEFA;
+  border-radius: 10px;
+  color: #0B013C;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card-valor h3 {
+  margin: 0 0 10px;
+  color: #0B013C;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+}
+
+.card-valor p {
+  margin: 0;
+  color: #8A93A2;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.card-valor:hover {
+  border-color: #153D7D;
+}
+
+.subir-seta {
+  position: fixed;
+  right: 70px;
+  bottom: 25px;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dbe6f8;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.subir-seta img {
+  width: 30px;
+}
+
+@media (max-width: 1100px) {
+
+  nav {
+    padding: 0 40px;
+  }
+
+  .nav-links {
+    gap: 25px;
+    margin-right: 35px;
+  }
+
+  .cards-valores {
+    flex-wrap: wrap;
+  }
+
+  .card-valor {
+    width: 48%;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  nav {
+    padding: 0 25px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-buttons {
+    margin-left: auto;
+  }
+
+  .sobre-inicio {
+    padding: 150px 30px 60px;
+  }
+
+  .sobre-inicio h1 {
+    font-size: 40px;
+  }
+
+  .historia {
+    padding: 60px 30px;
+  }
+
+  .missao-visao {
+    padding: 20px 30px 80px;
+  }
+
+  .cards-missao-visao {
+    flex-direction: column;
+  }
+
+  .card-missao,
+  .card-visao {
+    width: 100%;
+  }
+
+  .valores {
+    padding: 60px 30px 90px;
+  }
+
+  .valores h2 {
+    font-size: 34px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  nav {
+    height: 65px;
+    padding: 0 20px;
+  }
+
+  nav > img {
+    width: 105px;
+  }
+
+  .entrar {
+    display: none;
+  }
+
+  .cadastrar {
+    width: auto;
+    height: 42px;
+    padding: 0 18px;
+    font-size: 14px;
+  }
+
+  .sobre-inicio {
+    padding: 125px 20px 50px;
+  }
+
+  .sobre-inicio h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .descricao-sobre br,
+  .sobre-inicio h1 br {
+    display: none;
+  }
+
+  .historia {
+    padding: 50px 20px;
+  }
+
+  .historia h2 {
+    font-size: 27px;
+    line-height: 36px;
+  }
+
+  .marcadores {
+    width: 30px;
+  }
+
+  .marcador {
+    width: 16px;
+    height: 16px;
+  }
+
+  .linha {
+    height: 140px;
+  }
+
+  .textos-historia {
+    padding-left: 15px;
+  }
+
+  .textos-historia p {
+    min-height: 160px;
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .missao-visao {
+    padding: 20px 20px 70px;
+  }
+
+  .valores {
+    padding: 50px 20px 70px;
+  }
+
+  .valores h2 {
+    font-size: 29px;
+    line-height: 38px;
+  }
+
+  .cards-valores {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  .card-valor {
+    width: 100%;
+  }
+
+  .subir-seta {
+    right: 20px;
+    width: 55px;
+    height: 55px;
+  }
+
+}
+
+.equipe {
+  width: 100%;
+  padding: 80px 50px 110px;
+}
+
+.equipe-conteudo {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.equipe-titulo {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.equipe-titulo p {
+  margin: 0 0 10px;
+  color: #153D7D;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.equipe-titulo h2 {
+  margin: 0;
+  color: #0B013C;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+}
+
+.linha-equipe {
+  width: 100%;
+  height: 310px;
+
+  margin-bottom: 35px;
+
+  display: flex;
+  gap: 18px;
+}
+
+.card-equipe {
+  position: relative;
+
+  flex: 1;
+
+  height: 100%;
+
+  background-position: center;
+  background-size: cover;
+
+  border-radius: 17px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: flex 0.6s ease;
+}
+
+.card-equipe.destaque {
+  flex: 2;
+}
+
+.linha-equipe:hover .card-equipe.destaque {
+  flex: 1;
+}
+
+.linha-equipe .card-equipe:hover {
+  flex: 2;
+}
+
+.card-equipe::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(11, 1, 60, 0.32);
+
+  transition: 0.4s;
+}
+
+.card-equipe:hover::after,
+.card-equipe.destaque::after {
+  background-color: rgba(11, 1, 60, 0.2);
+}
+
+.info-equipe {
+  position: absolute;
+
+  left: 25px;
+  right: 20px;
+  bottom: 22px;
+
+  z-index: 2;
+
+  color: white;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.card-equipe.destaque .info-equipe {
+  opacity: 1;
+}
+
+.linha-equipe:hover .card-equipe.destaque .info-equipe {
+  opacity: 0;
+}
+
+.card-equipe:hover .info-equipe {
+  opacity: 1;
+}
+
+.info-equipe h3 {
+  margin: 0 0 3px;
+
+  color: white;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.info-equipe p {
+  margin: 0 0 3px;
+
+  color: white;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.info-equipe span {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+}
+
+.ferramentas {
+  margin-top: 9px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.ferramentas img {
+  width: 19px;
+  height: 19px;
+
+  object-fit: contain;
+}
+
+.nome-fechado {
+  position: absolute;
+
+  left: 13px;
+  bottom: 55px;
+
+  z-index: 3;
+
+  padding: 12px 10px;
+
+  background-color: #153D7D;
+
+  color: white;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+
+  writing-mode: vertical-rl;
+
+  transform: rotate(180deg);
+
+  transition: opacity 0.3s ease;
+}
+
+.card-equipe:hover .nome-fechado {
+  opacity: 0;
+}
+
+.linha-equipe:hover .card-equipe.destaque .nome-fechado {
+  opacity: 1;
+}
+
+.card-equipe.destaque .nome-fechado {
+  opacity: 0;
+}
+
+@media (max-width: 900px) {
+
+  .equipe {
+    padding: 70px 30px 90px;
+  }
+
+  .linha-equipe {
+    height: auto;
+
+    flex-wrap: wrap;
+  }
+
+  .card-equipe,
+  .card-equipe.destaque {
+    flex: none;
+
+    width: 48%;
+    height: 300px;
+  }
+
+  .linha-equipe:hover .card-equipe.destaque,
+  .linha-equipe .card-equipe:hover {
+    flex: none;
+  }
+
+  .info-equipe {
+    opacity: 1;
+  }
+
+  .nome-fechado {
+    display: none;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .equipe {
+    padding: 60px 20px 80px;
+  }
+
+  .equipe-titulo h2 {
+    font-size: 27px;
+  }
+
+  .linha-equipe {
+    gap: 15px;
+  }
+
+  .card-equipe,
+  .card-equipe.destaque {
+    width: 100%;
+    height: 320px;
+  }
+
+}
