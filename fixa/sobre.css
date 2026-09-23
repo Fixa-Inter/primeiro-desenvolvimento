@@ -42,7 +42,7 @@ nav > img {
   align-items: center;
   gap: 48px;
   margin-left: auto;
-  margin-right: 70px;
+  margin-right: 200px;
 }
 
 .nav-buttons {
@@ -734,6 +734,319 @@ button {
 
 .card-equipe.destaque .nome-fechado {
   opacity: 0;
+}
+
+.roadmap {
+  width: 100%;
+  padding: 80px 20px 110px;
+}
+
+.roadmap-conteudo {
+  width: 100%;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.titulo-roadmap {
+  margin: 0 0 20px;
+
+  color: #153D7D;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.roadmap h2 {
+  margin: 0;
+
+  color: #0B013C;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.descricao-roadmap {
+  margin: 25px 0 0;
+
+  color: #8A93A2;
+
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 28px;
+}
+
+.cards-roadmap {
+  margin-top: 65px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 22px;
+}
+
+.card-roadmap {
+  width: 32%;
+
+  min-height: 185px;
+
+  padding: 32px 35px;
+
+  background-color: white;
+
+  border: 1px solid #E1DFEB;
+
+  border-radius: 20px;
+}
+
+.tag-roadmap {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  padding: 7px 13px;
+
+  background-color: #F0EEFA;
+
+  color: #153D7D;
+
+  border-radius: 7px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card-roadmap h3 {
+  margin: 0 0 10px;
+
+  color: #0B013C;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.card-roadmap p {
+  margin: 0;
+
+  color: #8A93A2;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 23px;
+}
+
+.card-roadmap:hover {
+  border-color: #153D7D;
+}
+
+.footer {
+  width: 100%;
+  padding: 70px 0 35px;
+  background-color: #0B013C;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-conteudo {
+  width: 85%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 0 40px 65px;
+}
+
+.footer-logo {
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 230px;
+  height: auto;
+}
+
+.footer-coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-coluna h4 {
+  margin: 0 0 15px;
+  color: #6E96D6;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer-coluna a {
+  color: #C3C5DC;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.footer-coluna a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-contato {
+  min-width: 300px;
+}
+
+.footer-contato a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-contato svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #C3C5DC;
+  stroke-width: 2;
+}
+
+.footer-linha {
+  width: 100%;
+  height: 1px;
+  background-color: #8A93A2;
+}
+
+.footer-baixo {
+  min-height: 70px;
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-baixo p {
+  margin: 0;
+  color: #8A93A2;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.area-restrita {
+  color: #8A93A2;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.area-restrita:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+
+  .footer-conteudo {
+    width: 90%;
+  }
+
+  .footer-topo {
+    flex-wrap: wrap;
+  }
+
+  .footer-logo {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .footer {
+    padding: 50px 0 30px;
+  }
+
+  .footer-conteudo {
+    width: 90%;
+  }
+
+  .footer-topo {
+    flex-direction: column;
+    gap: 35px;
+    padding: 0 0 45px;
+  }
+
+  .footer-logo {
+    width: 100%;
+  }
+
+  .footer-logo img {
+    width: 180px;
+  }
+
+  .footer-contato {
+    min-width: 0;
+  }
+
+  .footer-baixo {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .card-roadmap {
+    width: 48%;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .roadmap {
+    padding: 60px 20px 80px;
+  }
+
+  .roadmap h2 {
+    font-size: 31px;
+  }
+
+  .descricao-roadmap {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  .descricao-roadmap br {
+    display: none;
+  }
+
+  .cards-roadmap {
+    margin-top: 40px;
+  }
+
+  .card-roadmap {
+    width: 100%;
+    min-height: auto;
+    padding: 28px 25px;
+  }
+
 }
 
 @media (max-width: 900px) {
