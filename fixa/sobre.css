@@ -8,156 +8,230 @@ html {
 
 body {
   margin: 0;
+
   background-color: #F9F7FF;
+
+  color: #0B013C;
+
+  font-family: "Inter", sans-serif;
 }
 
 img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: "Inter", sans-serif;
+}
+
+
+/* NAVBAR */
+
+header {
+  height: 70px;
+}
+
 nav {
   position: fixed;
+
   top: 0;
   left: 0;
+
   width: 100%;
-  height: 70px;
-  padding: 0 100px;
+  height: 80px;
+
+  padding: 0 90px;
+
   display: flex;
   align-items: center;
-  background-color: #ffffff;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
-  background-color: rgba(249, 247, 255, 0.7);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(5px);
-  box-shadow: 0 2px 12px rgba(13, 5, 51, 0.08);
+
+  background-color: rgba(249, 247, 255, 0.72);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow: 0 4px 22px rgba(11, 1, 60, 0.14);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
   z-index: 1000;
 }
 
 nav > img {
-  width: 118px;
+  width: 140px;
 }
 
 .nav-links {
+  margin-left: auto;
+  margin-right: 180px;
+
   display: flex;
   align-items: center;
+
   gap: 48px;
-  margin-left: auto;
-  margin-right: 70px;
 }
 
-.nav-buttons {
-  display: flex;
-  gap: 18px;
-}
-
-.normal,
-.sobre-link {
+.nav-links a {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  text-decoration: none;
+
+  font-size: 20px;
 }
 
 .normal {
   color: #606670;
+
   font-weight: 400;
 }
 
 .sobre-link {
   color: #153D7D;
-  font-weight: 700;
+
+  font-weight: 600;
 }
 
 .normal:hover,
 .sobre-link:hover {
-  color: #153D7D;
+  color: #34383D;
+
   text-decoration: underline;
 }
 
-button {
+.nav-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.entrar,
+.cadastrar {
+  width: 150px;
   height: 48px;
-  padding: 0 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   border-radius: 13px;
+
   font-family: "Poppins", sans-serif;
+
   font-size: 16px;
-  cursor: pointer;
 }
 
 .entrar {
-  width: 150px;
-  background-color: transparent;
   color: #0B013C;
+
   border: 1px solid #8A93A2;
 }
 
 .cadastrar {
   width: 152px;
+
   background-color: #0B013C;
+
   color: white;
+
   border: 1px solid #0B013C;
 }
 
 .entrar:hover {
   color: #153D7D;
+
   border-color: #153D7D;
 }
 
 .cadastrar:hover {
   background-color: #153D7D;
+
   border-color: #153D7D;
 }
 
+
+/* SOBRE INÍCIO */
+
 .sobre-inicio {
   width: 100%;
-  padding: 180px 70px 70px;
+
+  padding: 110px 120px 90px;
 }
 
 .sobre-inicio-conteudo {
   width: 100%;
-  max-width: 1320px;
-  margin: auto;
+  max-width: 1550px;
+
+  margin: 0 auto;
 }
 
 .titulo-pequeno {
   margin: 0 0 10px;
+
   color: #153D7D;
-  font-family: "Inter", sans-serif;
+
   font-size: 13px;
   font-weight: 700;
 }
 
 .sobre-inicio h1 {
-  margin: 0 0 20px;
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 0 24px;
+
   color: #0B013C;
+
   font-family: "Poppins", sans-serif;
-  font-size: 48px;
-  line-height: 1.15;
+
+  font-size: 60px;
+  font-weight: 700;
+
+  line-height: 1.05;
 }
 
 .descricao-sobre {
+  width: 100%;
+  max-width: 1100px;
+
   margin: 0;
+
   color: #606670;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
+
+  font-size: 16px;
   font-weight: 600;
-  line-height: 25px;
+
+  line-height: 28px;
 }
+
+
+/* HISTÓRIA */
 
 .historia {
   width: 100%;
-  padding: 70px;
+
+  padding: 70px 80px;
 }
 
 .historia-conteudo {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1450px;
+
   margin: auto;
 }
 
 .historia h2 {
   margin: 0 0 55px;
+
   color: #0B013C;
+
   font-family: "Poppins", sans-serif;
+
   font-size: 32px;
+
   line-height: 42px;
 }
 
@@ -167,63 +241,85 @@ button {
 
 .marcadores {
   width: 45px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  flex-shrink: 0;
 }
 
 .marcador {
   width: 21px;
   height: 21px;
-  background-color: #153D7D;
-  transform: rotate(45deg);
+
   margin-top: 4px;
+
+  background-color: #153D7D;
+
+  transform: rotate(45deg);
 }
 
 .linha {
   width: 2px;
   height: 85px;
+
   background-color: #E1DFEB;
 }
 
 .textos-historia {
   width: 100%;
+
   padding-left: 25px;
 }
 
 .textos-historia p {
   min-height: 105px;
+
   margin: 0;
+
   color: #8A93A2;
-  font-family: "Inter", sans-serif;
+
   font-size: 14px;
   font-weight: 400;
+
   line-height: 24px;
 }
 
 .textos-historia .texto-destaque {
   color: #0B013C;
+
   font-weight: 500;
 }
 
+
+/* MISSÃO E VISÃO */
+
 .missao-visao {
   width: 100%;
-  padding: 25px 70px 100px;
+
+  padding: 25px 80px 100px;
 }
 
 .cards-missao-visao {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1450px;
+
   margin: auto;
+
   display: flex;
+
   gap: 20px;
 }
 
 .card-missao,
 .card-visao {
   width: 50%;
+
   min-height: 180px;
+
   padding: 30px;
+
   border-radius: 18px;
 }
 
@@ -233,28 +329,24 @@ button {
 
 .card-visao {
   background-color: white;
+
   border: 1px solid #E4E2F1;
 }
 
 .icone-card {
   margin-bottom: 8px;
-  font-family: "Poppins", sans-serif;
-  font-size: 32px;
-  font-weight: 700;
 }
 
-.card-missao .icone-card {
-  color: white;
-}
-
-.card-visao .icone-card {
-  color: #0B013C;
+.icone-card img {
+  width: 35px;
 }
 
 .card-missao h3,
 .card-visao h3 {
   margin: 0 0 12px;
+
   font-family: "Poppins", sans-serif;
+
   font-size: 17px;
 }
 
@@ -269,9 +361,10 @@ button {
 .card-missao p,
 .card-visao p {
   margin: 0;
-  font-family: "Inter", sans-serif;
+
   font-size: 13px;
   font-weight: 400;
+
   line-height: 22px;
 }
 
@@ -283,68 +376,94 @@ button {
   color: #8A93A2;
 }
 
+
+/* VALORES */
+
 .valores {
   width: 100%;
-  padding: 70px 60px 110px;
+
+  padding: 70px 80px 110px;
 }
 
 .valores-conteudo {
   width: 100%;
   max-width: 1450px;
+
   margin: auto;
 }
 
 .valores h2 {
   margin: 0;
+
   color: #0B013C;
+
   font-family: "Poppins", sans-serif;
+
   font-size: 40px;
+
   line-height: 50px;
 }
 
 .cards-valores {
-  display: flex;
-  gap: 18px;
   margin-top: 65px;
+
+  display: flex;
+
+  gap: 18px;
 }
 
 .card-valor {
   width: 25%;
+
   min-height: 215px;
+
   padding: 30px 35px;
+
   background-color: white;
+
   border: 1px solid #E4E2F1;
+
   border-radius: 18px;
 }
 
 .icone-valor {
   width: 48px;
   height: 48px;
+
   margin-bottom: 24px;
+
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
   background-color: #F0EEFA;
+
   border-radius: 10px;
-  color: #0B013C;
-  font-family: "Poppins", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
+}
+
+.icone-valor img {
+  width: 48px;
+  height: 48px;
 }
 
 .card-valor h3 {
   margin: 0 0 10px;
+
   color: #0B013C;
+
   font-family: "Poppins", sans-serif;
+
   font-size: 17px;
 }
 
 .card-valor p {
   margin: 0;
+
   color: #8A93A2;
-  font-family: "Inter", sans-serif;
+
   font-size: 15px;
   font-weight: 400;
+
   line-height: 24px;
 }
 
@@ -352,220 +471,71 @@ button {
   border-color: #153D7D;
 }
 
+
+/* SETA */
+
 .subir-seta {
   position: fixed;
+
   right: 70px;
   bottom: 25px;
+
   width: 65px;
   height: 65px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #dbe6f8;
+
+  background-color: #DBE6F8;
+
   border-radius: 50%;
-  z-index: 999;
+
+  z-index: 900;
 }
 
 .subir-seta img {
   width: 30px;
 }
 
-@media (max-width: 1100px) {
 
-  nav {
-    padding: 0 40px;
-  }
-
-  .nav-links {
-    gap: 25px;
-    margin-right: 35px;
-  }
-
-  .cards-valores {
-    flex-wrap: wrap;
-  }
-
-  .card-valor {
-    width: 48%;
-  }
-
-}
-
-@media (max-width: 900px) {
-
-  nav {
-    padding: 0 25px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .nav-buttons {
-    margin-left: auto;
-  }
-
-  .sobre-inicio {
-    padding: 150px 30px 60px;
-  }
-
-  .sobre-inicio h1 {
-    font-size: 40px;
-  }
-
-  .historia {
-    padding: 60px 30px;
-  }
-
-  .missao-visao {
-    padding: 20px 30px 80px;
-  }
-
-  .cards-missao-visao {
-    flex-direction: column;
-  }
-
-  .card-missao,
-  .card-visao {
-    width: 100%;
-  }
-
-  .valores {
-    padding: 60px 30px 90px;
-  }
-
-  .valores h2 {
-    font-size: 34px;
-  }
-
-}
-
-@media (max-width: 600px) {
-
-  nav {
-    height: 65px;
-    padding: 0 20px;
-  }
-
-  nav > img {
-    width: 105px;
-  }
-
-  .entrar {
-    display: none;
-  }
-
-  .cadastrar {
-    width: auto;
-    height: 42px;
-    padding: 0 18px;
-    font-size: 14px;
-  }
-
-  .sobre-inicio {
-    padding: 125px 20px 50px;
-  }
-
-  .sobre-inicio h1 {
-    font-size: 34px;
-    line-height: 1.2;
-  }
-
-  .descricao-sobre br,
-  .sobre-inicio h1 br {
-    display: none;
-  }
-
-  .historia {
-    padding: 50px 20px;
-  }
-
-  .historia h2 {
-    font-size: 27px;
-    line-height: 36px;
-  }
-
-  .marcadores {
-    width: 30px;
-  }
-
-  .marcador {
-    width: 16px;
-    height: 16px;
-  }
-
-  .linha {
-    height: 140px;
-  }
-
-  .textos-historia {
-    padding-left: 15px;
-  }
-
-  .textos-historia p {
-    min-height: 160px;
-    font-size: 13px;
-    line-height: 21px;
-  }
-
-  .missao-visao {
-    padding: 20px 20px 70px;
-  }
-
-  .valores {
-    padding: 50px 20px 70px;
-  }
-
-  .valores h2 {
-    font-size: 29px;
-    line-height: 38px;
-  }
-
-  .cards-valores {
-    flex-direction: column;
-    margin-top: 40px;
-  }
-
-  .card-valor {
-    width: 100%;
-  }
-
-  .subir-seta {
-    right: 20px;
-    width: 55px;
-    height: 55px;
-  }
-
-}
+/* EQUIPE */
 
 .equipe {
   width: 100%;
-  padding: 80px 50px 110px;
+
+  padding: 80px 80px 110px;
 }
 
 .equipe-conteudo {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1450px;
+
   margin: auto;
 }
 
 .equipe-titulo {
-  text-align: center;
   margin-bottom: 55px;
+
+  text-align: center;
 }
 
 .equipe-titulo p {
   margin: 0 0 10px;
+
   color: #153D7D;
-  font-family: "Inter", sans-serif;
+
   font-size: 12px;
   font-weight: 700;
 }
 
 .equipe-titulo h2 {
   margin: 0;
+
   color: #0B013C;
+
   font-family: "Poppins", sans-serif;
+
   font-size: 32px;
 }
 
@@ -576,6 +546,7 @@ button {
   margin-bottom: 35px;
 
   display: flex;
+
   gap: 18px;
 }
 
@@ -595,7 +566,7 @@ button {
 
   cursor: pointer;
 
-  transition: flex 0.6s ease;
+  transition: 0.6s;
 }
 
 .card-equipe.destaque {
@@ -614,6 +585,7 @@ button {
   content: "";
 
   position: absolute;
+
   top: 0;
   left: 0;
 
@@ -621,8 +593,6 @@ button {
   height: 100%;
 
   background-color: rgba(11, 1, 60, 0.32);
-
-  transition: 0.4s;
 }
 
 .card-equipe:hover::after,
@@ -642,8 +612,6 @@ button {
   color: white;
 
   opacity: 0;
-
-  transition: opacity 0.3s ease;
 }
 
 .card-equipe.destaque .info-equipe {
@@ -664,8 +632,8 @@ button {
   color: white;
 
   font-family: "Poppins", sans-serif;
+
   font-size: 27px;
-  font-weight: 700;
 }
 
 .info-equipe p {
@@ -673,13 +641,11 @@ button {
 
   color: white;
 
-  font-family: "Inter", sans-serif;
   font-size: 11px;
   font-weight: 600;
 }
 
 .info-equipe span {
-  font-family: "Inter", sans-serif;
   font-size: 10px;
 }
 
@@ -713,15 +679,12 @@ button {
 
   color: white;
 
-  font-family: "Inter", sans-serif;
   font-size: 11px;
   font-weight: 700;
 
   writing-mode: vertical-rl;
 
   transform: rotate(180deg);
-
-  transition: opacity 0.3s ease;
 }
 
 .card-equipe:hover .nome-fechado {
@@ -736,7 +699,538 @@ button {
   opacity: 0;
 }
 
+
+/* ROADMAP */
+
+.roadmap {
+  width: 100%;
+
+  padding: 80px 80px 110px;
+}
+
+.roadmap-conteudo {
+  width: 100%;
+  max-width: 1450px;
+
+  margin: auto;
+}
+
+.titulo-roadmap {
+  margin: 0 0 20px;
+
+  color: #153D7D;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.roadmap h2 {
+  margin: 0;
+
+  color: #0B013C;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 44px;
+}
+
+.descricao-roadmap {
+  margin: 25px 0 0;
+
+  color: #8A93A2;
+
+  font-size: 17px;
+
+  line-height: 28px;
+}
+
+.cards-roadmap {
+  margin-top: 65px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 22px;
+}
+
+.card-roadmap {
+  width: calc(33.333% - 15px);
+
+  min-height: 185px;
+
+  padding: 32px 35px;
+
+  background-color: white;
+
+  border: 1px solid #E1DFEB;
+
+  border-radius: 20px;
+}
+
+.tag-roadmap {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  padding: 7px 13px;
+
+  background-color: #F0EEFA;
+
+  color: #153D7D;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card-roadmap h3 {
+  margin: 0 0 10px;
+
+  color: #0B013C;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 17px;
+}
+
+.card-roadmap p {
+  margin: 0;
+
+  color: #8A93A2;
+
+  font-size: 15px;
+
+  line-height: 23px;
+}
+
+.card-roadmap:hover {
+  border-color: #153D7D;
+}
+
+
+/* FOOTER */
+
+.footer {
+  width: 100%;
+
+  padding: 70px 0 35px;
+
+  background-color: #0B013C;
+}
+
+.footer-conteudo {
+  width: 85%;
+  max-width: 1400px;
+
+  margin: auto;
+}
+
+.footer-topo {
+  padding: 0 40px 65px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 50px;
+}
+
+.footer-logo {
+  width: 300px;
+}
+
+.footer-logo img {
+  width: 230px;
+}
+
+.footer-coluna {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.footer-coluna h4 {
+  margin: 0 0 15px;
+
+  color: #6E96D6;
+
+  font-size: 14px;
+}
+
+.footer-coluna a {
+  color: #C3C5DC;
+
+  font-size: 15px;
+}
+
+.footer-coluna a:hover {
+  color: white;
+
+  text-decoration: underline;
+}
+
+.footer-contato {
+  min-width: 300px;
+}
+
+.footer-contato a {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.footer-contato svg {
+  width: 20px;
+  height: 20px;
+
+  fill: none;
+
+  stroke: #C3C5DC;
+
+  stroke-width: 2;
+}
+
+.footer-linha {
+  width: 100%;
+  height: 1px;
+
+  background-color: #8A93A2;
+}
+
+.footer-baixo {
+  min-height: 70px;
+
+  padding-top: 28px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-baixo p,
+.area-restrita {
+  margin: 0;
+
+  color: #8A93A2;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.area-restrita:hover {
+  color: white;
+
+  text-decoration: underline;
+}
+
+
+/* MODAL */
+
+.modal-cadastro {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 20px;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(11, 1, 60, 0.55);
+
+  z-index: 3000;
+}
+
+.modal-cadastro:target {
+  display: flex;
+}
+
+.cadastro-box {
+  position: relative;
+
+  width: 720px;
+
+  max-height: 95vh;
+
+  padding: 65px 50px 50px;
+
+  overflow-y: auto;
+
+  background-color: white;
+
+  border-radius: 18px;
+}
+
+.fechar-cadastro {
+  position: absolute;
+
+  top: 22px;
+  right: 25px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #8A93A2;
+
+  border: 1px solid #D9DBE8;
+
+  border-radius: 5px;
+
+  font-size: 28px;
+}
+
+.fechar-cadastro:hover {
+  color: #0B013C;
+
+  background-color: #F5F4FA;
+}
+
+.etapas-cadastro {
+  margin-bottom: 45px;
+
+  display: flex;
+  align-items: center;
+}
+
+.etapa {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #8A93A2;
+
+  background-color: #F0EEFA;
+
+  border: 2px solid transparent;
+
+  border-radius: 50%;
+
+  font-weight: 700;
+}
+
+.etapa.ativa {
+  color: #153D7D;
+
+  background-color: white;
+
+  border-color: #153D7D;
+}
+
+.linha-etapa {
+  height: 2px;
+
+  flex: 1;
+
+  margin: 0 20px;
+
+  background-color: #D5D7E5;
+}
+
+.passo-cadastro {
+  display: none;
+}
+
+.passo-cadastro.ativo {
+  display: block;
+}
+
+.cadastro-box h2 {
+  margin: 0 0 10px;
+
+  color: #0B013C;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 40px;
+
+  line-height: 1.2;
+}
+
+.cadastro-descricao {
+  margin: 0 0 30px;
+
+  color: #8A93A2;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 24px;
+}
+
+.campo-cadastro {
+  margin-bottom: 22px;
+}
+
+.campo-cadastro label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #0B013C;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.campo-cadastro input {
+  width: 100%;
+  height: 52px;
+
+  padding: 0 14px;
+
+  color: #0B013C;
+
+  background-color: white;
+
+  border: 1px solid #D9DBE8;
+
+  border-radius: 9px;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+.campo-cadastro input:focus {
+  border-color: #153D7D;
+}
+
+.botao-principal {
+  width: 100%;
+  height: 52px;
+
+  padding: 0 25px;
+
+  background-color: #0B013C;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.botao-principal:hover {
+  background-color: #153D7D;
+}
+
+.ja-cadastrado {
+  margin: 23px 0 0;
+
+  text-align: center;
+
+  color: #0B013C;
+
+  font-size: 14px;
+}
+
+.ja-cadastrado a {
+  color: #0B013C;
+
+  font-weight: 700;
+
+  text-decoration: underline;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 1100px) {
+
+  nav {
+    padding: 0 40px;
+  }
+
+  .nav-links {
+    margin-right: 40px;
+
+    gap: 25px;
+  }
+
+  .cards-valores {
+    flex-wrap: wrap;
+  }
+
+  .card-valor {
+    width: calc(50% - 9px);
+  }
+
+}
+
+
 @media (max-width: 900px) {
+
+  nav {
+    padding: 0 25px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-buttons {
+    margin-left: auto;
+  }
+
+  .sobre-inicio {
+    padding: 70px 30px 60px;
+  }
+
+  .sobre-inicio h1 {
+    font-size: 40px;
+  }
+
+  .historia {
+    padding: 60px 30px;
+  }
+
+  .missao-visao {
+    padding: 20px 30px 80px;
+  }
+
+  .cards-missao-visao {
+    flex-direction: column;
+  }
+
+  .card-missao,
+  .card-visao {
+    width: 100%;
+  }
+
+  .valores {
+    padding: 60px 30px 90px;
+  }
+
+  .cards-valores {
+    flex-wrap: wrap;
+  }
+
+  .card-valor {
+    width: calc(50% - 9px);
+  }
 
   .equipe {
     padding: 70px 30px 90px;
@@ -752,7 +1246,7 @@ button {
   .card-equipe.destaque {
     flex: none;
 
-    width: 48%;
+    width: calc(50% - 9px);
     height: 300px;
   }
 
@@ -769,9 +1263,139 @@ button {
     display: none;
   }
 
+  .roadmap {
+    padding: 70px 30px 90px;
+  }
+
+  .card-roadmap {
+    width: calc(50% - 11px);
+  }
+
+  .footer-conteudo {
+    width: 90%;
+  }
+
+  .footer-topo {
+    flex-wrap: wrap;
+  }
+
+  .footer-logo {
+    width: 100%;
+  }
+
 }
 
+
 @media (max-width: 600px) {
+
+  header {
+    height: 65px;
+  }
+
+  nav {
+    height: 65px;
+
+    padding: 0 20px;
+  }
+
+  nav > img {
+    width: 105px;
+  }
+
+  .entrar {
+    display: none;
+  }
+
+  .cadastrar {
+    width: auto;
+    height: 42px;
+
+    padding: 0 18px;
+
+    font-size: 14px;
+  }
+
+  .sobre-inicio {
+    padding: 60px 20px 50px;
+  }
+
+  .sobre-inicio h1 {
+    font-size: 34px;
+
+    line-height: 1.2;
+  }
+
+  .sobre-inicio h1 br,
+  .descricao-sobre br {
+    display: none;
+  }
+
+  .historia {
+    padding: 50px 20px;
+  }
+
+  .historia h2 {
+    font-size: 27px;
+
+    line-height: 36px;
+  }
+
+  .marcadores {
+    width: 30px;
+  }
+
+  .marcador {
+    width: 16px;
+    height: 16px;
+  }
+
+  .linha {
+    height: 140px;
+  }
+
+  .textos-historia {
+    padding-left: 15px;
+  }
+
+  .textos-historia p {
+    min-height: 160px;
+
+    font-size: 13px;
+
+    line-height: 21px;
+  }
+
+  .missao-visao {
+    padding: 20px 20px 70px;
+  }
+
+  .valores {
+    padding: 50px 20px 70px;
+  }
+
+  .valores h2 {
+    font-size: 29px;
+
+    line-height: 38px;
+  }
+
+  .cards-valores {
+    margin-top: 40px;
+
+    flex-direction: column;
+  }
+
+  .card-valor {
+    width: 100%;
+  }
+
+  .subir-seta {
+    right: 20px;
+    bottom: 20px;
+
+    width: 55px;
+    height: 55px;
+  }
 
   .equipe {
     padding: 60px 20px 80px;
@@ -789,6 +1413,87 @@ button {
   .card-equipe.destaque {
     width: 100%;
     height: 320px;
+  }
+
+  .roadmap {
+    padding: 60px 20px 80px;
+  }
+
+  .roadmap h2 {
+    font-size: 31px;
+  }
+
+  .descricao-roadmap {
+    font-size: 14px;
+
+    line-height: 23px;
+  }
+
+  .descricao-roadmap br {
+    display: none;
+  }
+
+  .cards-roadmap {
+    margin-top: 40px;
+  }
+
+  .card-roadmap {
+    width: 100%;
+
+    padding: 28px 25px;
+  }
+
+  .footer {
+    padding: 50px 0 30px;
+  }
+
+  .footer-topo {
+    padding: 0 0 45px;
+
+    flex-direction: column;
+
+    gap: 35px;
+  }
+
+  .footer-logo img {
+    width: 180px;
+  }
+
+  .footer-contato {
+    min-width: 0;
+  }
+
+  .footer-baixo {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .modal-cadastro {
+    padding: 10px;
+  }
+
+  .cadastro-box {
+    padding: 60px 20px 35px;
+  }
+
+  .cadastro-box h2 {
+    font-size: 28px;
+  }
+
+  .etapas-cadastro {
+    margin-bottom: 35px;
+  }
+
+  .etapa {
+    width: 34px;
+    height: 34px;
+
+    font-size: 14px;
+  }
+
+  .linha-etapa {
+    margin: 0 7px;
   }
 
 }
