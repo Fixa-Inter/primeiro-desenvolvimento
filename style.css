@@ -26,30 +26,20 @@ input {
   font-family: "Inter", sans-serif;
 }
 
-
 nav {
   position: fixed;
-
   top: 0;
   left: 0;
-
   width: 100%;
   height: 80px;
-
   padding: 0 90px;
-
   display: flex;
   align-items: center;
-
   background-color: rgba(249, 247, 255, 0.72);
-
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-
   box-shadow: 0 4px 22px rgba(11, 1, 60, 0.14);
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-
   z-index: 1000;
 }
 
@@ -60,28 +50,23 @@ nav > img {
 .nav-links {
   margin-left: auto;
   margin-right: 180px;
-
   display: flex;
   align-items: center;
-
   gap: 48px;
 }
 
 .nav-links a {
   font-family: "Poppins", sans-serif;
-
   font-size: 20px;
 }
 
 .normal {
   color: #606670;
-
   font-weight: 400;
 }
 
 .inicio {
   color: #153D7D;
-
   font-weight: 600;
 }
 
@@ -94,7 +79,6 @@ nav > img {
 .nav-buttons {
   display: flex;
   align-items: center;
-
   gap: 18px;
 }
 
@@ -102,60 +86,45 @@ nav > img {
 .cadastrar {
   width: 150px;
   height: 48px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   border-radius: 13px;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 16px;
 }
 
 .entrar {
   color: #0B013C;
-
   border: 1px solid #8A93A2;
 }
 
 .cadastrar {
   width: 152px;
-
   background-color: #0B013C;
-
   color: white;
-
   border: 1px solid #0B013C;
 }
 
 .entrar:hover {
   color: #153D7D;
-
   border-color: #153D7D;
 }
 
 .cadastrar:hover {
   background-color: #153D7D;
-
   border-color: #153D7D;
 }
-
 
 .principal {
   width: 90%;
   max-width: 1300px;
-
   margin: auto;
-
   padding-top: 245px;
   padding-bottom: 80px;
-
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
   gap: 50px;
 }
 
@@ -165,13 +134,9 @@ nav > img {
 
 .texto-header h1 {
   margin: 0 0 28px;
-
   color: #0D0533;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 52px;
-
   line-height: 1.27;
 }
 
@@ -182,21 +147,15 @@ nav > img {
 
 .texto-header > p {
   width: 500px;
-
   margin: 0;
-
   color: #525966;
-
   font-size: 15.5px;
   font-weight: 600;
-
   line-height: 27px;
 }
 
-
 .saiba-mais-falar-equipe {
   padding-top: 27px;
-
   display: flex;
   gap: 15px;
   align-items: center;
@@ -204,11 +163,9 @@ nav > img {
 
 .saiba-mais {
   height: 44px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   border-radius: 11px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
@@ -217,11 +174,9 @@ nav > img {
 
 .falar-equipe {
   height: 44px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   border-radius: 11px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -230,9 +185,7 @@ nav > img {
 
 .saiba-mais {
   width: 177px;
-
   gap: 18px;
-
   background-color: #153D7D;
   color: white;
 }
@@ -243,9 +196,7 @@ nav > img {
 
 .falar-equipe {
   width: 202px;
-
   color: #0D0533;
-
   border: 1px solid #E0DDE8;
 }
 
@@ -255,14 +206,11 @@ nav > img {
 
 .falar-equipe:hover {
   color: #153D7D;
-
   border-color: #153D7D;
 }
 
-
 .foto-header {
   width: 650px;
-
   margin-top: 63px;
 }
 
@@ -270,24 +218,17 @@ nav > img {
   width: 650px;
 }
 
-
 .subir-seta {
   position: fixed;
-
   right: 70px;
   bottom: 25px;
-
   width: 65px;
   height: 65px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: #DBE6F8;
-
   border-radius: 50%;
-
   z-index: 900;
 }
 
@@ -295,14 +236,11 @@ nav > img {
   width: 30px;
 }
 
-
 .problema,
 .funcionalidades {
   width: 100%;
   max-width: 1320px;
-
   margin: 100px auto 0;
-
   padding: 0 70px;
 }
 
@@ -311,19 +249,15 @@ nav > img {
   flex-direction: column;
 }
 
-
 .p-problema,
 .label-antes-depois,
 .label-funcionalidades,
 .p-usuarios {
   margin-bottom: 12px;
-
   color: #153D7D;
-
   font-size: 13px;
   font-weight: 700;
 }
-
 
 .texto-problema h3,
 .antes-depois h3,
@@ -332,65 +266,48 @@ nav > img {
 .planos h3,
 .faq-header h3 {
   margin: 0;
-
   color: #0D0533;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 36px;
-
   line-height: 1.35;
 }
 
-.texto-problema p{
+.texto-problema p {
   font-weight: 650;
 }
 
 .texto-problema > p:last-child,
 .sub-funcionalidades {
   color: #525966;
-
   font-size: 15px;
-
   line-height: 25px;
 }
 
-
 .cards-problema {
   margin-top: 40px;
-
   display: flex;
   flex-wrap: wrap;
-
   gap: 15px;
 }
-
 
 .card1-problema,
 .card2-problema,
 .card3-problema,
 .card4-problema {
   width: 280px;
-
   padding: 20px 24px;
-
   background-color: white;
-
   border: 1px solid #E4E2F1;
-
   border-radius: 20px;
 }
-
 
 .card1-problema img,
 .card2-problema img,
 .card3-problema img,
 .card4-problema img {
   width: 42px;
-
   margin-bottom: 15px;
 }
-
 
 .card1-problema h5,
 .card2-problema h5,
@@ -398,67 +315,45 @@ nav > img {
 .card4-problema h5,
 .card-funcionalidade h5 {
   margin: 0 0 8px;
-
   color: #0D0533;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 16px;
 }
 
-
 .card-p {
   margin: 0;
-
   color: #8A93A2;
-
   font-family: "DM Sans", sans-serif;
-
   font-size: 14px;
   font-weight: 400;
-
   line-height: 22px;
 }
-
 
 .como-funciona {
   width: 90%;
   max-width: 1320px;
-
   margin: 100px auto 0;
-
   padding: 45px 70px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   background-color: #0B013C;
-
   border-radius: 30px;
-
   text-align: center;
 }
 
 .como-funciona h6 {
   margin: 0 0 15px;
-
   color: #6E96D6;
-
   font-family: "Inter", sans-serif;
-
   font-size: 13px;
 }
 
 .como-funciona h3 {
   margin: 0 0 30px;
-
   color: white;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 36px;
-
   line-height: 1.35;
 }
 
@@ -466,25 +361,16 @@ nav > img {
   width: 1000px;
 }
 
-
 .funcionamento {
   margin-top: 50px;
-
   padding: 12px 30px;
-
   display: flex;
   align-items: center;
-
   gap: 14px;
-
   background-color: white;
-
   color: #0B013C;
-
   border-radius: 13px;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 16px;
 }
 
@@ -492,24 +378,18 @@ nav > img {
   background-color: #E6E6E6;
 }
 
-
 .antes-depois {
   width: 100%;
-
   margin-top: 100px;
-
   padding: 0 70px 100px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   text-align: center;
 }
 
 .antes-depois-header {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -517,51 +397,37 @@ nav > img {
 
 .label-antes-depois {
   margin: 0 0 14px;
-
   color: #153D7D;
-
   font-size: 13px;
   font-weight: 700;
 }
 
 .antes-depois h3 {
   margin: 0;
-
   color: #0D0533;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 44px;
   font-weight: 700;
-
   line-height: 1.3;
 }
 
 .antes-depois-cards {
   width: 100%;
   max-width: 1550px;
-
   margin-top: 65px;
-
   display: flex;
   justify-content: center;
-
   gap: 24px;
 }
 
 .card-branco,
 .card-azul {
   flex: 1;
-
   width: 100%;
   min-height: 300px;
-
   padding: 42px 40px;
-
   border-radius: 22px;
-
   text-align: left;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -569,7 +435,6 @@ nav > img {
 
 .card-branco {
   background-color: #EDECF7;
-
   border: 1px solid #E1DFEB;
 }
 
@@ -579,9 +444,7 @@ nav > img {
 
 .titulo-card {
   margin: 0 0 30px;
-
   color: #606670;
-
   font-size: 14px;
   font-weight: 700;
 }
@@ -592,10 +455,8 @@ nav > img {
 
 .item-card {
   margin-bottom: 20px;
-
   display: flex;
   align-items: center;
-
   gap: 16px;
 }
 
@@ -606,23 +467,19 @@ nav > img {
 .item-card img {
   width: 18px;
   height: 18px;
-
   flex-shrink: 0;
 }
 
 .item-card span {
   color: #0B013C;
-
   font-size: 16px;
   font-weight: 500;
-
   line-height: 22px;
 }
 
 .card-azul .item-card span {
   color: white;
 }
-
 
 .funcionalidades {
   display: flex;
@@ -639,44 +496,30 @@ nav > img {
   margin-top: 10px;
 }
 
-
 .grid-funcionalidades {
   margin-top: 45px;
-
   display: flex;
   flex-wrap: wrap;
-
   gap: 20px;
 }
 
-
 .card-funcionalidade {
   width: 280px;
-
   min-height: 180px;
-
   padding: 24px;
-
   background-color: white;
-
   border: 1px solid #E4E2F1;
-
   border-radius: 20px;
 }
-
 
 .icone-funcionalidade {
   width: 40px;
   height: 40px;
-
   margin-bottom: 16px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: #F1F0FA;
-
   border-radius: 10px;
 }
 
@@ -688,64 +531,49 @@ nav > img {
   border-color: #153D7D;
 }
 
-
 .usuarios {
   margin-top: 40px;
-
   padding: 100px 70px 120px;
 }
 
 .usuarios-conteudo {
   width: 100%;
   max-width: 1550px;
-
   margin: auto;
 }
 
 .usuarios-header {
   margin-bottom: 75px;
-
   text-align: center;
 }
 
 .p-usuarios {
   margin-bottom: 14px;
-
   color: #153D7D;
-
   font-size: 13px;
   font-weight: 700;
 }
 
 .usuarios h3 {
   margin: 0;
-
   color: #0D0533;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 44px;
   font-weight: 700;
-
   line-height: 1.3;
 }
 
 .cards-usuarios {
   display: flex;
   justify-content: center;
-
   gap: 24px;
 }
 
 .card-usuario {
   flex: 1;
-
   min-height: 375px;
-
   padding: 36px 38px 30px;
-
   background-color: white;
-
   border: 1px solid #E4E2F1;
   border-radius: 20px;
 }
@@ -753,28 +581,21 @@ nav > img {
 .icone-usuario {
   width: 64px;
   height: 64px;
-
   margin-bottom: 25px;
 }
 
 .h5-card-usuario {
   margin: 0 0 14px;
-
   color: #0D0533;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 20px;
   font-weight: 700;
 }
 
 .card-usuario > .card-p {
   margin-bottom: 18px;
-
   color: #8A93A2;
-
   font-size: 15px;
-
   line-height: 25px;
 }
 
@@ -784,39 +605,29 @@ nav > img {
 
 .item-usuario {
   margin-top: 13px;
-
   display: flex;
   align-items: center;
-
   gap: 12px;
 }
 
 .item-usuario span {
   width: 24px;
   height: 1px;
-
   flex-shrink: 0;
-
   background-color: #6E96D6;
 }
 
 .item-usuario p {
   margin: 0;
-
   color: #0D0533;
-
   font-size: 14px;
   font-weight: 400;
-
   line-height: 20px;
 }
 
-
 .planos {
   margin-top: 40px;
-
   padding: 75px 70px 90px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -828,191 +639,132 @@ nav > img {
 
 .planos h3 {
   text-align: center;
-
   font-size: 40px;
 }
 
-
 .planos > input[type="radio"] {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
 }
-
 
 .toggle-wrapper {
   position: relative;
-
   width: 280px;
   height: 56px;
-
   margin-top: 55px;
-
   padding: 6px;
-
   display: flex;
-
   background-color: #E7E8F5;
-
   border-radius: 30px;
 }
 
-
 .toggle-thumb {
   position: absolute;
-
   top: 6px;
   left: 6px;
-
   width: 134px;
   height: 44px;
-
   background-color: #0B013C;
-
   border-radius: 25px;
 }
 
-
 .toggle-option {
   width: 50%;
-
   z-index: 1;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   color: #8A93A2;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 14px;
   font-weight: 600;
-
   cursor: pointer;
 }
-
 
 #anual:checked ~ .toggle-wrapper .toggle-thumb {
   left: 140px;
 }
-
 
 #mensal:checked ~ .toggle-wrapper .option-mensal,
 #anual:checked ~ .toggle-wrapper .option-anual {
   color: white;
 }
 
-
 .planos-grid {
   width: 100%;
   max-width: 1320px;
-
   margin-top: 55px;
-
   display: flex;
   justify-content: center;
-
   gap: 14px;
 }
 
-
 .plano-card {
   position: relative;
-
   width: 32%;
-
   min-height: 465px;
-
   padding: 50px 38px 24px;
-
   display: flex;
   flex-direction: column;
-
   background-color: white;
-
   color: #0B013C;
-
   border: 1px solid #E4E2F1;
-
   border-radius: 20px;
 }
 
-
 .plano-card.destaque {
   min-height: 495px;
-
   margin-top: -16px;
-
   background-color: #0B013C;
-
   color: white;
-
   border: none;
 }
 
-
 .badge {
   position: absolute;
-
   top: -17px;
   left: 50%;
-
   padding: 8px 18px;
-
   background-color: white;
-
   color: #153D7D;
-
   border-radius: 25px;
-
   font-size: 12px;
   font-weight: 700;
-
   transform: translateX(-50%);
 }
 
-
 .plano-nome {
   margin-bottom: 20px;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 16px;
   font-weight: 700;
 }
 
-
 .plano-preco {
   margin-bottom: 16px;
-
   display: flex;
   align-items: baseline;
-
   gap: 4px;
 }
-
 
 .preco-mensal,
 .preco-anual {
   color: #0B013C;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 38px;
   font-weight: 700;
 }
-
 
 .plano-card.destaque .preco-mensal,
 .plano-card.destaque .preco-anual {
   color: white;
 }
 
-
 .plano-total {
   margin-bottom: 12px;
-
   font-size: 12px;
-
   opacity: 0.7;
 }
 
@@ -1020,26 +772,19 @@ nav > img {
   text-decoration: line-through;
 }
 
-
 .plano-desc {
   margin-bottom: 17px;
-
   color: #8A93A2;
-
   font-size: 14px;
 }
-
 
 .plano-card.destaque .plano-desc {
   color: #D5D3E1;
 }
 
-
 .plano-lista {
   margin: 0 0 25px;
-
   padding-left: 20px;
-
   font-size: 14px;
 }
 
@@ -1047,37 +792,26 @@ nav > img {
   padding: 9px 0;
 }
 
-
 .plano-btn {
   width: 100%;
   height: 46px;
-
   margin-top: auto;
-
   background-color: transparent;
-
   color: #0B013C;
-
   border: 1px solid #0B013C;
-
   border-radius: 10px;
-
   font-size: 15px;
   font-weight: 600;
-
   cursor: pointer;
 }
 
-
 .plano-card.destaque .plano-btn {
   background-color: white;
-
   border: none;
 }
 
 .plano-card.destaque .plano-btn:hover {
   background-color: #E6E6E6;
-
   border: none;
 }
 
@@ -1089,7 +823,6 @@ nav > img {
 .total-anual {
   display: none;
 }
-
 
 #anual:checked ~ .planos-grid .preco-mensal {
   display: none;
@@ -1103,29 +836,22 @@ nav > img {
   display: block;
 }
 
-
 .faq-section {
   width: 100%;
-
   padding: 70px 70px 110px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
 .faq-header {
   margin-bottom: 65px;
-
   text-align: center;
 }
 
 .faq-header p {
   margin: 0 0 10px;
-
   color: #153D7D;
-
   font-size: 13px;
   font-weight: 700;
 }
@@ -1133,7 +859,6 @@ nav > img {
 .faq-header h3 {
   font-size: 40px;
 }
-
 
 .faq-lista {
   width: 100%;
@@ -1144,122 +869,86 @@ nav > img {
   border-bottom: 1px solid #E1DFEB;
 }
 
-
 .faq-lista summary {
   min-height: 88px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   gap: 30px;
-
   color: #0D0533;
-
   font-size: 17px;
   font-weight: 700;
-
   cursor: pointer;
-
   list-style: none;
 }
-
 
 .faq-lista summary::-webkit-details-marker {
   display: none;
 }
 
-
 .faq-icone {
   position: relative;
-
   width: 30px;
   height: 30px;
-
   flex-shrink: 0;
-
   background-color: #ECEAF4;
-
   border-radius: 4px;
 }
-
 
 .faq-icone::before,
 .faq-icone::after {
   content: "";
-
   position: absolute;
-
   top: 14px;
   left: 8px;
-
   width: 14px;
   height: 2px;
-
   background-color: #0B013C;
 }
-
 
 .faq-icone::after {
   transform: rotate(90deg);
 }
 
-
 .faq-lista details[open] .faq-icone {
   background-color: #0B013C;
 }
-
 
 .faq-lista details[open] .faq-icone::after {
   display: none;
 }
 
-
 .faq-lista details[open] .faq-icone::before {
   background-color: white;
 }
 
-
 .faq-resposta {
   max-width: 800px;
-
   padding: 0 50px 22px 0;
-
   color: #8A93A2;
-
   font-size: 15px;
-
   line-height: 26px;
 }
 
-
 .footer {
   width: 100%;
-
   padding: 70px 0 35px;
-
   background-color: #0B013C;
 }
-
 
 .footer-conteudo {
   width: 85%;
   max-width: 1400px;
-
   margin: auto;
 }
 
-
 .footer-topo {
   padding: 0 40px 65px;
-
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
   gap: 50px;
 }
-
 
 .footer-logo {
   width: 300px;
@@ -1269,504 +958,438 @@ nav > img {
   width: 230px;
 }
 
-
 .footer-coluna {
   display: flex;
   flex-direction: column;
-
   gap: 14px;
 }
 
-
 .footer-coluna h4 {
   margin: 0 0 15px;
-
   color: #6E96D6;
-
   font-size: 14px;
 }
 
-
 .footer-coluna a {
   color: #C3C5DC;
-
   font-size: 15px;
 }
 
-
 .footer-coluna a:hover {
   color: white;
-
   text-decoration: underline;
 }
-
 
 .footer-contato {
   min-width: 300px;
 }
 
-
 .footer-contato a {
   display: flex;
   align-items: center;
-
   gap: 10px;
 }
-
 
 .footer-contato svg {
   width: 20px;
   height: 20px;
-
   fill: none;
-
   stroke: #C3C5DC;
-
   stroke-width: 2;
 }
-
 
 .footer-linha {
   width: 100%;
   height: 1px;
-
   background-color: #8A93A2;
 }
 
-
 .footer-baixo {
   min-height: 70px;
-
   padding-top: 28px;
-
   display: flex;
   justify-content: space-between;
 }
 
-
 .footer-baixo p,
 .area-restrita {
   margin: 0;
-
   color: #8A93A2;
-
   font-size: 13px;
   font-weight: 600;
 }
 
-
 .area-restrita:hover {
   color: white;
-
   text-decoration: underline;
 }
 
-
 .modal-cadastro {
   position: fixed;
-
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
-
   padding: 20px;
-
   display: none;
-
   justify-content: center;
   align-items: center;
-
   background-color: rgba(11, 1, 60, 0.55);
-
   z-index: 3000;
 }
-
 
 .modal-cadastro:target {
   display: flex;
 }
 
-
 .cadastro-box {
   position: relative;
-
   width: 720px;
-
+  max-width: 100%;
   max-height: 95vh;
-
   padding: 65px 50px 50px;
-
   overflow-y: auto;
-
   background-color: white;
-
   border-radius: 18px;
 }
 
-
 .fechar-cadastro {
   position: absolute;
-
   top: 22px;
   right: 25px;
-
   width: 40px;
   height: 40px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   color: #8A93A2;
-
   border: 1px solid #D9DBE8;
-
   border-radius: 5px;
-
   font-size: 28px;
   font-weight: 400;
 }
 
-
 .fechar-cadastro:hover {
   color: #0B013C;
-
   background-color: #F5F4FA;
 }
 
-
 .etapas-cadastro {
   margin-bottom: 45px;
-
   display: flex;
   align-items: center;
 }
-
 
 .etapa {
   width: 40px;
   height: 40px;
-
   flex-shrink: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   color: #8A93A2;
-
   background-color: #F0EEFA;
-
   border: 2px solid transparent;
-
   border-radius: 50%;
-
   font-weight: 700;
 }
 
-
 .etapa.ativa {
   color: #153D7D;
-
   background-color: white;
-
   border-color: #153D7D;
 }
-
 
 .etapa.concluida {
   color: white;
-
   background-color: #153D7D;
-
   border-color: #153D7D;
 }
 
-
 .linha-etapa {
   height: 2px;
-
   flex: 1;
-
   margin: 0 20px;
-
   background-color: #D5D7E5;
 }
-
 
 .linha-etapa.concluida {
   background-color: #153D7D;
 }
 
-
 .passo-cadastro {
   display: none;
 }
-
 
 .passo-cadastro.ativo {
   display: block;
 }
 
-
 .cadastro-box h2 {
   margin: 0 0 10px;
-
   color: #0B013C;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 40px;
-
   line-height: 1.2;
 }
 
-
 .cadastro-descricao {
   margin: 0 0 30px;
-
   color: #8A93A2;
-
   font-size: 15px;
   font-weight: 400;
-
   line-height: 24px;
 }
-
 
 .campo-cadastro {
   margin-bottom: 22px;
 }
 
-
 .campo-cadastro label,
 .codigo-area label {
   display: block;
-
   margin-bottom: 9px;
-
   color: #0B013C;
-
   font-size: 15px;
   font-weight: 700;
 }
 
-
 .campo-cadastro input {
   width: 100%;
   height: 52px;
-
   padding: 0 14px;
-
   color: #0B013C;
-
   background-color: white;
-
   border: 1px solid #D9DBE8;
-
   border-radius: 9px;
-
   font-size: 15px;
-
   outline: none;
 }
-
 
 .campo-cadastro input:focus,
 .codigo-inputs input:focus {
   border-color: #153D7D;
 }
 
-
 .botao-principal {
   width: 100%;
-
   min-height: 52px;
-
   padding: 0 25px;
-
   display: flex;
   align-items: center;
-
   background-color: #0B013C;
-
   color: white;
-
   border: none;
-
   border-radius: 8px;
-
   font-family: "Poppins", sans-serif;
-
   font-size: 15px;
   font-weight: 600;
-
   cursor: pointer;
 }
-
 
 .botao-principal:hover {
   background-color: #153D7D;
 }
 
-
 .ja-cadastrado,
 .reenviar {
   margin: 23px 0 0;
-
   text-align: center;
-
   color: #0B013C;
-
   font-size: 14px;
 }
-
 
 .ja-cadastrado a,
 .reenviar a {
   color: #0B013C;
-
   font-weight: 700;
-
   text-decoration: underline;
 }
-
 
 .icone-email,
 .icone-concluido {
   width: 75px;
   height: 75px;
-
   margin-bottom: 35px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   border-radius: 50%;
-
   font-size: 28px;
 }
 
-
 .icone-email {
   color: #153D7D;
-
   background-color: #F0EEFA;
 }
 
-
 .icone-concluido {
   color: #25A45F;
-
   background-color: #E4F5EC;
 }
-
 
 .codigo-area {
   margin: 35px 0 25px;
 }
 
-
 .codigo-inputs {
   display: flex;
-
   gap: 12px;
 }
 
-
 .codigo-inputs input {
-  width: 16.66%;
+  flex: 1;
+  width: 0;
+  min-width: 0;
   height: 80px;
-
   text-align: center;
-
   border: 1px solid #D9DBE8;
-
   border-radius: 9px;
-
   color: #0B013C;
-
   font-size: 26px;
-
   outline: none;
 }
-
 
 .campo-senha {
   margin-bottom: 30px;
 }
 
-
 .link-login {
   justify-content: center;
 }
 
+.menu-mobile,
+.etapas-mobile {
+  display: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+.grid-funcionalidades:focus-visible {
+  outline: 3px solid #6E96D6;
+  outline-offset: 4px;
+}
+
+#mensal:focus-visible ~ .toggle-wrapper .option-mensal,
+#anual:focus-visible ~ .toggle-wrapper .option-anual {
+  outline: 3px solid #6E96D6;
+  border-radius: 25px;
+}
+
+#planos,
+#faq,
+#equipe {
+  scroll-margin-top: 100px;
+}
 
 @media (max-width: 1200px) {
-
   nav {
-    padding: 0 40px;
+    padding: 0 32px;
   }
 
   .nav-links {
-    margin-right: 40px;
+    margin-right: 32px;
+    gap: 24px;
+  }
 
-    gap: 25px;
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .entrar,
+  .cadastrar {
+    width: 120px;
   }
 
   .principal {
-    width: 90%;
+    gap: 32px;
+    padding-top: 180px;
   }
 
   .texto-header,
   .foto-header {
-    width: 48%;
+    width: calc(50% - 16px);
+    min-width: 0;
   }
 
   .texto-header h1 {
-    font-size: 44px;
+    font-size: 40px;
+  }
+
+  .texto-header > p {
+    width: 100%;
+  }
+
+  .texto-header br,
+  .card-p br {
+    display: none;
   }
 
   .foto-header img {
     width: 100%;
   }
 
+  .problema,
+  .funcionalidades,
+  .antes-depois,
+  .usuarios,
+  .planos,
+  .faq-section {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .card1-problema,
+  .card2-problema,
+  .card3-problema,
+  .card4-problema {
+    width: calc(50% - 8px);
+  }
+
+  .card-funcionalidade {
+    width: calc(50% - 10px);
+  }
+
+  .card-usuario,
+  .plano-card {
+    min-width: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .plano-preco {
+    flex-wrap: wrap;
+  }
+
+  .preco-mensal,
+  .preco-anual {
+    font-size: 32px;
+  }
+
+  .footer-conteudo {
+    width: calc(100% - 64px);
+  }
+
+  .footer-topo {
+    padding-left: 0;
+    padding-right: 0;
+    gap: 24px;
+  }
+
+  .footer-logo {
+    width: 180px;
+  }
+
+  .footer-contato {
+    min-width: 0;
+  }
 }
 
-
-
 @media (max-width: 900px) {
-
-  .antes-depois {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .antes-depois-cards {
-    flex-direction: column;
-  }
-
-  .card-branco,
-  .card-azul {
-    width: 100%;
-  }
-
-  .cards-usuarios {
-    flex-direction: column;
-  }
-
-  .card-usuario {
-    width: 100%;
-  }
-}
-
-@media (max-width: 900px) {
-
   nav {
-    padding: 0 25px;
+    height: 72px;
+    gap: 16px;
   }
 
   .nav-links {
@@ -1777,44 +1400,93 @@ nav > img {
     margin-left: auto;
   }
 
-  .principal {
-    padding-top: 150px;
+  .menu-mobile {
+    display: block;
+  }
 
+  .menu-mobile summary {
+    width: 40px;
+    height: 40px;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-
-    text-align: center;
+    gap: 6px;
+    cursor: pointer;
+    list-style: none;
   }
 
-  .texto-header,
-  .foto-header {
-    width: 100%;
-
-    max-width: 650px;
+  .menu-mobile summary::-webkit-details-marker {
+    display: none;
   }
 
-  .texto-header > p {
-    width: 100%;
+  .menu-mobile summary span {
+    width: 24px;
+    height: 2px;
+    background-color: #153D7D;
+    border-radius: 2px;
+  }
+
+  .menu-mobile-links {
+    position: absolute;
+    top: 100%;
+    right: 24px;
+    width: 230px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F7FF;
+    border: 1px solid #E4E2F1;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(11, 1, 60, 0.12);
+  }
+
+  .menu-mobile-links a {
+    padding: 12px;
+    color: #0B013C;
+    font-size: 15px;
+  }
+
+  .menu-mobile-links a:hover {
+    text-decoration: underline;
+  }
+
+  .principal {
+    padding-top: 140px;
+  }
+
+  .texto-header h1 {
+    font-size: 34px;
   }
 
   .saiba-mais-falar-equipe {
-    justify-content: center;
+    flex-wrap: wrap;
   }
 
-  .foto-header {
-    margin-top: 40px;
+  .antes-depois-cards,
+  .cards-usuarios {
+    flex-direction: column;
+  }
+
+  .card-branco,
+  .card-azul,
+  .card-usuario {
+    flex: auto;
+    width: 100%;
+    min-height: 0;
+  }
+
+  .como-funciona {
+    padding: 40px 24px;
   }
 
   .planos-grid {
-    flex-direction: column;
-    align-items: center;
-
+    flex-wrap: wrap;
     gap: 30px;
   }
 
   .plano-card {
     width: 100%;
-
     max-width: 500px;
   }
 
@@ -1830,13 +1502,20 @@ nav > img {
     width: 100%;
   }
 
+  .subir-seta {
+    right: 24px;
+    width: 48px;
+    height: 48px;
+  }
 }
 
-
 @media (max-width: 600px) {
-
   nav {
-    padding: 0 20px;
+    height: 68px;
+    padding: 0 22px;
+    gap: 14px;
+    box-shadow: none;
+    border-bottom: 1px solid #E4E2F1;
   }
 
   nav > img {
@@ -1848,54 +1527,86 @@ nav > img {
   }
 
   .cadastrar {
-    width: auto;
-    height: 42px;
+    width: 108px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
 
-    padding: 0 20px;
+  .menu-mobile summary {
+    width: 30px;
+    height: 44px;
+  }
 
-    font-size: 14px;
+  .menu-mobile-links {
+    right: 22px;
   }
 
   .principal {
-    padding-top: 130px;
-    padding-bottom: 60px;
+    width: 100%;
+    padding: 102px 22px 0;
+    display: block;
+  }
+
+  .texto-header {
+    width: 100%;
   }
 
   .texto-header h1 {
-    font-size: 35px;
+    margin-bottom: 18px;
+    font-size: 34px;
+    line-height: 1.08;
+    letter-spacing: -0.8px;
+  }
+
+  .texto-header .achismo {
+    color: #0D0533;
+  }
+
+  .texto-header > p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+  }
+
+  .foto-header,
+  .subir {
+    display: none;
   }
 
   .saiba-mais-falar-equipe {
+    padding-top: 20px;
     flex-direction: column;
+    gap: 10px;
   }
 
   .saiba-mais,
   .falar-equipe {
     width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    font-size: 13px;
   }
 
   .problema,
   .funcionalidades,
   .usuarios,
   .planos,
-  .faq-section {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .card1-problema,
-  .card2-problema,
-  .card3-problema,
-  .card4-problema,
-  .card-branco,
-  .card-azul,
-  .card-usuario,
-  .card-funcionalidade {
+  .faq-section,
+  .antes-depois {
     width: 100%;
+    margin: 54px auto 0;
+    padding: 0 22px;
   }
 
-  .como-funciona {
-    padding: 35px 20px;
+  .p-problema,
+  .label-antes-depois,
+  .label-funcionalidades,
+  .p-usuarios,
+  .faq-header > p {
+    margin: 0 0 12px;
+    font-size: 11px;
+    line-height: 16px;
   }
 
   .texto-problema h3,
@@ -1905,52 +1616,438 @@ nav > img {
   .planos h3,
   .faq-header h3 {
     font-size: 29px;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .texto-problema h3 br,
+  .texto-problema p br,
+  .antes-depois h3 br,
+  .funcionalidades h3 br,
+  .planos h3 br {
+    display: none;
+  }
+
+  .texto-problema > p:last-child,
+  .sub-funcionalidades {
+    margin: 10px 0 0;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+
+  .cards-problema {
+    margin-top: 24px;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .card1-problema,
+  .card2-problema,
+  .card3-problema,
+  .card4-problema {
+    width: 100%;
+    padding: 22px 28px;
+    border-radius: 15px;
+  }
+
+  .cards-problema img {
+    width: 42px;
+    margin-bottom: 12px;
+  }
+
+  .cards-problema h5,
+  .card-funcionalidade h5 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .card-p {
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .como-funciona {
+    width: calc(100% - 44px);
+    margin-top: 48px;
+    padding: 28px 24px 22px;
+    border-radius: 18px;
+  }
+
+  .como-funciona h6 {
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+
+  .como-funciona h3 {
+    margin-bottom: 24px;
+    font-size: 28px;
+    line-height: 1.14;
+  }
+
+  .como-funciona h3 br,
+  .como-funciona > img {
+    display: none;
+  }
+
+  .etapas-mobile {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    list-style: none;
+  }
+
+  .etapas-mobile li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .numero-etapa {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #24549A;
+    color: white;
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .etapas-mobile h5 {
+    margin: 16px 0 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .etapas-mobile p {
+    max-width: 280px;
+    margin: 0;
+    color: #9B99BD;
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .funcionamento {
+    width: 100%;
+    margin-top: 28px;
+    padding: 12px 8px;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 7px;
+    font-size: 12px;
+  }
+
+  .funcionamento img {
+    width: 16px;
+  }
+
+  .antes-depois-header,
+  .usuarios-header,
+  .faq-header {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .antes-depois-cards {
+    margin-top: 24px;
+    gap: 18px;
+  }
+
+  .card-branco,
+  .card-azul {
+    padding: 26px 28px;
+    border-radius: 18px;
+  }
+
+  .titulo-card {
+    margin-bottom: 24px;
+    font-size: 12px;
+  }
+
+  .item-card {
+    margin-bottom: 14px;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .item-card img {
+    width: 15px;
+    height: 18px;
+  }
+
+  .item-card span {
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  .grid-funcionalidades {
+    margin-top: 24px;
+    padding-bottom: 12px;
+    flex-wrap: nowrap;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #D5D3E1 transparent;
+  }
+
+  .card-funcionalidade {
+    flex: 0 0 86%;
+    min-height: 190px;
+    padding: 24px 28px;
+    border-radius: 16px;
+    scroll-snap-align: start;
+  }
+
+  .usuarios-header {
+    margin-bottom: 24px;
+  }
+
+  .cards-usuarios {
+    gap: 16px;
+  }
+
+  .card-usuario {
+    padding: 24px 28px;
+    border-radius: 16px;
+  }
+
+  .icone-usuario {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 16px;
+  }
+
+  .h5-card-usuario {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .card-usuario > .card-p {
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .item-usuario {
+    margin-top: 12px;
+    gap: 10px;
+  }
+
+  .item-usuario p {
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  .item-usuario span {
+    width: 20px;
+  }
+
+  .planos {
+    align-items: flex-start;
   }
 
   .toggle-wrapper {
-    width: 260px;
+    width: 200px;
+    height: 38px;
+    margin: 24px auto 0;
+    padding: 4px;
   }
 
   .toggle-thumb {
-    width: 124px;
+    top: 4px;
+    left: 4px;
+    width: 96px;
+    height: 30px;
   }
 
   #anual:checked ~ .toggle-wrapper .toggle-thumb {
-    left: 130px;
+    left: 100px;
+  }
+
+  .toggle-option {
+    font-size: 12px;
+  }
+
+  .planos-grid {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .plano-card,
+  .plano-card.destaque {
+    width: 100%;
+    max-width: none;
+    min-height: 325px;
+    padding: 36px 38px 24px;
+    border-radius: 16px;
+  }
+
+  .plano-card.destaque {
+    order: -1;
+  }
+
+  .badge {
+    top: -10px;
+    left: 24px;
+    padding: 5px 14px;
+    transform: none;
+    font-size: 10px;
+  }
+
+  .plano-nome {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .plano-preco {
+    margin-bottom: 8px;
+  }
+
+  .preco-mensal,
+  .preco-anual {
+    font-size: 29px;
+  }
+
+  .plano-preco > span:last-child {
+    font-size: 11px;
+  }
+
+  .plano-desc,
+  .plano-lista {
+    font-size: 11px;
+    line-height: 18px;
+  }
+
+  .plano-desc {
+    margin-bottom: 12px;
+  }
+
+  .plano-lista {
+    padding-left: 16px;
+  }
+
+  .plano-lista li {
+    padding: 4px 0;
+  }
+
+  .plano-btn {
+    height: 36px;
+    font-size: 12px;
+    border-radius: 7px;
+  }
+
+  .faq-section {
+    margin-bottom: 54px;
+    align-items: stretch;
+  }
+
+  .faq-header {
+    margin-bottom: 22px;
+  }
+
+  .faq-header h3 {
+    font-size: 28px;
+  }
+
+  .faq-lista summary {
+    min-height: 62px;
+    padding: 14px 0;
+    gap: 12px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .faq-icone {
+    width: 22px;
+    height: 22px;
+  }
+
+  .faq-icone::before,
+  .faq-icone::after {
+    top: 10px;
+    left: 6px;
+    width: 10px;
+  }
+
+  .faq-resposta {
+    padding: 0 24px 18px 0;
+    font-size: 12px;
+    line-height: 20px;
   }
 
   .footer {
-    padding: 50px 0 30px;
+    padding: 30px 22px 24px;
   }
 
   .footer-conteudo {
-    width: 90%;
+    width: 100%;
   }
 
   .footer-topo {
-    padding: 0 0 45px;
-
+    padding: 0 0 28px;
     flex-direction: column;
-
-    gap: 35px;
+    gap: 28px;
   }
 
-  .footer-contato {
-    min-width: 0;
+  .footer-logo img {
+    width: 190px;
+  }
+
+  .footer-coluna {
+    gap: 12px;
+  }
+
+  .footer-coluna h4 {
+    margin-bottom: 4px;
+    font-size: 11px;
+  }
+
+  .footer-coluna a {
+    font-size: 12px;
+  }
+
+  .footer-contato a {
+    overflow-wrap: anywhere;
+  }
+
+  .footer-contato svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
   }
 
   .footer-baixo {
+    min-height: 0;
+    padding-top: 24px;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
 
-    gap: 15px;
+  .footer-baixo p,
+  .area-restrita {
+    font-size: 10px;
   }
 
   .modal-cadastro {
-    padding: 10px;
+    padding: 12px;
   }
 
   .cadastro-box {
-    padding: 60px 20px 35px;
+    max-height: calc(100dvh - 24px);
+    padding: 74px 20px 30px;
   }
 
   .cadastro-box h2 {
@@ -1958,18 +2055,21 @@ nav > img {
   }
 
   .etapas-cadastro {
-    margin-bottom: 35px;
+    margin-bottom: 28px;
   }
 
   .etapa {
-    width: 34px;
-    height: 34px;
-
-    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
   }
 
   .linha-etapa {
-    margin: 0 7px;
+    margin: 0 6px;
+  }
+
+  .campo-cadastro input {
+    font-size: 16px;
   }
 
   .codigo-inputs {
@@ -1977,9 +2077,7 @@ nav > img {
   }
 
   .codigo-inputs input {
-    height: 58px;
-
+    height: 50px;
     font-size: 20px;
   }
-
 }
