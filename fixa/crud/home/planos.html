@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Planos | FIXA
+    </title>
+    <link rel="stylesheet" href="crud.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  
+      <link
+  rel="icon"
+  href="/fixa/crud/login/assets/icon-claro.svg"
+  media="(prefers-color-scheme: light)"
+  >
+
+  <link rel="icon" 
+  href="/fixa/crud/login/assets/icon-escuro.svg" 
+  type="image/svg+xml" 
+  media="(prefers-color-scheme: dark)">
+  </head>
+  <body>
+    <a class="pular-conteudo" href="#conteudo">
+      Pular para o conteúdo
+    </a>
+    <aside class="menu-lateral" aria-label="Menu administrativo">
+      <div class="marca-menu">
+        <details class="controle-menu">
+          <summary aria-label="Expandir ou recolher menu" title="Expandir ou recolher menu">
+            <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16"/>
+            </svg>
+          </summary>
+        </details>
+        <img src="logo-fixa.svg" alt="FIXA" width="84" height="32">
+      </div>
+      <nav class="navegacao" aria-label="Páginas do CRUD">
+        <a href="home.html" title="Página inicial">
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 11.5 12 4l9 7.5"/>
+            <path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/>
+          </svg>
+          <span class="texto-menu">
+            Página inicial
+          </span>
+        </a>
+        <p class="grupo-menu">
+          <span class="texto-menu">
+            Cadastros
+          </span>
+        </p>
+        <a href="instituicoes.html" title="Instituições">
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="3" width="16" height="18" rx="1.5"/>
+            <path d="M9 21v-5h6v5"/>
+            <path d="M8.5 7.5h1M14.5 7.5h1M8.5 11.5h1M14.5 11.5h1M8.5 15.5h1M14.5 15.5h1"/>
+          </svg>
+          <span class="texto-menu">
+            Instituições
+          </span>
+        </a>
+        <a href="usuarios.html" title="Usuários">
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span class="texto-menu">
+            Usuários
+          </span>
+        </a>
+        <a href="enderecos.html" title="Endereços">
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span class="texto-menu">
+            Endereços
+          </span>
+        </a>
+        <a href="super-administradores.html" title="Super Administradores">
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+          </svg>
+          <span class="texto-menu">
+            Super Administradores
+          </span>
+        </a>
+        <p class="grupo-menu">
+          <span class="texto-menu">
+            Configuração
+          </span>
+        </p>
+        <a href="planos.html" title="Planos" aria-current="page">
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/>
+            <path d="M3.3 8.3 12 13l8.7-4.7"/>
+            <path d="M12 22v-9"/>
+          </svg>
+          <span class="texto-menu">
+            Planos
+          </span>
+        </a>
+        <p class="grupo-menu">
+          <span class="texto-menu">
+            Operação
+          </span>
+        </p>
+        <a href="contratos.html" title="Contratos">
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <line x1="10" y1="9" x2="8" y2="9"/>
+          </svg>
+          <span class="texto-menu">
+            Contratos
+          </span>
+        </a>
+        <a href="pagamentos.html" title="Pagamentos">
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          <span class="texto-menu">
+            Pagamentos
+          </span>
+        </a>
+        <a href="fotos-usuario.html" title="Fotos de Usuário">
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <span class="texto-menu">
+            Fotos de Usuário
+          </span>
+        </a>
+      </nav>
+      <div class="rodape-menu">
+        <a href="acesso.html" class="voltar-login" title="Acesso administrativo">
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+          </svg>
+          <span class="texto-menu">
+            Acesso administrativo
+          </span>
+        </a>
+      </div>
+    </aside>
+    <div class="pagina">
+      <header class="cabecalho">
+        <div>
+          <h1>
+            Planos
+          </h1>
+          <p>
+            Gerenciamento de planos
+          </p>
+        </div>
+        <div class="acoes">
+          <a class="botao " href="planos-novo.html">
+            + Novo registro
+          </a>
+        </div>
+      </header>
+      <main class="conteudo" id="conteudo" tabindex="-1">
+        <p class="aviso-demonstracao">
+          Demonstração visual · Dados de exemplo · Alterações ainda não são gravadas.
+        </p>
+        <section class="cartao" aria-label="Lista de planos">
+          <div class="barra-tabela">
+            <span class="contagem">
+              3 registro(s)
+            </span>
+            <form class="filtros" action="planos.html" method="get" aria-describedby="aviso-filtros">
+              <div class="campo">
+                <label for="campo-filtro">
+                  Campo
+                </label>
+                <select id="campo-filtro" name="campo">
+                  <option value="id">
+                    ID
+                  </option>
+                  <option value="nome">
+                    Nome
+                  </option>
+                  <option value="valor_mensal">
+                    Valor mensal (R$)
+                  </option>
+                  <option value="duracao_meses">
+                    Duração (meses)
+                  </option>
+                  <option value="descricao">
+                    Descrição
+                  </option>
+                  <option value="data_criacao">
+                    Data de criação
+                  </option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="operador">
+                  Condição
+                </label>
+                <select id="operador" name="operador">
+                  <option value="igual">
+                    Igual a
+                  </option>
+                  <option value="contem">
+                    Contém
+                  </option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="valor-filtro">
+                  Valor
+                </label>
+                <input id="valor-filtro" type="search" name="valor" placeholder="Digite um valor">
+              </div>
+              <button class="botao botao-secundario" type="submit" disabled>
+                + Filtro
+              </button>
+            </form>
+          </div>
+          <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Tabela de planos com rolagem">
+            <table>
+              <caption id="aviso-filtros">
+                Planos · Os filtros serão ativados com a integração ao servidor.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    ID
+                  </th>
+                  <th scope="col">
+                    Nome
+                  </th>
+                  <th scope="col">
+                    Valor mensal (R$)
+                  </th>
+                  <th scope="col">
+                    Duração (meses)
+                  </th>
+                  <th scope="col">
+                    Descrição
+                  </th>
+                  <th scope="col">
+                    Data de criação
+                  </th>
+                  <th scope="col" class="coluna-acoes">
+                    Ações
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    Essencial
+                  </td>
+                  <td>
+                    R$ 299,90
+                  </td>
+                  <td>
+                    12
+                  </td>
+                  <td>
+                    Até 3 usuários gestores.
+                  </td>
+                  <td>
+                    01/11/2024 às 09:00
+                  </td>
+                  <td class="coluna-acoes">
+                    <div class="acoes-linha">
+                      <a href="planos-consultar-1.html" aria-label="Ver: Essencial">
+                        Ver
+                      </a>
+                      <a href="planos-editar-1.html" aria-label="Editar: Essencial">
+                        Editar
+                      </a>
+                      <a href="planos-excluir-1.html" class="link-excluir" aria-label="Excluir: Essencial">
+                        Excluir
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    Escala
+                  </td>
+                  <td>
+                    R$ 699,90
+                  </td>
+                  <td>
+                    12
+                  </td>
+                  <td>
+                    Usuários ilimitados e relatórios avançados.
+                  </td>
+                  <td>
+                    01/11/2024 às 09:05
+                  </td>
+                  <td class="coluna-acoes">
+                    <div class="acoes-linha">
+                      <a href="planos-consultar-2.html" aria-label="Ver: Escala">
+                        Ver
+                      </a>
+                      <a href="planos-editar-2.html" aria-label="Editar: Escala">
+                        Editar
+                      </a>
+                      <a href="planos-excluir-2.html" class="link-excluir" aria-label="Excluir: Escala">
+                        Excluir
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    3
+                  </td>
+                  <td>
+                    Anual Plus
+                  </td>
+                  <td>
+                    R$ 399,90
+                  </td>
+                  <td>
+                    24
+                  </td>
+                  <td>
+                    Fidelidade de 24 meses com desconto.
+                  </td>
+                  <td>
+                    15/01/2025 às 10:00
+                  </td>
+                  <td class="coluna-acoes">
+                    <div class="acoes-linha">
+                      <a href="planos-consultar-3.html" aria-label="Ver: Anual Plus">
+                        Ver
+                      </a>
+                      <a href="planos-editar-3.html" aria-label="Editar: Anual Plus">
+                        Editar
+                      </a>
+                      <a href="planos-excluir-3.html" class="link-excluir" aria-label="Excluir: Anual Plus">
+                        Excluir
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="rodape-tabela">
+            Mostrando 3 de 3 registro(s) de exemplo
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
