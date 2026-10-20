@@ -47,7 +47,7 @@ nav {
   display: flex;
   align-items: center;
 
-  background-color: rgba(249, 247, 255, 0.72);
+  background-color: rgba(231, 231, 231, 0.619);
 
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);

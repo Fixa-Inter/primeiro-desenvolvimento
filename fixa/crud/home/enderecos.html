@@ -1,372 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      Endereços | FIXA
-    </title>
-    <link rel="stylesheet" href="crud.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  
-      <link
-  rel="icon"
-  href="/fixa/crud/login/assets/icon-claro.svg"
-  media="(prefers-color-scheme: light)"
-  >
-
-  <link rel="icon" 
-  href="/fixa/crud/login/assets/icon-escuro.svg" 
-  type="image/svg+xml" 
-  media="(prefers-color-scheme: dark)">
-  </head>
-  <body>
-    <a class="pular-conteudo" href="#conteudo">
-      Pular para o conteúdo
-    </a>
-    <aside class="menu-lateral" aria-label="Menu administrativo">
-      <div class="marca-menu">
-        <details class="controle-menu">
-          <summary aria-label="Expandir ou recolher menu" title="Expandir ou recolher menu">
-            <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M4 7h16M4 12h16M4 17h16"/>
-            </svg>
-          </summary>
-        </details>
-        <img src="logo-fixa.svg" alt="FIXA" width="84" height="32">
-      </div>
-      <nav class="navegacao" aria-label="Páginas do CRUD">
-        <a href="home.html" title="Página inicial">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M3 11.5 12 4l9 7.5"/>
-            <path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endereços | FIXA</title>
+  <link rel="icon" href="simbolo-fixa.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="fontes/fontes.css">
+  <link rel="stylesheet" href="crud.css">
+  <script src="config.js" defer></script>
+  <script src="entidades.js" defer></script>
+  <script src="dados.js" defer></script>
+  <script src="crud.js" defer></script>
+</head>
+<body data-entidade="enderecos">
+<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+<aside class="menu-lateral" aria-label="Menu administrativo">
+  <button class="marca-menu" type="button" id="controle-menu" aria-label="Expandir menu lateral" aria-expanded="false"><img class="simbolo" src="simbolo-fixa.svg" alt=""><img class="logo-menu" src="logo-fixa.svg" alt="FIXA"></button>
+  <nav class="navegacao" aria-label="Páginas do CRUD"><a href="home.html" title="Página inicial"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 11.5 12 4l9 7.5"></path>
+            <path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"></path>
           </svg>
-          <span class="texto-menu">
-            Página inicial
-          </span>
-        </a>
-        <p class="grupo-menu">
-          <span class="texto-menu">
-            Cadastros
-          </span>
-        </p>
-        <a href="instituicoes.html" title="Instituições">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="4" y="3" width="16" height="18" rx="1.5"/>
-            <path d="M9 21v-5h6v5"/>
-            <path d="M8.5 7.5h1M14.5 7.5h1M8.5 11.5h1M14.5 11.5h1M8.5 15.5h1M14.5 15.5h1"/>
+          <span class="texto-menu">Página inicial</span></a><a href="instituicoes.html" title="Instituições"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="3" width="16" height="18" rx="1.5"></rect>
+            <path d="M9 21v-5h6v5"></path>
+            <path d="M8.5 7.5h1M14.5 7.5h1M8.5 11.5h1M14.5 11.5h1M8.5 15.5h1M14.5 15.5h1"></path>
           </svg>
-          <span class="texto-menu">
-            Instituições
-          </span>
-        </a>
-        <a href="usuarios.html" title="Usuários">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
+          <span class="texto-menu">Instituições</span></a><a href="usuarios.html" title="Usuários"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path><circle cx="9" cy="7" r="4"></circle></svg>
+          <span class="texto-menu">Usuários</span></a><a href="enderecos.html" title="Endereços" aria-current="page"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
           </svg>
-          <span class="texto-menu">
-            Usuários
-          </span>
-        </a>
-        <a href="enderecos.html" title="Endereços" aria-current="page">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/>
-            <circle cx="12" cy="10" r="3"/>
+          <span class="texto-menu">Endereços</span></a><a href="super-administradores.html" title="Super administradores"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
           </svg>
-          <span class="texto-menu">
-            Endereços
-          </span>
-        </a>
-        <a href="super-administradores.html" title="Super Administradores">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+          <span class="texto-menu">Super administradores</span></a><a href="planos.html" title="Planos"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 10 5-10 5L2 8l10-5ZM2 12l10 5 10-5M2 16l10 5 10-5"></path></svg>
+          <span class="texto-menu">Planos</span></a><a href="contratos.html" title="Contratos"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <line x1="10" y1="9" x2="8" y2="9"></line>
           </svg>
-          <span class="texto-menu">
-            Super Administradores
-          </span>
-        </a>
-        <p class="grupo-menu">
-          <span class="texto-menu">
-            Configuração
-          </span>
-        </p>
-        <a href="planos.html" title="Planos">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/>
-            <path d="M3.3 8.3 12 13l8.7-4.7"/>
-            <path d="M12 22v-9"/>
+          <span class="texto-menu">Contratos</span></a><a href="pagamentos.html" title="Pagamentos"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M2 10h20M6 16h4"></path></svg>
+          <span class="texto-menu">Pagamentos</span></a><a href="fotos-usuario.html" title="Fotos de usuário"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
           </svg>
-          <span class="texto-menu">
-            Planos
-          </span>
-        </a>
-        <p class="grupo-menu">
-          <span class="texto-menu">
-            Operação
-          </span>
-        </p>
-        <a href="contratos.html" title="Contratos">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="16" y1="13" x2="8" y2="13"/>
-            <line x1="16" y1="17" x2="8" y2="17"/>
-            <line x1="10" y1="9" x2="8" y2="9"/>
+          <span class="texto-menu">Fotos de usuário</span></a></nav>
+  <div class="rodape-menu"><a href="../login/login.html" class="voltar-login"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"></path>
           </svg>
-          <span class="texto-menu">
-            Contratos
-          </span>
-        </a>
-        <a href="pagamentos.html" title="Pagamentos">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="12" y1="1" x2="12" y2="23"/>
-            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-          </svg>
-          <span class="texto-menu">
-            Pagamentos
-          </span>
-        </a>
-        <a href="fotos-usuario.html" title="Fotos de Usuário">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21 15 16 10 5 21"/>
-          </svg>
-          <span class="texto-menu">
-            Fotos de Usuário
-          </span>
-        </a>
-      </nav>
-      <div class="rodape-menu">
-        <a href="acesso.html" class="voltar-login" title="Acesso administrativo">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
-          </svg>
-          <span class="texto-menu">
-            Acesso administrativo
-          </span>
-        </a>
-      </div>
-    </aside>
-    <div class="pagina">
-      <header class="cabecalho">
-        <div>
-          <h1>
-            Endereços
-          </h1>
-          <p>
-            Gerenciamento de endereços
-          </p>
-        </div>
-        <div class="acoes">
-          <a class="botao " href="enderecos-novo.html">
-            + Novo registro
-          </a>
-        </div>
-      </header>
-      <main class="conteudo" id="conteudo" tabindex="-1">
-        <p class="aviso-demonstracao">
-          Demonstração visual · Dados de exemplo · Alterações ainda não são gravadas.
-        </p>
-        <section class="cartao" aria-label="Lista de endereços">
-          <div class="barra-tabela">
-            <span class="contagem">
-              2 registro(s)
-            </span>
-            <form class="filtros" action="enderecos.html" method="get" aria-describedby="aviso-filtros">
+          <span class="texto-menu">Sair</span></a></div>
+</aside>
+<div class="pagina"><header class="cabecalho"><div><h1>Endereços</h1><p>Consulte, filtre e edite os registros de endereços.</p></div><div class="acoes"><button type="button" id="desfazer" class="botao botao-secundario" disabled><span aria-hidden="true">↶</span> Desfazer</button><a class="botao" href="enderecos-novo.html" id="novo">+ Novo</a></div></header>
+<main class="conteudo" id="conteudo"><section class="cartao lista" aria-label="Registros de endereços">
+  <div class="barra-tabela"><strong id="contagem" role="status">0 registros</strong>
+    <form id="filtro-form" class="filtros" role="search">
+      <label class="sr-only" for="campo-filtro">Campo</label><select id="campo-filtro" name="campo"><option value="id">ID</option><option value="nome">Nome do endereço</option><option value="rua">Rua</option><option value="numero">Número</option><option value="complemento">Complemento</option><option value="bairro">Bairro</option><option value="cidade">Cidade</option><option value="estado">Estado (UF)</option><option value="cep">CEP</option><option value="instituicao">Instituição</option><option value="cnpj">CNPJ</option><option value="data_criacao">Data de criação</option></select>
+      <label class="sr-only" for="operador-filtro">Operador</label><select id="operador-filtro" name="operador"><option value="igual">=</option><option value="diferente">≠</option><option value="contem">Contém</option><option value="maior">&gt;</option><option value="menor">&lt;</option></select>
+      <label class="sr-only" for="valor-filtro">Valor do filtro</label><input id="valor-filtro" name="valor" placeholder="Valor" required>
+      <button class="botao botao-secundario" type="submit">+ Filtro</button>
+    </form>
+    <div class="pesquisa"><span aria-hidden="true"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg></span><label class="sr-only" for="pesquisa">Pesquisar em todos os campos</label><input id="pesquisa" type="search" placeholder="Pesquisar em todos os campos" autocomplete="off"></div>
+  </div>
+  <div id="filtros-ativos" class="filtros-ativos" aria-label="Filtros ativos"></div>
+  <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Tabela de endereços, com rolagem horizontal e vertical">
+    <table><caption class="sr-only">Endereços. Clique no nome de uma coluna para alternar a ordem.</caption><thead><tr><th scope="col" data-campo="id" aria-sort="none"><button type="button" class="ordenar" data-ordenar="id">ID<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="nome" aria-sort="none"><button type="button" class="ordenar" data-ordenar="nome">Nome do endereço<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="rua" aria-sort="none"><button type="button" class="ordenar" data-ordenar="rua">Rua<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="numero" aria-sort="none"><button type="button" class="ordenar" data-ordenar="numero">Número<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="complemento" aria-sort="none"><button type="button" class="ordenar" data-ordenar="complemento">Complemento<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="bairro" aria-sort="none"><button type="button" class="ordenar" data-ordenar="bairro">Bairro<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="cidade" aria-sort="none"><button type="button" class="ordenar" data-ordenar="cidade">Cidade<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="estado" aria-sort="none"><button type="button" class="ordenar" data-ordenar="estado">Estado (UF)<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="cep" aria-sort="none"><button type="button" class="ordenar" data-ordenar="cep">CEP<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="instituicao" aria-sort="none" class="coluna-relacionada"><button type="button" class="ordenar" data-ordenar="instituicao">Instituição<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="cnpj" aria-sort="none"><button type="button" class="ordenar" data-ordenar="cnpj">CNPJ<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="data_criacao" aria-sort="none"><button type="button" class="ordenar" data-ordenar="data_criacao">Data de criação<span aria-hidden="true">↕</span></button></th><th scope="col" class="coluna-acoes">Ações</th></tr></thead><tbody id="registros"><tr><td colspan="13" class="vazio">Carregando registros…</td></tr></tbody></table>
+  </div>
+  <footer class="rodape-tabela" id="rodape-tabela">Nenhum registro cadastrado</footer>
+</section><p class="modo-dados" id="modo-dados"></p><p class="mensagem" id="mensagem" role="status" aria-live="polite"></p></main></div>
+<dialog id="registro-dialog" class="modal formulario-cartao" aria-labelledby="titulo-formulario">
+  <div class="titulo-cartao"><h2 id="titulo-formulario">Cadastrar registro</h2><button class="fechar" type="button" data-fechar aria-label="Fechar formulário">×</button></div>
+  <form action="enderecos.html" method="post" aria-describedby="aviso-formulario" id="registro-form">
+            <input type="hidden" name="id" value=""><input type="hidden" name="operacao" value="novo">
+            <div class="corpo-formulario">
+              <p class="orientacao" id="aviso-formulario">Campos com * são obrigatórios.</p>
               <div class="campo">
-                <label for="campo-filtro">
-                  Campo
+    <label for="nome">Nome do endereço *</label>
+    <input type="text" id="nome" name="nome" maxlength="50" placeholder="Ex: Unidade Centro" required>
+  </div><div class="campo">
+                <label for="rua">Rua *</label>
+                <input type="text" id="rua" name="rua" maxlength="40" placeholder="Ex: Av. das Palmeiras" value="" required="required">
+              </div>
+              <div class="campo">
+                <label for="numero">
+                  Número
                 </label>
-                <select id="campo-filtro" name="campo">
-                  <option value="id">
-                    ID
+                <input type="text" id="numero" name="numero" maxlength="10" placeholder="Ex: 450" value="">
+              </div>
+              <div class="campo">
+                <label for="bairro">
+                  Bairro
+                </label>
+                <input type="text" id="bairro" name="bairro" maxlength="40" placeholder="Ex: Centro" value="">
+              </div>
+              <div class="campo">
+                <label for="complemento">
+                  Complemento
+                </label>
+                <input type="text" id="complemento" name="complemento" maxlength="50" placeholder="Ex: Bloco B, apto 12" value="">
+              </div>
+              <div class="campo">
+                <label for="cidade">
+                  Cidade
+                </label>
+                <input type="text" id="cidade" name="cidade" maxlength="40" placeholder="Ex: Campinas" value="">
+              </div>
+              <div class="campo">
+                <label for="estado">
+                  Estado (UF)
+                </label>
+                <select id="estado" name="estado">
+                  <option value="">
+                    Selecione
                   </option>
-                  <option value="rua">
-                    Rua
+                  <option value="AC">
+                    AC
                   </option>
-                  <option value="bairro">
-                    Bairro
+                  <option value="AL">
+                    AL
                   </option>
-                  <option value="cidade">
-                    Cidade
+                  <option value="AP">
+                    AP
                   </option>
-                  <option value="estado">
-                    Estado (UF)
+                  <option value="AM">
+                    AM
                   </option>
-                  <option value="cep">
-                    CEP
+                  <option value="BA">
+                    BA
                   </option>
-                  <option value="fk_instituicao_id">
-                    Instituição
+                  <option value="CE">
+                    CE
                   </option>
-                  <option value="cnpj">
-                    CNPJ
+                  <option value="DF">
+                    DF
                   </option>
-                  <option value="data_criacao">
-                    Data de criação
+                  <option value="ES">
+                    ES
+                  </option>
+                  <option value="GO">
+                    GO
+                  </option>
+                  <option value="MA">
+                    MA
+                  </option>
+                  <option value="MT">
+                    MT
+                  </option>
+                  <option value="MS">
+                    MS
+                  </option>
+                  <option value="MG">
+                    MG
+                  </option>
+                  <option value="PA">
+                    PA
+                  </option>
+                  <option value="PB">
+                    PB
+                  </option>
+                  <option value="PR">
+                    PR
+                  </option>
+                  <option value="PE">
+                    PE
+                  </option>
+                  <option value="PI">
+                    PI
+                  </option>
+                  <option value="RJ">
+                    RJ
+                  </option>
+                  <option value="RN">
+                    RN
+                  </option>
+                  <option value="RS">
+                    RS
+                  </option>
+                  <option value="RO">
+                    RO
+                  </option>
+                  <option value="RR">
+                    RR
+                  </option>
+                  <option value="SC">
+                    SC
+                  </option>
+                  <option value="SP">
+                    SP
+                  </option>
+                  <option value="SE">
+                    SE
+                  </option>
+                  <option value="TO">
+                    TO
                   </option>
                 </select>
               </div>
               <div class="campo">
-                <label for="operador">
-                  Condição
+                <label for="cep">
+                  CEP
                 </label>
-                <select id="operador" name="operador">
-                  <option value="igual">
-                    Igual a
-                  </option>
-                  <option value="contem">
-                    Contém
-                  </option>
-                </select>
+                <input type="text" id="cep" name="cep" aria-describedby="ajuda-cep" inputmode="numeric" pattern="[0-9]{8}" maxlength="8" value="">
+                <small class="ajuda" id="ajuda-cep">
+                  Informe somente os 8 dígitos, sem pontuação.
+                </small>
               </div>
               <div class="campo">
-                <label for="valor-filtro">
-                  Valor
+                <label for="fk_instituicao_id">
+                  Instituição
                 </label>
-                <input id="valor-filtro" type="search" name="valor" placeholder="Digite um valor">
+                <select id="fk_instituicao_id" name="fk_instituicao_id">
+                  <option value="">Sem vínculo</option></select>
               </div>
-              <button class="botao botao-secundario" type="submit" disabled>
-                + Filtro
+              <div class="campo">
+                <label for="cnpj">
+                  CNPJ
+                </label>
+                <input type="text" id="cnpj" name="cnpj" aria-describedby="ajuda-cnpj" inputmode="numeric" pattern="[0-9]{14}" maxlength="14" value="">
+                <small class="ajuda" id="ajuda-cnpj">Informe um valor único.</small>
+              </div>
+            </div>
+            <div class="rodape-formulario">
+              <a class="botao botao-secundario" href="enderecos.html" data-fechar="">
+                Cancelar
+              </a>
+              <button type="submit" class="botao">
+                Salvar
               </button>
-            </form>
-          </div>
-          <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Tabela de endereços com rolagem">
-            <table>
-              <caption id="aviso-filtros">
-                Endereços · Os filtros serão ativados com a integração ao servidor.
-              </caption>
-              <thead>
-                <tr>
-                  <th scope="col">
-                    ID
-                  </th>
-                  <th scope="col">
-                    Rua
-                  </th>
-                  <th scope="col">
-                    Bairro
-                  </th>
-                  <th scope="col">
-                    Cidade
-                  </th>
-                  <th scope="col">
-                    Estado (UF)
-                  </th>
-                  <th scope="col">
-                    CEP
-                  </th>
-                  <th scope="col">
-                    Instituição
-                  </th>
-                  <th scope="col">
-                    CNPJ
-                  </th>
-                  <th scope="col">
-                    Data de criação
-                  </th>
-                  <th scope="col" class="coluna-acoes">
-                    Ações
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    1
-                  </td>
-                  <td>
-                    Av. das Palmeiras
-                  </td>
-                  <td>
-                    Centro
-                  </td>
-                  <td>
-                    Campinas
-                  </td>
-                  <td>
-                    SP
-                  </td>
-                  <td>
-                    13010000
-                  </td>
-                  <td>
-                    Colégio Aurora
-                  </td>
-                  <td>
-                    12345678000195
-                  </td>
-                  <td>
-                    10/02/2025 às 09:00
-                  </td>
-                  <td class="coluna-acoes">
-                    <div class="acoes-linha">
-                      <a href="enderecos-consultar-1.html" aria-label="Ver: Av. das Palmeiras, 450 — Campinas/SP">
-                        Ver
-                      </a>
-                      <a href="enderecos-editar-1.html" aria-label="Editar: Av. das Palmeiras, 450 — Campinas/SP">
-                        Editar
-                      </a>
-                      <a href="enderecos-excluir-1.html" class="link-excluir" aria-label="Excluir: Av. das Palmeiras, 450 — Campinas/SP">
-                        Excluir
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    2
-                  </td>
-                  <td>
-                    Rua Sete de Setembro
-                  </td>
-                  <td>
-                    Jardim Europa
-                  </td>
-                  <td>
-                    Ribeirão Preto
-                  </td>
-                  <td>
-                    SP
-                  </td>
-                  <td>
-                    14020000
-                  </td>
-                  <td>
-                    Instituto Vértice
-                  </td>
-                  <td>
-                    98765432000198
-                  </td>
-                  <td>
-                    22/05/2025 às 09:00
-                  </td>
-                  <td class="coluna-acoes">
-                    <div class="acoes-linha">
-                      <a href="enderecos-consultar-2.html" aria-label="Ver: Rua Sete de Setembro, 120 — Ribeirão Preto/SP">
-                        Ver
-                      </a>
-                      <a href="enderecos-editar-2.html" aria-label="Editar: Rua Sete de Setembro, 120 — Ribeirão Preto/SP">
-                        Editar
-                      </a>
-                      <a href="enderecos-excluir-2.html" class="link-excluir" aria-label="Excluir: Rua Sete de Setembro, 120 — Ribeirão Preto/SP">
-                        Excluir
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="rodape-tabela">
-            Mostrando 2 de 2 registro(s) de exemplo
-          </div>
-        </section>
-      </main>
-    </div>
-  </body>
-</html>
+            </div>
+          </form>
+        
+</dialog>
+<dialog id="consulta-dialog" class="modal formulario-cartao" aria-labelledby="titulo-consulta"><div class="titulo-cartao"><h2 id="titulo-consulta">Consultar registro</h2><button type="button" class="fechar" data-fechar aria-label="Fechar consulta">×</button></div><dl class="dados-registro" id="dados-consulta"></dl><div class="rodape-formulario"><button type="button" class="botao botao-secundario" data-fechar>Fechar</button></div></dialog>
+<dialog id="excluir-dialog" class="modal confirmacao" aria-labelledby="titulo-exclusao"><div class="titulo-cartao"><h2 id="titulo-exclusao">Excluir registro</h2><button class="fechar" type="button" data-fechar aria-label="Cancelar exclusão">×</button></div>
+  <form id="excluir-form" action="enderecos.html" method="post"><input type="hidden" name="operacao" value="excluir"><input type="hidden" name="id"><div class="corpo-formulario"><p id="confirmacao-texto"></p><p>Esta ação removerá o registro da lista.</p></div><div class="rodape-formulario"><button type="button" class="botao botao-secundario" data-fechar>Cancelar</button><button type="submit" class="botao botao-excluir">Excluir</button></div></form>
+</dialog>
+<noscript><p class="sem-js">Ative o JavaScript para cadastrar e gerenciar registros nesta versão.</p></noscript>
+</body></html>
