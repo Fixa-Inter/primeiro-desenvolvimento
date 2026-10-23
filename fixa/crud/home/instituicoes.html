@@ -1,141 +1,541 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instituições | FIXA</title>
-  <link rel="icon" href="simbolo-fixa.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="fontes/fontes.css">
-  <link rel="stylesheet" href="crud.css">
-  <script src="config.js" defer></script>
-  <script src="entidades.js" defer></script>
-  <script src="dados.js" defer></script>
-  <script src="crud.js" defer></script>
-</head>
-<body data-entidade="instituicoes">
-<a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
-<aside class="menu-lateral" aria-label="Menu administrativo">
-  <button class="marca-menu" type="button" id="controle-menu" aria-label="Expandir menu lateral" aria-expanded="false"><img class="simbolo" src="simbolo-fixa.svg" alt=""><img class="logo-menu" src="logo-fixa.svg" alt="FIXA"></button>
-  <nav class="navegacao" aria-label="Páginas do CRUD"><a href="home.html" title="Página inicial"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instituições | FIXA</title>
+    <link rel="icon" href="assets/simbolo-fixa.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="fontes/fontes.css" />
+    <link rel="stylesheet" href="crud.css" />
+    <script src="JavaScript/config.js" defer></script>
+    <script src="JavaScript/entidades.js" defer></script>
+    <script src="JavaScript/dados.js" defer></script>
+    <script src="JavaScript/crud.js" defer></script>
+  </head>
+  <body data-entidade="instituicoes">
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+    <aside class="menu-lateral" aria-label="Menu administrativo">
+      <button
+        class="marca-menu"
+        type="button"
+        id="controle-menu"
+        aria-label="Expandir menu lateral"
+        aria-expanded="false"
+      >
+        <img class="simbolo" src="assets/simbolo-fixa.svg" alt="" />
+        <img class="logo-menu" src="assets/logo-fixa.svg" alt="FIXA" />
+      </button>
+      <nav class="navegacao" aria-label="Páginas do CRUD">
+        <a href="home.html" title="Página inicial">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <path d="M3 11.5 12 4l9 7.5"></path>
             <path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"></path>
           </svg>
-          <span class="texto-menu">Página inicial</span></a><a href="instituicoes.html" title="Instituições" aria-current="page"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <span class="texto-menu">Página inicial</span>
+        </a>
+        <a href="instituicoes.html" title="Instituições" aria-current="page">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <rect x="4" y="3" width="16" height="18" rx="1.5"></rect>
             <path d="M9 21v-5h6v5"></path>
             <path d="M8.5 7.5h1M14.5 7.5h1M8.5 11.5h1M14.5 11.5h1M8.5 15.5h1M14.5 15.5h1"></path>
           </svg>
-          <span class="texto-menu">Instituições</span></a><a href="usuarios.html" title="Usuários"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path><circle cx="9" cy="7" r="4"></circle></svg>
-          <span class="texto-menu">Usuários</span></a><a href="enderecos.html" title="Endereços"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <span class="texto-menu">Instituições</span>
+        </a>
+        <a href="usuarios.html" title="Usuários">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+            ></path>
+            <circle cx="9" cy="7" r="4"></circle>
+          </svg>
+          <span class="texto-menu">Usuários</span>
+        </a>
+        <a href="enderecos.html" title="Endereços">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path>
             <circle cx="12" cy="10" r="3"></circle>
           </svg>
-          <span class="texto-menu">Endereços</span></a><a href="super-administradores.html" title="Super administradores"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <span class="texto-menu">Endereços</span>
+        </a>
+        <a href="super-admin.html" title="Super administradores">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
           </svg>
-          <span class="texto-menu">Super administradores</span></a><a href="planos.html" title="Planos"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 10 5-10 5L2 8l10-5ZM2 12l10 5 10-5M2 16l10 5 10-5"></path></svg>
-          <span class="texto-menu">Planos</span></a><a href="contratos.html" title="Contratos"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <span class="texto-menu">Super administradores</span>
+        </a>
+        <a href="planos.html" title="Planos">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="m12 3 10 5-10 5L2 8l10-5ZM2 12l10 5 10-5M2 16l10 5 10-5"></path>
+          </svg>
+          <span class="texto-menu">Planos</span>
+        </a>
+        <a href="contratos.html" title="Contratos">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
             <line x1="16" y1="13" x2="8" y2="13"></line>
             <line x1="16" y1="17" x2="8" y2="17"></line>
             <line x1="10" y1="9" x2="8" y2="9"></line>
           </svg>
-          <span class="texto-menu">Contratos</span></a><a href="pagamentos.html" title="Pagamentos"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M2 10h20M6 16h4"></path></svg>
-          <span class="texto-menu">Pagamentos</span></a><a href="fotos-usuario.html" title="Fotos de usuário"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <span class="texto-menu">Contratos</span>
+        </a>
+        <a href="pagamentos.html" title="Pagamentos">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="M2 10h20M6 16h4"></path>
+          </svg>
+          <span class="texto-menu">Pagamentos</span>
+        </a>
+        <a href="foto-usuario.html" title="Fotos de usuário">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <rect x="3" y="3" width="18" height="18" rx="2"></rect>
             <circle cx="8.5" cy="8.5" r="1.5"></circle>
             <polyline points="21 15 16 10 5 21"></polyline>
           </svg>
-          <span class="texto-menu">Fotos de usuário</span></a></nav>
-  <div class="rodape-menu"><a href="../login/login.html" class="voltar-login"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <span class="texto-menu">Fotos de usuário</span>
+        </a>
+      </nav>
+      <div class="rodape-menu">
+        <a href="../login/login.html" class="voltar-login">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            aria-hidden="true"
+          >
             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"></path>
           </svg>
-          <span class="texto-menu">Sair</span></a></div>
-</aside>
-<div class="pagina"><header class="cabecalho"><div><h1>Instituições</h1><p>Consulte, filtre e edite os registros de instituições.</p></div><div class="acoes"><button type="button" id="desfazer" class="botao botao-secundario" disabled><span aria-hidden="true">↶</span> Desfazer</button><a class="botao" href="instituicoes-novo.html" id="novo">+ Novo</a></div></header>
-<main class="conteudo" id="conteudo"><section class="cartao lista" aria-label="Registros de instituições">
-  <div class="barra-tabela"><strong id="contagem" role="status">0 registros</strong>
-    <form id="filtro-form" class="filtros" role="search">
-      <label class="sr-only" for="campo-filtro">Campo</label><select id="campo-filtro" name="campo"><option value="id">ID</option><option value="nome">Nome</option><option value="email_corporativo">E-mail corporativo</option><option value="data_cadastro">Data de cadastro</option><option value="dominio_email">Domínio do e-mail</option><option value="tipo_instituicao">Tipo de instituição</option></select>
-      <label class="sr-only" for="operador-filtro">Operador</label><select id="operador-filtro" name="operador"><option value="igual">=</option><option value="diferente">≠</option><option value="contem">Contém</option><option value="maior">&gt;</option><option value="menor">&lt;</option></select>
-      <label class="sr-only" for="valor-filtro">Valor do filtro</label><input id="valor-filtro" name="valor" placeholder="Valor" required>
-      <button class="botao botao-secundario" type="submit">+ Filtro</button>
-    </form>
-    <div class="pesquisa"><span aria-hidden="true"><svg class="icone" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg></span><label class="sr-only" for="pesquisa">Pesquisar em todos os campos</label><input id="pesquisa" type="search" placeholder="Pesquisar em todos os campos" autocomplete="off"></div>
-  </div>
-  <div id="filtros-ativos" class="filtros-ativos" aria-label="Filtros ativos"></div>
-  <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Tabela de instituições, com rolagem horizontal e vertical">
-    <table><caption class="sr-only">Instituições. Clique no nome de uma coluna para alternar a ordem.</caption><thead><tr><th scope="col" data-campo="id" aria-sort="none"><button type="button" class="ordenar" data-ordenar="id">ID<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="nome" aria-sort="none"><button type="button" class="ordenar" data-ordenar="nome">Nome<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="email_corporativo" aria-sort="none"><button type="button" class="ordenar" data-ordenar="email_corporativo">E-mail corporativo<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="data_cadastro" aria-sort="none"><button type="button" class="ordenar" data-ordenar="data_cadastro">Data de cadastro<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="dominio_email" aria-sort="none"><button type="button" class="ordenar" data-ordenar="dominio_email">Domínio do e-mail<span aria-hidden="true">↕</span></button></th><th scope="col" data-campo="tipo_instituicao" aria-sort="none"><button type="button" class="ordenar" data-ordenar="tipo_instituicao">Tipo de instituição<span aria-hidden="true">↕</span></button></th><th scope="col" class="coluna-acoes">Ações</th></tr></thead><tbody id="registros"><tr><td colspan="7" class="vazio">Carregando registros…</td></tr></tbody></table>
-  </div>
-  <footer class="rodape-tabela" id="rodape-tabela">Nenhum registro cadastrado</footer>
-</section><p class="modo-dados" id="modo-dados"></p><p class="mensagem" id="mensagem" role="status" aria-live="polite"></p></main></div>
-<dialog id="registro-dialog" class="modal formulario-cartao" aria-labelledby="titulo-formulario">
-  <div class="titulo-cartao"><h2 id="titulo-formulario">Cadastrar registro</h2><button class="fechar" type="button" data-fechar aria-label="Fechar formulário">×</button></div>
-  <form action="instituicoes.html" method="post" aria-describedby="aviso-formulario" id="registro-form">
-            <input type="hidden" name="id" value=""><input type="hidden" name="operacao" value="novo">
-            <div class="corpo-formulario">
-              <p class="orientacao" id="aviso-formulario">Campos com * são obrigatórios.</p>
-              <div class="campo">
-                <label for="nome">Nome *</label>
-                <input type="text" id="nome" name="nome" maxlength="50" placeholder="Ex: Colégio Aurora" value="" required="required">
-              </div>
-              <div class="campo">
-                <label for="email_corporativo">E-mail corporativo *</label>
-                <input type="email" id="email_corporativo" name="email_corporativo" maxlength="50" placeholder="Ex: contato@suainstituicao.com.br" autocomplete="email" value="" required="required">
-              </div>
-              <div class="campo">
-                <label for="data_cadastro">
-                  Data de cadastro
-                </label>
-                <input type="date" id="data_cadastro" name="data_cadastro" value="">
-              </div>
-              <div class="campo">
-                <label for="dominio_email">
-                  Domínio do e-mail
-                </label>
-                <input type="text" id="dominio_email" name="dominio_email" aria-describedby="ajuda-dominio_email" maxlength="100" placeholder="Ex: aurora.edu.br" value="">
-                <small class="ajuda" id="ajuda-dominio_email">Informe um valor único.</small>
-              </div>
-              <div class="campo">
-                <label for="tipo_instituicao">Tipo de instituição *</label>
-                <select id="tipo_instituicao" name="tipo_instituicao" required>
-                  <option value="">
-                    Selecione
-                  </option>
-                  <option value="1">
-                    Escola
-                  </option>
-                  <option value="2">
-                    Faculdade
-                  </option>
-                  <option value="3">
-                    Empresa
-                  </option>
-                  <option value="4">
-                    Órgão Público
-                  </option>
-                </select>
-              </div>
-            <div class="campo">
-    <label for="senha">Senha *</label>
-    <input type="password" id="senha" name="senha" autocomplete="new-password" minlength="6" placeholder="Digite uma senha segura" required aria-describedby="ajuda-senha">
-    <small class="ajuda" id="ajuda-senha">Na edição, deixe em branco para manter a senha atual.</small>
-  </div></div>
-            <div class="rodape-formulario">
-              <a class="botao botao-secundario" href="instituicoes.html" data-fechar="">
-                Cancelar
-              </a>
-              <button type="submit" class="botao">
-                Salvar
-              </button>
+          <span class="texto-menu">Sair</span>
+        </a>
+      </div>
+    </aside>
+    <div class="pagina">
+      <header class="cabecalho">
+        <div>
+          <h1>Instituições</h1>
+          <p>Consulte, filtre e edite os registros de instituições.</p>
+        </div>
+        <div class="acoes">
+          <button type="button" id="desfazer" class="botao botao-secundario" disabled>
+            <span aria-hidden="true">↶</span>
+            Desfazer
+          </button>
+          <a class="botao" id="novo" href="cadastro-instituicao.html">+ Novo</a>
+        </div>
+      </header>
+      <main class="conteudo" id="conteudo">
+        <section class="cartao lista" aria-label="Registros de instituições">
+          <div class="barra-tabela">
+            <strong id="contagem" role="status">1 registro</strong>
+            <form id="filtro-form" class="filtros" role="search">
+              <label class="sr-only" for="campo-filtro">Campo</label>
+              <select id="campo-filtro" name="campo">
+                <option value="id">ID</option>
+                <option value="nome">Nome</option>
+                <option value="email_corporativo">E-mail corporativo</option>
+                <option value="data_cadastro">Data de cadastro</option>
+                <option value="tipo_instituicao">Tipo de instituição</option>
+                <option value="dominio_email">Domínio do e-mail</option>
+              </select>
+              <label class="sr-only" for="operador-filtro">Operador</label>
+              <select id="operador-filtro" name="operador">
+                <option value="IGUAL">=</option>
+              </select>
+              <label class="sr-only" for="valor-filtro">Valor do filtro</label>
+              <input
+                type="number"
+                step="1"
+                id="valor-filtro"
+                name="valor"
+                placeholder="Valor"
+                required
+              />
+              <button class="botao botao-secundario" type="submit">+ Filtro</button>
+            </form>
+            <div class="pesquisa">
+              <span aria-hidden="true">
+                <svg
+                  class="icone"
+                  viewbox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                  <path d="m16 16 5 5"></path>
+                </svg>
+              </span>
+              <label class="sr-only" for="pesquisa">Pesquisar em todos os campos</label>
+              <input
+                id="pesquisa"
+                type="search"
+                placeholder="Pesquisar em todos os campos"
+                autocomplete="off"
+              />
             </div>
-          </form>
-        
-</dialog>
-<dialog id="consulta-dialog" class="modal formulario-cartao" aria-labelledby="titulo-consulta"><div class="titulo-cartao"><h2 id="titulo-consulta">Consultar registro</h2><button type="button" class="fechar" data-fechar aria-label="Fechar consulta">×</button></div><dl class="dados-registro" id="dados-consulta"></dl><div class="rodape-formulario"><button type="button" class="botao botao-secundario" data-fechar>Fechar</button></div></dialog>
-<dialog id="excluir-dialog" class="modal confirmacao" aria-labelledby="titulo-exclusao"><div class="titulo-cartao"><h2 id="titulo-exclusao">Excluir registro</h2><button class="fechar" type="button" data-fechar aria-label="Cancelar exclusão">×</button></div>
-  <form id="excluir-form" action="instituicoes.html" method="post"><input type="hidden" name="operacao" value="excluir"><input type="hidden" name="id"><div class="corpo-formulario"><p id="confirmacao-texto"></p><p>Esta ação removerá o registro da lista.</p></div><div class="rodape-formulario"><button type="button" class="botao botao-secundario" data-fechar>Cancelar</button><button type="submit" class="botao botao-excluir">Excluir</button></div></form>
-</dialog>
-<noscript><p class="sem-js">Ative o JavaScript para cadastrar e gerenciar registros nesta versão.</p></noscript>
-</body></html>
+          </div>
+          <div id="filtros-ativos" class="filtros-ativos" aria-label="Filtros ativos"></div>
+          <div
+            class="tabela-rolagem"
+            tabindex="0"
+            role="region"
+            aria-label="Tabela de instituições, com rolagem horizontal e vertical"
+          >
+            <table>
+              <caption class="sr-only">
+                Instituições. Clique nos cabeçalhos com setas para alternar entre ordem crescente,
+                decrescente e padrão por ID.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" data-campo="id" aria-sort="ascending">
+                    <button type="button" class="ordenar" data-ordenar="id">
+                      ID
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
+                  </th>
+                  <th scope="col" data-campo="nome" aria-sort="none">
+                    <button type="button" class="ordenar" data-ordenar="nome">
+                      Nome
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
+                  </th>
+                  <th scope="col" data-campo="email_corporativo" aria-sort="none">
+                    <button type="button" class="ordenar" data-ordenar="email_corporativo">
+                      E-mail corporativo
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
+                  </th>
+                  <th scope="col" data-campo="data_cadastro" aria-sort="none">
+                    <button type="button" class="ordenar" data-ordenar="data_cadastro">
+                      Data de cadastro
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
+                  </th>
+                  <th scope="col" data-campo="dominio_email" aria-sort="none">
+                    <button type="button" class="ordenar" data-ordenar="dominio_email">
+                      Domínio do e-mail
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
+                  </th>
+                  <th scope="col" data-campo="tipo_instituicao" aria-sort="none">
+                    <button type="button" class="ordenar" data-ordenar="tipo_instituicao">
+                      Tipo de instituição
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
+                  </th>
+                  <th scope="col" class="coluna-acoes">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="registros">
+                <tr data-temporario="true">
+                  <td><button disabled type="button" class="consultar" data-acao="consultar" data-id="1" aria-label="Consultar registro #1">#1</button></td>
+                  <td>Escola Exemplo</td>
+                  <td>contato@escola.example</td>
+                  <td>23/10/2026</td>
+                  <td>escola.example</td>
+                  <td>Escola</td>
+                  <td class="coluna-acoes">
+                    <div class="acoes-linha">
+                      <button disabled type="button" class="editar" data-acao="editar" data-id="1" aria-label="Editar registro #1">
+                        <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                          <path d="M16 3l5 5L8 21H3v-5L16 3Z M14 5l5 5"></path>
+                        </svg>
+                        Editar
+                      </button>
+                      <button disabled type="button" class="excluir" data-acao="excluir" data-id="1" aria-label="Excluir registro #1">
+                        <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                          <path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"></path>
+                        </svg>
+                        Excluir
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <footer class="rodape-tabela" id="rodape-tabela">1 de 1 registros</footer>
+        </section>
+
+        <p class="mensagem" id="mensagem" role="status" aria-live="polite"></p>
+      </main>
+    </div>
+    <dialog id="registro-dialog" class="modal" aria-labelledby="titulo-formulario">
+      <div class="titulo-cartao">
+        <h2 id="titulo-formulario">Cadastrar registro</h2>
+        <button class="fechar" type="button" data-fechar aria-label="Fechar formulário">×</button>
+      </div>
+      <form
+        action="instituicoes.html"
+        method="post"
+        aria-describedby="aviso-formulario"
+        id="registro-form"
+      >
+        <input type="hidden" name="id" value="" />
+        <input type="hidden" name="operacao" value="novo" />
+        <div class="corpo-formulario">
+          <p class="orientacao" id="aviso-formulario">Campos com * são obrigatórios.</p>
+          <div class="campo">
+            <label for="nome">Nome *</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              maxlength="50"
+              placeholder="Ex: Colégio Aurora"
+              value=""
+              required="required"
+            />
+          </div>
+          <div class="campo">
+            <label for="email_corporativo">E-mail corporativo *</label>
+            <input
+              type="email"
+              id="email_corporativo"
+              name="email_corporativo"
+              maxlength="50"
+              placeholder="Ex: contato@suainstituicao.com.br"
+              autocomplete="email"
+              value=""
+              required="required"
+            />
+          </div>
+          <div class="campo">
+            <label for="data_cadastro">Data de cadastro</label>
+            <input type="date" id="data_cadastro" name="data_cadastro" value="" />
+          </div>
+          <div class="campo">
+            <label for="dominio_email">Domínio do e-mail</label>
+            <input
+              type="text"
+              id="dominio_email"
+              name="dominio_email"
+              aria-describedby="ajuda-dominio_email"
+              maxlength="100"
+              placeholder="Ex: aurora.edu.br"
+              value=""
+            />
+            <small class="ajuda" id="ajuda-dominio_email">Informe um valor único.</small>
+          </div>
+          <div class="campo">
+            <label for="tipo_instituicao">Tipo de instituição *</label>
+            <select id="tipo_instituicao" name="tipo_instituicao" required>
+              <option value="">Selecione</option>
+              <option value="1">Escola</option>
+              <option value="2">Faculdade</option>
+              <option value="3">Empresa</option>
+              <option value="4">Órgão Público</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="senha">Senha *</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              autocomplete="new-password"
+              minlength="6"
+              placeholder="Digite uma senha segura"
+              required
+              aria-describedby="ajuda-senha"
+            />
+            <small class="ajuda" id="ajuda-senha">
+              Na edição, deixe em branco para manter a senha atual.
+            </small>
+          </div>
+        </div>
+        <div class="rodape-formulario">
+          <button class="botao botao-secundario" data-fechar="" type="button">Cancelar</button>
+          <button type="submit" class="botao">Salvar</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="consulta-dialog" class="modal" aria-labelledby="titulo-consulta">
+      <div class="titulo-cartao">
+        <h2 id="titulo-consulta">Consultar registro</h2>
+        <button type="button" class="fechar" data-fechar aria-label="Fechar consulta">×</button>
+      </div>
+      <dl class="dados-registro" id="dados-consulta"></dl>
+      <div class="rodape-formulario">
+        <button type="button" class="botao botao-secundario" data-fechar>Fechar</button>
+      </div>
+    </dialog>
+    <dialog id="excluir-dialog" class="modal confirmacao" aria-labelledby="titulo-exclusao">
+      <div class="titulo-cartao">
+        <h2 id="titulo-exclusao">Excluir registro</h2>
+        <button class="fechar" type="button" data-fechar aria-label="Cancelar exclusão">×</button>
+      </div>
+      <form id="excluir-form" action="instituicoes.html" method="post">
+        <input type="hidden" name="operacao" value="excluir" />
+        <input type="hidden" name="id" />
+        <div class="corpo-formulario">
+          <p id="confirmacao-texto"></p>
+          <p>Esta ação removerá o registro da lista.</p>
+        </div>
+        <div class="rodape-formulario">
+          <button type="button" class="botao botao-secundario" data-fechar>Cancelar</button>
+          <button type="submit" class="botao botao-excluir">Excluir</button>
+        </div>
+      </form>
+    </dialog>
+    <noscript>
+      <p class="sem-js">Ative o JavaScript para cadastrar e gerenciar registros nesta versão.</p>
+    </noscript>
+  </body>
+</html>
