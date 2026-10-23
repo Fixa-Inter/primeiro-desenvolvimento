@@ -1,356 +1,549 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      Pagamentos | FIXA
-    </title>
-    <link rel="stylesheet" href="crud.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  
-      <link
-  rel="icon"
-  href="/fixa/crud/login/assets/icon-claro.svg"
-  media="(prefers-color-scheme: light)"
-  >
-
-  <link rel="icon" 
-  href="/fixa/crud/login/assets/icon-escuro.svg" 
-  type="image/svg+xml" 
-  media="(prefers-color-scheme: dark)">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagamentos | FIXA</title>
+    <link rel="icon" href="assets/simbolo-fixa.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="fontes/fontes.css" />
+    <link rel="stylesheet" href="crud.css" />
+    <script src="JavaScript/config.js" defer></script>
+    <script src="JavaScript/entidades.js" defer></script>
+    <script src="JavaScript/dados.js" defer></script>
+    <script src="JavaScript/crud.js" defer></script>
   </head>
-  <body>
-    <a class="pular-conteudo" href="#conteudo">
-      Pular para o conteúdo
-    </a>
+  <body data-entidade="pagamentos">
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
     <aside class="menu-lateral" aria-label="Menu administrativo">
-      <div class="marca-menu">
-        <details class="controle-menu">
-          <summary aria-label="Expandir ou recolher menu" title="Expandir ou recolher menu">
-            <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M4 7h16M4 12h16M4 17h16"/>
-            </svg>
-          </summary>
-        </details>
-        <img src="logo-fixa.svg" alt="FIXA" width="84" height="32">
-      </div>
+      <button
+        class="marca-menu"
+        type="button"
+        id="controle-menu"
+        aria-label="Expandir menu lateral"
+        aria-expanded="false"
+      >
+        <img class="simbolo" src="assets/simbolo-fixa.svg" alt="" />
+        <img class="logo-menu" src="assets/logo-fixa.svg" alt="FIXA" />
+      </button>
       <nav class="navegacao" aria-label="Páginas do CRUD">
         <a href="home.html" title="Página inicial">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M3 11.5 12 4l9 7.5"/>
-            <path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/>
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 11.5 12 4l9 7.5"></path>
+            <path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"></path>
           </svg>
-          <span class="texto-menu">
-            Página inicial
-          </span>
+          <span class="texto-menu">Página inicial</span>
         </a>
-        <p class="grupo-menu">
-          <span class="texto-menu">
-            Cadastros
-          </span>
-        </p>
         <a href="instituicoes.html" title="Instituições">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="4" y="3" width="16" height="18" rx="1.5"/>
-            <path d="M9 21v-5h6v5"/>
-            <path d="M8.5 7.5h1M14.5 7.5h1M8.5 11.5h1M14.5 11.5h1M8.5 15.5h1M14.5 15.5h1"/>
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="4" y="3" width="16" height="18" rx="1.5"></rect>
+            <path d="M9 21v-5h6v5"></path>
+            <path d="M8.5 7.5h1M14.5 7.5h1M8.5 11.5h1M14.5 11.5h1M8.5 15.5h1M14.5 15.5h1"></path>
           </svg>
-          <span class="texto-menu">
-            Instituições
-          </span>
+          <span class="texto-menu">Instituições</span>
         </a>
         <a href="usuarios.html" title="Usuários">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-            <circle cx="12" cy="7" r="4"/>
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+            ></path>
+            <circle cx="9" cy="7" r="4"></circle>
           </svg>
-          <span class="texto-menu">
-            Usuários
-          </span>
+          <span class="texto-menu">Usuários</span>
         </a>
         <a href="enderecos.html" title="Endereços">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/>
-            <circle cx="12" cy="10" r="3"/>
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
           </svg>
-          <span class="texto-menu">
-            Endereços
-          </span>
+          <span class="texto-menu">Endereços</span>
         </a>
-        <a href="super-administradores.html" title="Super Administradores">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+        <a href="super-admin.html" title="Super administradores">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
           </svg>
-          <span class="texto-menu">
-            Super Administradores
-          </span>
+          <span class="texto-menu">Super administradores</span>
         </a>
-        <p class="grupo-menu">
-          <span class="texto-menu">
-            Configuração
-          </span>
-        </p>
         <a href="planos.html" title="Planos">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/>
-            <path d="M3.3 8.3 12 13l8.7-4.7"/>
-            <path d="M12 22v-9"/>
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="m12 3 10 5-10 5L2 8l10-5ZM2 12l10 5 10-5M2 16l10 5 10-5"></path>
           </svg>
-          <span class="texto-menu">
-            Planos
-          </span>
+          <span class="texto-menu">Planos</span>
         </a>
-        <p class="grupo-menu">
-          <span class="texto-menu">
-            Operação
-          </span>
-        </p>
         <a href="contratos.html" title="Contratos">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="16" y1="13" x2="8" y2="13"/>
-            <line x1="16" y1="17" x2="8" y2="17"/>
-            <line x1="10" y1="9" x2="8" y2="9"/>
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <line x1="10" y1="9" x2="8" y2="9"></line>
           </svg>
-          <span class="texto-menu">
-            Contratos
-          </span>
+          <span class="texto-menu">Contratos</span>
         </a>
         <a href="pagamentos.html" title="Pagamentos" aria-current="page">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="12" y1="1" x2="12" y2="23"/>
-            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="M2 10h20M6 16h4"></path>
           </svg>
-          <span class="texto-menu">
-            Pagamentos
-          </span>
+          <span class="texto-menu">Pagamentos</span>
         </a>
-        <a href="fotos-usuario.html" title="Fotos de Usuário">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21 15 16 10 5 21"/>
+        <a href="foto-usuario.html" title="Fotos de usuário">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
           </svg>
-          <span class="texto-menu">
-            Fotos de Usuário
-          </span>
+          <span class="texto-menu">Fotos de usuário</span>
         </a>
       </nav>
       <div class="rodape-menu">
-        <a href="acesso.html" class="voltar-login" title="Acesso administrativo">
-          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+        <a href="../login/login.html" class="voltar-login">
+          <svg
+            class="icone"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            aria-hidden="true"
+          >
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"></path>
           </svg>
-          <span class="texto-menu">
-            Acesso administrativo
-          </span>
+          <span class="texto-menu">Sair</span>
         </a>
       </div>
     </aside>
     <div class="pagina">
       <header class="cabecalho">
         <div>
-          <h1>
-            Pagamentos
-          </h1>
-          <p>
-            Gerenciamento de pagamentos
-          </p>
+          <h1>Pagamentos</h1>
+          <p>Consulte, filtre e edite os registros de pagamentos.</p>
         </div>
         <div class="acoes">
-          <a class="botao " href="pagamentos-novo.html">
-            + Novo registro
-          </a>
+          <button type="button" id="desfazer" class="botao botao-secundario" disabled>
+            <span aria-hidden="true">↶</span>
+            Desfazer
+          </button>
+          <a class="botao" id="novo" href="cadastro-pagamento.html">+ Novo</a>
         </div>
       </header>
-      <main class="conteudo" id="conteudo" tabindex="-1">
-        <p class="aviso-demonstracao">
-          Demonstração visual · Dados de exemplo · Alterações ainda não são gravadas.
-        </p>
-        <section class="cartao" aria-label="Lista de pagamentos">
+      <main class="conteudo" id="conteudo">
+        <section class="cartao lista" aria-label="Registros de pagamentos">
           <div class="barra-tabela">
-            <span class="contagem">
-              2 registro(s)
-            </span>
-            <form class="filtros" action="pagamentos.html" method="get" aria-describedby="aviso-filtros">
-              <div class="campo">
-                <label for="campo-filtro">
-                  Campo
-                </label>
-                <select id="campo-filtro" name="campo">
-                  <option value="id">
-                    ID
-                  </option>
-                  <option value="valor">
-                    Valor (R$)
-                  </option>
-                  <option value="data_pagamento">
-                    Data/hora do pagamento
-                  </option>
-                  <option value="foi_realizado">
-                    Foi realizado
-                  </option>
-                  <option value="fk_contrato_id">
-                    Contrato
-                  </option>
-                  <option value="metodo_pagamento">
-                    Método de pagamento
-                  </option>
-                  <option value="data_criacao">
-                    Data de criação
-                  </option>
-                </select>
-              </div>
-              <div class="campo">
-                <label for="operador">
-                  Condição
-                </label>
-                <select id="operador" name="operador">
-                  <option value="igual">
-                    Igual a
-                  </option>
-                  <option value="contem">
-                    Contém
-                  </option>
-                </select>
-              </div>
-              <div class="campo">
-                <label for="valor-filtro">
-                  Valor
-                </label>
-                <input id="valor-filtro" type="search" name="valor" placeholder="Digite um valor">
-              </div>
-              <button class="botao botao-secundario" type="submit" disabled>
-                + Filtro
-              </button>
+            <strong id="contagem" role="status">1 registro</strong>
+            <form id="filtro-form" class="filtros" role="search">
+              <label class="sr-only" for="campo-filtro">Campo</label>
+              <select id="campo-filtro" name="campo">
+                <option value="id">ID</option>
+                <option value="valor">Valor (R$)</option>
+                <option value="data_pagamento">Data/hora do pagamento</option>
+                <option value="foi_realizado">Foi realizado</option>
+                <option value="fk_contrato_id">Contrato</option>
+                <option value="metodo_pagamento">Método de pagamento</option>
+              </select>
+              <label class="sr-only" for="operador-filtro">Operador</label>
+              <select id="operador-filtro" name="operador">
+                <option value="IGUAL">=</option>
+              </select>
+              <label class="sr-only" for="valor-filtro">Valor do filtro</label>
+              <input
+                type="number"
+                step="1"
+                id="valor-filtro"
+                name="valor"
+                placeholder="Valor"
+                required
+              />
+              <button class="botao botao-secundario" type="submit">+ Filtro</button>
             </form>
+            <div class="pesquisa">
+              <span aria-hidden="true">
+                <svg
+                  class="icone"
+                  viewbox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                  <path d="m16 16 5 5"></path>
+                </svg>
+              </span>
+              <label class="sr-only" for="pesquisa">Pesquisar em todos os campos</label>
+              <input
+                id="pesquisa"
+                type="search"
+                placeholder="Pesquisar em todos os campos"
+                autocomplete="off"
+              />
+            </div>
           </div>
-          <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Tabela de pagamentos com rolagem">
+          <div id="filtros-ativos" class="filtros-ativos" aria-label="Filtros ativos"></div>
+          <div
+            class="tabela-rolagem"
+            tabindex="0"
+            role="region"
+            aria-label="Tabela de pagamentos, com rolagem horizontal e vertical"
+          >
             <table>
-              <caption id="aviso-filtros">
-                Pagamentos · Os filtros serão ativados com a integração ao servidor.
+              <caption class="sr-only">
+                Pagamentos. Clique nos cabeçalhos com setas para alternar entre ordem crescente,
+                decrescente e padrão por ID.
               </caption>
               <thead>
                 <tr>
-                  <th scope="col">
-                    ID
+                  <th scope="col" data-campo="id" aria-sort="ascending">
+                    <button type="button" class="ordenar" data-ordenar="id">
+                      ID
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
                   </th>
-                  <th scope="col">
-                    Valor (R$)
+                  <th scope="col" data-campo="valor" aria-sort="none">
+                    <button type="button" class="ordenar" data-ordenar="valor">
+                      Valor (R$)
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
                   </th>
-                  <th scope="col">
-                    Data/hora do pagamento
+                  <th scope="col" data-campo="data_pagamento" aria-sort="none">
+                    <button type="button" class="ordenar" data-ordenar="data_pagamento">
+                      Data/hora do pagamento
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
                   </th>
-                  <th scope="col">
-                    Foi realizado
+                  <th scope="col" data-campo="foi_realizado" aria-sort="none">
+                    <button type="button" class="ordenar" data-ordenar="foi_realizado">
+                      Foi realizado
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
                   </th>
-                  <th scope="col">
-                    Contrato
+                  <th scope="col" data-campo="contrato" aria-sort="none">
+                    <button type="button" class="ordenar" data-ordenar="contrato">
+                      Contrato
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
                   </th>
-                  <th scope="col">
-                    Método de pagamento
+                  <th scope="col" data-campo="metodo_pagamento" aria-sort="none">
+                    <button type="button" class="ordenar" data-ordenar="metodo_pagamento">
+                      Método de pagamento
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
                   </th>
-                  <th scope="col">
-                    Data de criação
+                  <th scope="col" data-campo="data_criacao" aria-sort="none">
+                    <button type="button" class="ordenar" data-ordenar="data_criacao">
+                      Data de criação
+                      <svg
+                        class="icone-ordenacao"
+                        viewBox="0 0 12 18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path class="seta-cima" d="m2 6 4-4 4 4"></path>
+                        <path class="seta-baixo" d="m2 12 4 4 4-4"></path>
+                      </svg>
+                    </button>
                   </th>
-                  <th scope="col" class="coluna-acoes">
-                    Ações
+                  <th scope="col" data-campo="status_contrato" class="coluna-relacionada">
+                    Status do contrato
                   </th>
+                  <th scope="col" data-campo="data_vencimento" class="coluna-relacionada">
+                    Data de vencimento
+                  </th>
+                  <th scope="col" data-campo="plano" class="coluna-relacionada">Plano</th>
+                  <th scope="col" data-campo="estado" class="coluna-relacionada">Estado (UF)</th>
+                  <th scope="col" data-campo="instituicao" class="coluna-relacionada">
+                    Instituição
+                  </th>
+                  <th scope="col" data-campo="em_dia" class="coluna-relacionada">Em dia?</th>
+                  <th scope="col" class="coluna-acoes">Ações</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    1
-                  </td>
-                  <td>
-                    R$ 299,90
-                  </td>
-                  <td>
-                    10/02/2025 às 09:30
-                  </td>
-                  <td>
-                    <span class="etiqueta etiqueta-verde">
-                      Sim
-                    </span>
-                  </td>
-                  <td>
-                    Contrato #1
-                  </td>
-                  <td>
-                    <span class="etiqueta">
-                      Crédito
-                    </span>
-                  </td>
-                  <td>
-                    10/02/2025 às 09:30
-                  </td>
+              <tbody id="registros">
+                <tr data-temporario="true">
+                  <td><button disabled type="button" class="consultar" data-acao="consultar" data-id="1" aria-label="Consultar registro #1">#1</button></td>
+                  <td>R$ 299,90</td>
+                  <td>23/10/2026 10:00</td>
+                  <td><span class="etiqueta etiqueta-verde">Sim</span></td>
+                  <td>Contrato #1 — Essencial</td>
+                  <td>Pix</td>
+                  <td>23/10/2026 10:00</td>
+                  <td class="coluna-relacionada"><span class="etiqueta etiqueta-verde">Ativo</span></td>
+                  <td class="coluna-relacionada">23/10/2027</td>
+                  <td class="coluna-relacionada">Essencial</td>
+                  <td class="coluna-relacionada">SP</td>
+                  <td class="coluna-relacionada">Escola Exemplo</td>
+                  <td class="coluna-relacionada"><span class="etiqueta etiqueta-verde">Sim</span></td>
                   <td class="coluna-acoes">
                     <div class="acoes-linha">
-                      <a href="pagamentos-consultar-1.html" aria-label="Ver: Pagamento #1">
-                        Ver
-                      </a>
-                      <a href="pagamentos-editar-1.html" aria-label="Editar: Pagamento #1">
+                      <button disabled type="button" class="editar" data-acao="editar" data-id="1" aria-label="Editar registro #1">
+                        <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                          <path d="M16 3l5 5L8 21H3v-5L16 3Z M14 5l5 5"></path>
+                        </svg>
                         Editar
-                      </a>
-                      <a href="pagamentos-excluir-1.html" class="link-excluir" aria-label="Excluir: Pagamento #1">
+                      </button>
+                      <button disabled type="button" class="excluir" data-acao="excluir" data-id="1" aria-label="Excluir registro #1">
+                        <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                          <path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"></path>
+                        </svg>
                         Excluir
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    2
-                  </td>
-                  <td>
-                    R$ 699,90
-                  </td>
-                  <td>
-                    22/05/2025 às 14:00
-                  </td>
-                  <td>
-                    <span class="etiqueta etiqueta-verde">
-                      Sim
-                    </span>
-                  </td>
-                  <td>
-                    Contrato #2
-                  </td>
-                  <td>
-                    <span class="etiqueta">
-                      Pix
-                    </span>
-                  </td>
-                  <td>
-                    22/05/2025 às 14:00
-                  </td>
-                  <td class="coluna-acoes">
-                    <div class="acoes-linha">
-                      <a href="pagamentos-consultar-2.html" aria-label="Ver: Pagamento #2">
-                        Ver
-                      </a>
-                      <a href="pagamentos-editar-2.html" aria-label="Editar: Pagamento #2">
-                        Editar
-                      </a>
-                      <a href="pagamentos-excluir-2.html" class="link-excluir" aria-label="Excluir: Pagamento #2">
-                        Excluir
-                      </a>
+                      </button>
                     </div>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="rodape-tabela">
-            Mostrando 2 de 2 registro(s) de exemplo
-          </div>
+          <footer class="rodape-tabela" id="rodape-tabela">1 de 1 registros</footer>
         </section>
+
+        <p class="mensagem" id="mensagem" role="status" aria-live="polite"></p>
       </main>
     </div>
+    <dialog id="registro-dialog" class="modal" aria-labelledby="titulo-formulario">
+      <div class="titulo-cartao">
+        <h2 id="titulo-formulario">Cadastrar registro</h2>
+        <button class="fechar" type="button" data-fechar aria-label="Fechar formulário">×</button>
+      </div>
+      <form
+        action="pagamentos.html"
+        method="post"
+        aria-describedby="aviso-formulario"
+        id="registro-form"
+      >
+        <input type="hidden" name="id" value="" />
+        <input type="hidden" name="operacao" value="novo" />
+        <div class="corpo-formulario">
+          <p class="orientacao" id="aviso-formulario">Campos com * são obrigatórios.</p>
+          <div class="campo">
+            <label for="valor">Valor (R$) *</label>
+            <input
+              type="number"
+              id="valor"
+              name="valor"
+              min="0"
+              step="0.01"
+              max="99999999.99"
+              placeholder="Ex: 299.90"
+              value=""
+              required="required"
+            />
+          </div>
+          <div class="campo">
+            <label for="data_pagamento">Data/hora do pagamento</label>
+            <input type="datetime-local" id="data_pagamento" name="data_pagamento" value="" />
+          </div>
+          <div class="campo">
+            <label class="alternancia" for="foi_realizado">
+              <input type="checkbox" id="foi_realizado" name="foi_realizado" value="true" />
+              Foi realizado
+            </label>
+          </div>
+          <div class="campo">
+            <label for="fk_contrato_id">Contrato</label>
+            <select id="fk_contrato_id" name="fk_contrato_id">
+              <option value="">Sem vínculo</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="metodo_pagamento">Método de pagamento *</label>
+            <select id="metodo_pagamento" name="metodo_pagamento" required>
+              <option value="">Selecione</option>
+              <option value="1">Crédito</option>
+              <option value="2">Débito</option>
+              <option value="3">Pix</option>
+            </select>
+          </div>
+        </div>
+        <div class="rodape-formulario">
+          <button class="botao botao-secundario" data-fechar="" type="button">Cancelar</button>
+          <button type="submit" class="botao">Salvar</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="consulta-dialog" class="modal" aria-labelledby="titulo-consulta">
+      <div class="titulo-cartao">
+        <h2 id="titulo-consulta">Consultar registro</h2>
+        <button type="button" class="fechar" data-fechar aria-label="Fechar consulta">×</button>
+      </div>
+      <dl class="dados-registro" id="dados-consulta"></dl>
+      <div class="rodape-formulario">
+        <button type="button" class="botao botao-secundario" data-fechar>Fechar</button>
+      </div>
+    </dialog>
+    <dialog id="excluir-dialog" class="modal confirmacao" aria-labelledby="titulo-exclusao">
+      <div class="titulo-cartao">
+        <h2 id="titulo-exclusao">Excluir registro</h2>
+        <button class="fechar" type="button" data-fechar aria-label="Cancelar exclusão">×</button>
+      </div>
+      <form id="excluir-form" action="pagamentos.html" method="post">
+        <input type="hidden" name="operacao" value="excluir" />
+        <input type="hidden" name="id" />
+        <div class="corpo-formulario">
+          <p id="confirmacao-texto"></p>
+          <p>Esta ação removerá o registro da lista.</p>
+        </div>
+        <div class="rodape-formulario">
+          <button type="button" class="botao botao-secundario" data-fechar>Cancelar</button>
+          <button type="submit" class="botao botao-excluir">Excluir</button>
+        </div>
+      </form>
+    </dialog>
+    <noscript>
+      <p class="sem-js">Ative o JavaScript para cadastrar e gerenciar registros nesta versão.</p>
+    </noscript>
   </body>
 </html>
