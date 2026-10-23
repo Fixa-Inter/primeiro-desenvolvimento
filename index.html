@@ -35,7 +35,7 @@
 
       <div class="nav-buttons">
         <a class="entrar" href="/fixa/crud/login/login.html/fixa/">Entrar</a>
-        <a class="cadastrar" href="#modal-cadastro">Cadastrar</a>
+        <a class="cadastrar" href="fixa/cadastro/cadastro-escolha.html">Cadastrar</a>
       </div>
 
       <details class="menu-mobile">
@@ -475,17 +475,49 @@
     <div class="imagem-manu"><img src="/fixa/assets/manu-foto.svg" alt="foto manu"></div>
     
     <div class="texto-imagem-manu">
-      <div texto-manu>
+      <div class="texto-manu">
         <p class="p-manu">05 · CHATBOT MANU</p>
         <h3>Conheça a Manu, o chatbot do Fixa</h3>
         <p class="sub-funcionalidades">Com a Manu você abre e busca solicitações, lista ordens de serviço, registra ocorrências, anexa fotos <br>
         à OS, consulta técnicos disponíveis e registra feedback.
         </p>
         <div class="chat-com-manu">
-          <div>
-            <img src="fixa/assets/bolinha-manu.svg" alt="manu-perfil">
+          <div class="dentro-chat-manu">
+            <div>
+              <div class="perfil-manu">
+                <img src="fixa/assets/bolinha-manu.svg" alt="manu-perfil"> 
+                <div class="perfil-manu-texto">
+                  <p class="manu">Manu</p>
+                  <div class="perfil-manu-texto-online">
+                    <img src="/fixa/assets/bola-verde.svg" alt="">
+                    <p>Assistente do Fixa · online</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="conversas-manu">
+              <div class="conversa">
+                <p>O ar-condicionado da sala 12 está vazando.</p>
+              </div>
+              <div class="conversa2">
+                <p>Solicitação #1042 registrada com sucesso.</p>
+              </div>
+              <div class="conversa2">
+                <p>Quer anexar uma foto à OS ou ver suas ordens de serviço?</p>
+              </div>
+            </div>
+            <div class="botoes-manu">
+              <div class="botao-manu">
+                <p>Listar minhas OS</p>
+              </div>
+              <div class="botao-manu">
+                <p>Anexar foto à OS</p>
+              </div>
+            </div>
           </div>
         </div>
+        
       </div>
     </div>
 
@@ -875,194 +907,7 @@
 
   </footer>
 
-  <div class="modal-cadastro" id="modal-cadastro">
-
-    <div class="cadastro-box">
-
-      <a href="#" class="fechar-cadastro" aria-label="Fechar cadastro">×</a>
-
-      <div class="etapas-cadastro">
-        <div class="etapa ativa">1</div>
-        <div class="linha-etapa"></div>
-        <div class="etapa">2</div>
-        <div class="linha-etapa"></div>
-        <div class="etapa">3</div>
-        <div class="linha-etapa"></div>
-        <div class="etapa">4</div>
-      </div>
-
-      <div class="passo-cadastro passo-1 ativo">
-
-        <h2>Cadastre sua instituição</h2>
-
-        <p class="cadastro-descricao">
-          Leva menos de 2 minutos. Depois enviaremos um código de acesso para o e-mail informado.
-        </p>
-
-        <form action="cadastro-instituicao" method="post">
-
-          <div class="campo-cadastro">
-
-            <label for="instituicao">Nome da instituição *</label>
-
-            <input
-              type="text"
-              id="instituicao"
-              name="instituicao"
-              placeholder="Ex: Instituto J&F - Escola de Tecnologia"
-              required
-            >
-
-          </div>
-
-          <div class="campo-cadastro">
-
-            <label for="cnpj">CNPJ *</label>
-
-            <input
-              type="text"
-              id="cnpj"
-              name="cnpj"
-              placeholder="Ex: 00.000.000/0000-00"
-              required
-            >
-
-          </div>
-
-          <div class="campo-cadastro">
-
-            <label for="email-cadastro">E-mail corporativo *</label>
-
-            <input
-              type="email"
-              id="email-cadastro"
-              name="email"
-              placeholder="Ex: contato@suainstituicao.com.br"
-              required
-            >
-
-          </div>
-
-          <button type="submit" class="botao-principal">
-            Continuar
-          </button>
-
-        </form>
-
-        <p class="ja-cadastrado">
-          Já é cadastrado?
-          <a href="/fixa/crud/login/login.html">Entrar</a>
-        </p>
-
-      </div>
-
-      <div class="passo-cadastro passo-2">
-
-        <div class="icone-email">✉</div>
-
-        <h2>Verifique seu e-mail</h2>
-
-        <p class="cadastro-descricao">
-          Enviamos um código de acesso temporário para o e-mail informado.
-          Ele é válido por 15 minutos.
-        </p>
-
-        <form action="verificar-codigo" method="post">
-
-          <div class="codigo-area">
-
-            <label>Código de verificação *</label>
-
-            <div class="codigo-inputs">
-              <input type="text" name="codigo1" maxlength="1" inputmode="numeric" required>
-              <input type="text" name="codigo2" maxlength="1" inputmode="numeric" required>
-              <input type="text" name="codigo3" maxlength="1" inputmode="numeric" required>
-              <input type="text" name="codigo4" maxlength="1" inputmode="numeric" required>
-              <input type="text" name="codigo5" maxlength="1" inputmode="numeric" required>
-              <input type="text" name="codigo6" maxlength="1" inputmode="numeric" required>
-            </div>
-
-          </div>
-
-          <button type="submit" class="botao-principal">
-            Confirmar código
-          </button>
-
-        </form>
-
-        <p class="reenviar">
-          Não recebeu?
-          <a href="reenviar-codigo">Reenviar e-mail</a>
-        </p>
-
-      </div>
-
-      <div class="passo-cadastro passo-3">
-
-        <h2>Defina sua senha</h2>
-
-        <p class="cadastro-descricao">
-          Escolha a senha definitiva de acesso.
-        </p>
-
-        <form action="definir-senha" method="post">
-
-          <div class="campo-cadastro campo-senha">
-
-            <label for="nova-senha">Nova senha *</label>
-
-            <input
-              type="password"
-              id="nova-senha"
-              name="senha"
-              placeholder="Mínimo 8 caracteres, com letras e números"
-              required
-            >
-
-          </div>
-
-          <div class="campo-cadastro campo-senha">
-
-            <label for="confirmar-senha">Confirmar nova senha *</label>
-
-            <input
-              type="password"
-              id="confirmar-senha"
-              name="confirmarSenha"
-              placeholder="Repita a nova senha"
-              required
-            >
-
-          </div>
-
-          <button type="submit" class="botao-principal">
-            Salvar senha e ativar cadastro
-          </button>
-
-        </form>
-
-      </div>
-
-      <div class="passo-cadastro passo-4">
-
-        <div class="icone-concluido">✓</div>
-
-        <h2>Cadastro concluído!</h2>
-
-        <p class="cadastro-descricao">
-          Sua instituição já está ativa no Fixa.
-          Use seu e-mail e a nova senha para entrar no painel.
-        </p>
-
-        <a href="/fixa/crud/login/login.html" class="botao-principal link-login">
-          Ir para o login
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
+  
 
 </body>
 </html>
