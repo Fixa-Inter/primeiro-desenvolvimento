@@ -7,13 +7,358 @@
     <link rel="icon" href="assets/simbolo-fixa.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="fontes/fontes.css" />
     <link rel="stylesheet" href="crud.css" />
+
     <script src="JavaScript/config.js" defer></script>
     <script src="JavaScript/entidades.js" defer></script>
     <script src="JavaScript/dados.js" defer></script>
     <script src="JavaScript/crud.js" defer></script>
+
+    <style>
+      .painel-graficos {
+        margin-top: 24px;
+        color: #0e1240;
+        font-family: Inter, Arial, sans-serif;
+      }
+
+      .painel-graficos * {
+        box-sizing: border-box;
+      }
+
+      .painel-graficos .resumos,
+      .painel-graficos .graficos {
+        display: grid;
+        gap: 20px;
+      }
+
+      .painel-graficos .resumos {
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 20px;
+      }
+
+      .painel-graficos .graficos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .painel-graficos .resumo,
+      .painel-graficos .grafico {
+        min-width: 0;
+        padding: 24px;
+        border: 1px solid #e5e8f2;
+        border-radius: 16px;
+        background-color: #ffffff;
+      }
+
+      .painel-graficos .resumo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .painel-graficos .resumo-titulo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #6b7280;
+        font-size: 15px;
+      }
+
+      .painel-graficos .resumo-icone {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        color: #0e1240;
+      }
+
+      .painel-graficos .resumo-numero {
+        font-size: 32px;
+        line-height: 1.2;
+      }
+
+      .painel-graficos .resumo-detalhe {
+        margin-bottom: 12px;
+        color: #6b7280;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .painel-graficos .link-tabela {
+        color: #173f7c;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .painel-graficos .resumo .link-tabela {
+        margin-top: auto;
+      }
+
+      .painel-graficos .link-tabela:hover {
+        text-decoration: underline;
+      }
+
+      .painel-graficos .link-tabela:focus-visible {
+        outline: 2px solid #173f7c;
+        outline-offset: 4px;
+      }
+
+      .painel-graficos .grafico-cabecalho {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .painel-graficos .grafico-cabecalho h2 {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.4;
+      }
+
+      .painel-graficos .grafico-descricao {
+        margin: 8px 0 24px;
+        color: #6b7280;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .painel-graficos .barra-linha {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .painel-graficos .barra-nome {
+        width: 110px;
+        flex-shrink: 0;
+        font-size: 14px;
+      }
+
+      .painel-graficos .barra-fundo {
+        height: 12px;
+        flex: 1;
+        overflow: hidden;
+        border-radius: 20px;
+        background-color: #e9edf6;
+      }
+
+      .painel-graficos .barra-preenchida {
+        height: 100%;
+        border-radius: 20px;
+        background-color: #173f7c;
+      }
+
+      .painel-graficos .barra-valor {
+        width: 60px;
+        flex-shrink: 0;
+        color: #6b7280;
+        font-size: 12px;
+        text-align: right;
+      }
+
+      .painel-graficos .usuarios-grafico {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+
+      .painel-graficos .rosquinha {
+        width: 150px;
+        height: 150px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: conic-gradient(#173f7c 80%, #d9deee 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .painel-graficos .rosquinha-centro {
+        width: 106px;
+        height: 106px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .painel-graficos .rosquinha-centro strong {
+        font-size: 28px;
+      }
+
+      .painel-graficos .rosquinha-centro span {
+        color: #6b7280;
+        font-size: 13px;
+      }
+
+      .painel-graficos .legenda {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 13px;
+      }
+
+      .painel-graficos .legenda li {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0;
+      }
+
+      .painel-graficos .legenda-cor {
+        width: 12px;
+        height: 12px;
+        border-radius: 3px;
+      }
+
+      .painel-graficos .cor-ativos {
+        background-color: #173f7c;
+      }
+
+      .painel-graficos .cor-inativos {
+        background-color: #d9deee;
+      }
+
+      .painel-graficos .aviso-usuarios {
+        margin: 20px 0 0;
+        padding: 12px;
+        border: 1px solid #f3e1a0;
+        border-radius: 10px;
+        background-color: #fff7dd;
+        color: #6b4e00;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+
+      .painel-graficos .colunas {
+        display: flex;
+        justify-content: space-around;
+        gap: 12px;
+      }
+
+      .painel-graficos .coluna {
+        min-width: 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .painel-graficos .coluna-valor {
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .painel-graficos .coluna-barra {
+        width: 100%;
+        max-width: 60px;
+        height: 120px;
+        border-radius: 6px 6px 0 0;
+        background-color: #173f7c;
+      }
+
+      .painel-graficos .coluna-nome {
+        margin-top: 10px;
+        color: #6b7280;
+        font-size: 12px;
+        text-align: center;
+        overflow-wrap: break-word;
+      }
+
+      .painel-graficos .ranking {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .painel-graficos .ranking li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 0;
+        border-bottom: 1px solid #e5e8f2;
+        font-size: 14px;
+      }
+
+      .painel-graficos .ranking li:last-child {
+        border-bottom: 0;
+      }
+
+      .painel-graficos .ranking-posicao {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        border-radius: 6px;
+        background-color: #eef1fa;
+        color: #173f7c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .painel-graficos .ranking-nome {
+        flex: 1;
+      }
+
+      @media (max-width: 1200px) {
+        .painel-graficos .resumos {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 1050px) {
+        .painel-graficos .graficos {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .painel-graficos .resumos {
+          grid-template-columns: 1fr;
+        }
+
+        .painel-graficos .resumo,
+        .painel-graficos .grafico {
+          padding: 18px;
+        }
+
+        .painel-graficos .barra-linha {
+          gap: 8px;
+        }
+
+        .painel-graficos .barra-nome {
+          width: 85px;
+          font-size: 12px;
+        }
+
+        .painel-graficos .barra-valor {
+          width: 52px;
+          font-size: 11px;
+        }
+
+        .painel-graficos .colunas {
+          gap: 8px;
+        }
+
+        .painel-graficos .coluna-nome {
+          font-size: 11px;
+        }
+      }
+    </style>
   </head>
+
   <body>
     <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
     <aside class="menu-lateral" aria-label="Menu administrativo">
       <button
         class="marca-menu"
@@ -25,11 +370,12 @@
         <img class="simbolo" src="assets/simbolo-fixa.svg" alt="" />
         <img class="logo-menu" src="assets/logo-fixa.svg" alt="FIXA" />
       </button>
+
       <nav class="navegacao" aria-label="Páginas do CRUD">
         <a href="home.html" title="Página inicial" aria-current="page">
           <svg
             class="icone"
-            viewbox="0 0 24 24"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="1.8"
@@ -42,10 +388,11 @@
           </svg>
           <span class="texto-menu">Página inicial</span>
         </a>
+
         <a href="instituicoes.html" title="Instituições">
           <svg
             class="icone"
-            viewbox="0 0 24 24"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="1.8"
@@ -59,10 +406,11 @@
           </svg>
           <span class="texto-menu">Instituições</span>
         </a>
+
         <a href="usuarios.html" title="Usuários">
           <svg
             class="icone"
-            viewbox="0 0 24 24"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="1.8"
@@ -70,17 +418,16 @@
             stroke-linejoin="round"
             aria-hidden="true"
           >
-            <path
-              d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
-            ></path>
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
             <circle cx="9" cy="7" r="4"></circle>
           </svg>
           <span class="texto-menu">Usuários</span>
         </a>
+
         <a href="enderecos.html" title="Endereços">
           <svg
             class="icone"
-            viewbox="0 0 24 24"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="1.8"
@@ -93,10 +440,11 @@
           </svg>
           <span class="texto-menu">Endereços</span>
         </a>
+
         <a href="super-admin.html" title="Super administradores">
           <svg
             class="icone"
-            viewbox="0 0 24 24"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="1.8"
@@ -108,10 +456,11 @@
           </svg>
           <span class="texto-menu">Super administradores</span>
         </a>
+
         <a href="planos.html" title="Planos">
           <svg
             class="icone"
-            viewbox="0 0 24 24"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="1.8"
@@ -123,10 +472,11 @@
           </svg>
           <span class="texto-menu">Planos</span>
         </a>
+
         <a href="contratos.html" title="Contratos">
           <svg
             class="icone"
-            viewbox="0 0 24 24"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="1.8"
@@ -142,10 +492,11 @@
           </svg>
           <span class="texto-menu">Contratos</span>
         </a>
+
         <a href="pagamentos.html" title="Pagamentos">
           <svg
             class="icone"
-            viewbox="0 0 24 24"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="1.8"
@@ -158,10 +509,11 @@
           </svg>
           <span class="texto-menu">Pagamentos</span>
         </a>
+
         <a href="foto-usuario.html" title="Fotos de usuário">
           <svg
             class="icone"
-            viewbox="0 0 24 24"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="1.8"
@@ -176,11 +528,12 @@
           <span class="texto-menu">Fotos de usuário</span>
         </a>
       </nav>
+
       <div class="rodape-menu">
         <a href="../login/login.html" class="voltar-login">
           <svg
             class="icone"
-            viewbox="0 0 24 24"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="1.8"
@@ -192,6 +545,7 @@
         </a>
       </div>
     </aside>
+
     <div class="pagina">
       <header class="cabecalho">
         <div>
@@ -199,154 +553,253 @@
           <p>Painel administrativo</p>
         </div>
       </header>
+
       <main class="conteudo" id="conteudo">
-        <section class="cartao boas-vindas">
-          <h2>Bem-vindo ao painel administrativo FIXA</h2>
-          <p>Escolha uma área para consultar e gerenciar os cadastros.</p>
-          <div class="atalhos">
-            <a class="atalho" href="instituicoes.html">
-              <svg
-                class="icone"
-                viewbox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <rect x="4" y="3" width="16" height="18" rx="1.5"></rect>
-                <path d="M9 21v-5h6v5"></path>
-                <path
-                  d="M8.5 7.5h1M14.5 7.5h1M8.5 11.5h1M14.5 11.5h1M8.5 15.5h1M14.5 15.5h1"
-                ></path>
-              </svg>
-              <span>Instituições</span>
-              <strong data-total="instituicoes">0</strong>
-            </a>
-            <a class="atalho" href="usuarios.html">
-              <svg
-                class="icone"
-                viewbox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
-              <span>Usuários</span>
-              <strong data-total="usuarios">0</strong>
-            </a>
-            <a class="atalho" href="enderecos.html">
-              <svg
-                class="icone"
-                viewbox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              <span>Endereços</span>
-              <strong data-total="enderecos">0</strong>
-            </a>
-            <a class="atalho" href="super-admin.html">
-              <svg
-                class="icone"
-                viewbox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path>
-              </svg>
-              <span>Super administradores</span>
-              <strong data-total="super-administradores">0</strong>
-            </a>
-            <a class="atalho" href="planos.html">
-              <svg
-                class="icone"
-                viewbox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"></path>
-                <path d="M3.3 8.3 12 13l8.7-4.7"></path>
-                <path d="M12 22v-9"></path>
-              </svg>
-              <span>Planos</span>
-              <strong data-total="planos">0</strong>
-            </a>
-            <a class="atalho" href="contratos.html">
-              <svg
-                class="icone"
-                viewbox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <line x1="10" y1="9" x2="8" y2="9"></line>
-              </svg>
-              <span>Contratos</span>
-              <strong data-total="contratos">0</strong>
-            </a>
-            <a class="atalho" href="pagamentos.html">
-              <svg
-                class="icone"
-                viewbox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <line x1="12" y1="1" x2="12" y2="23"></line>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              </svg>
-              <span>Pagamentos</span>
-              <strong data-total="pagamentos">0</strong>
-            </a>
-            <a class="atalho" href="foto-usuario.html">
-              <svg
-                class="icone"
-                viewbox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                <polyline points="21 15 16 10 5 21"></polyline>
-              </svg>
-              <span>Fotos de usuário</span>
-              <strong data-total="fotos-usuario">0</strong>
-            </a>
+        <section class="painel-graficos" aria-label="Resumo e gráficos do CRUD">
+          <div class="resumos">
+            <article class="resumo">
+              <span class="resumo-titulo">
+                <svg
+                  class="resumo-icone"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <rect x="4" y="3" width="16" height="18" rx="1.5"></rect>
+                  <path d="M9 21v-5h6v5M8 7h2M14 7h2M8 11h2M14 11h2"></path>
+                </svg>
+                Instituições
+              </span>
+
+              <strong class="resumo-numero">15</strong>
+              <span class="resumo-detalhe">4 tipos cadastrados</span>
+              <a class="link-tabela" href="instituicoes.html">Ver tabela →</a>
+            </article>
+
+            <article class="resumo">
+              <span class="resumo-titulo">
+                <svg
+                  class="resumo-icone"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2M16 3a4 4 0 0 1 0 8M22 21v-2a4 4 0 0 0-3-4"></path>
+                </svg>
+                Usuários
+              </span>
+
+              <strong class="resumo-numero">15</strong>
+              <span class="resumo-detalhe">12 ativos (80%)</span>
+              <a class="link-tabela" href="usuarios.html">Ver tabela →</a>
+            </article>
+
+            <article class="resumo">
+              <span class="resumo-titulo">
+                <svg
+                  class="resumo-icone"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0Z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Endereços
+              </span>
+
+              <strong class="resumo-numero">15</strong>
+              <span class="resumo-detalhe">1 por instituição, em média</span>
+              <a class="link-tabela" href="enderecos.html">Ver tabela →</a>
+            </article>
+
+            <article class="resumo">
+              <span class="resumo-titulo">
+                <svg
+                  class="resumo-icone"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  aria-hidden="true"
+                >
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8ZM14 2v6h6M8 13h8M8 17h8"></path>
+                </svg>
+                Contratos
+              </span>
+
+              <strong class="resumo-numero">15</strong>
+              <span class="resumo-detalhe">Em 12 planos</span>
+              <a class="link-tabela" href="contratos.html">Ver tabela →</a>
+            </article>
+          </div>
+
+          <div class="graficos">
+            <article class="grafico">
+              <header class="grafico-cabecalho">
+                <h2>Instituições por tipo</h2>
+                <a class="link-tabela" href="instituicoes.html">Ver tabela →</a>
+              </header>
+
+              <p class="grafico-descricao">
+                Quantas instituições existem de cada tipo
+              </p>
+
+              <div class="barra-linha">
+                <span class="barra-nome">Faculdade</span>
+                <div class="barra-fundo" aria-hidden="true">
+                  <div class="barra-preenchida" style="width: 40%;"></div>
+                </div>
+                <span class="barra-valor">6 · 40%</span>
+              </div>
+
+              <div class="barra-linha">
+                <span class="barra-nome">Escola</span>
+                <div class="barra-fundo" aria-hidden="true">
+                  <div class="barra-preenchida" style="width: 40%;"></div>
+                </div>
+                <span class="barra-valor">6 · 40%</span>
+              </div>
+
+              <div class="barra-linha">
+                <span class="barra-nome">Órgão público</span>
+                <div class="barra-fundo" aria-hidden="true">
+                  <div class="barra-preenchida" style="width: 13.33%;"></div>
+                </div>
+                <span class="barra-valor">2 · 13%</span>
+              </div>
+
+              <div class="barra-linha">
+                <span class="barra-nome">Empresa</span>
+                <div class="barra-fundo" aria-hidden="true">
+                  <div class="barra-preenchida" style="width: 6.67%;"></div>
+                </div>
+                <span class="barra-valor">1 · 7%</span>
+              </div>
+            </article>
+
+            <article class="grafico">
+              <header class="grafico-cabecalho">
+                <h2>Usuários ativos x inativos</h2>
+                <a class="link-tabela" href="usuarios.html">Ver tabela →</a>
+              </header>
+
+              <p class="grafico-descricao">
+                Situação das contas de usuário
+              </p>
+
+              <div class="usuarios-grafico">
+                <div class="rosquinha" aria-hidden="true">
+                  <div class="rosquinha-centro">
+                    <strong>80%</strong>
+                    <span>ativos</span>
+                  </div>
+                </div>
+
+                <ul class="legenda">
+                  <li>
+                    <span class="legenda-cor cor-ativos" aria-hidden="true"></span>
+                    Ativos <strong>12 (80%)</strong>
+                  </li>
+                  <li>
+                    <span class="legenda-cor cor-inativos" aria-hidden="true"></span>
+                    Inativos <strong>3 (20%)</strong>
+                  </li>
+                </ul>
+              </div>
+
+              <p class="aviso-usuarios">
+                3 usuários inativos: estão há muito tempo sem usar o sistema.
+                Vale revisar se ainda precisam de acesso.
+              </p>
+            </article>
+
+            <article class="grafico">
+              <header class="grafico-cabecalho">
+                <h2>Contratos por plano</h2>
+                <a class="link-tabela" href="contratos.html">Ver tabela →</a>
+              </header>
+
+              <p class="grafico-descricao">
+                Top 5 de 8 planos com contrato
+              </p>
+
+              <div class="colunas">
+                <div class="coluna">
+                  <span class="coluna-valor">2</span>
+                  <div class="coluna-barra" aria-hidden="true"></div>
+                  <span class="coluna-nome">Escala</span>
+                </div>
+
+                <div class="coluna">
+                  <span class="coluna-valor">2</span>
+                  <div class="coluna-barra" aria-hidden="true"></div>
+                  <span class="coluna-nome">Anual Plus</span>
+                </div>
+
+                <div class="coluna">
+                  <span class="coluna-valor">2</span>
+                  <div class="coluna-barra" aria-hidden="true"></div>
+                  <span class="coluna-nome">Starter</span>
+                </div>
+
+                <div class="coluna">
+                  <span class="coluna-valor">2</span>
+                  <div class="coluna-barra" aria-hidden="true"></div>
+                  <span class="coluna-nome">Básico</span>
+                </div>
+
+                <div class="coluna">
+                  <span class="coluna-valor">2</span>
+                  <div class="coluna-barra" aria-hidden="true"></div>
+                  <span class="coluna-nome">Premium</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="grafico">
+              <header class="grafico-cabecalho">
+                <h2>Endereços por instituição</h2>
+                <a class="link-tabela" href="enderecos.html">Ver tabela →</a>
+              </header>
+
+              <p class="grafico-descricao">
+                Top 4 de 15 instituições cadastradas
+              </p>
+
+              <ol class="ranking">
+                <li>
+                  <span class="ranking-posicao">1</span>
+                  <span class="ranking-nome">Colégio Aurora</span>
+                  <strong>2</strong>
+                </li>
+
+                <li>
+                  <span class="ranking-posicao">2</span>
+                  <span class="ranking-nome">Instituto Vértice</span>
+                  <strong>2</strong>
+                </li>
+
+                <li>
+                  <span class="ranking-posicao">3</span>
+                  <span class="ranking-nome">Escola Horizonte</span>
+                  <strong>1</strong>
+                </li>
+
+                <li>
+                  <span class="ranking-posicao">4</span>
+                  <span class="ranking-nome">Prefeitura de Serra Alta</span>
+                  <strong>1</strong>
+                </li>
+              </ol>
+            </article>
           </div>
         </section>
 
