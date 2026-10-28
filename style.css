@@ -129,6 +129,13 @@ nav > img {
   border-color: #0B013C;
 }
 
+.azul{
+  color: #153D7D;
+  font-size: 19px;
+  font-weight: 600;
+  font-family: Inter, sans-serif;
+}
+
 .principal {
   width: 90%;
   max-width: 1300px;
@@ -165,6 +172,22 @@ nav > img {
   font-size: 17px;
   font-weight: 450;
   line-height: 27px;
+}
+
+.para-solicitantes{
+  padding-top: 20px;
+}
+
+.para-solicitantes a{
+  text-decoration: underline;
+}
+
+.para-solicitantes a:active{
+  color: #2E62B0;
+}
+
+.para-solicitantes a:after{
+  color: #2E62B0;
 }
 
 .saiba-mais-falar-equipe {
@@ -339,7 +362,8 @@ nav > img {
 .card2-problema:hover,
 .card3-problema:hover,
 .card4-problema:hover,
-.card-funcionalidade:hover {
+.card-funcionalidade:hover,
+.card-usuario:hover {
   border: solid 2px #153D7D;
 }
 
