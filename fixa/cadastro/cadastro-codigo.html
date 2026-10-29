@@ -7,7 +7,6 @@
   <link rel="icon" href="../assets/logo-claro.svg">
   <link rel="stylesheet" href="../crud/home/fontes/fontes.css">
   <link rel="stylesheet" href="cadastro.css">
-  <script src="cadastro.js" defer></script>
 </head>
 <body>
   <main class="cadastro">
@@ -40,12 +39,12 @@
         <input type="text" id="codigo6" name="codigo6" inputmode="numeric" pattern="[0-9]" maxlength="1" aria-label="Dígito 6 do código" autocomplete="off" required>
       </div>
     </fieldset>
-      <button class="botao-principal" type="submit">Verificar código</button>
+      <a class="botao-principal" href="cadastro-senha.html">Verificar código</a>
     </form>
 
     <form class="reenviar-codigo" action="cadastro-codigo.html" method="post">
       <span>Não recebeu?</span>
-      <button type="submit">Reenviar e-mail</button>
+      <a href="cadastro-codigo.html">Reenviar e-mail</a>
     </form>
 
     <a class="voltar-cadastro" href="cadastro-instituicao-info.html">Voltar</a>

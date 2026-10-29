@@ -26,13 +26,6 @@ input {
   font-family: "Inter", sans-serif;
 }
 
-
-/* NAVBAR */
-
-header {
-  height: 70px;
-}
-
 nav {
   position: fixed;
   top: 0;
@@ -63,7 +56,7 @@ nav > img {
 }
 
 .nav-links a {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 17px;
 }
 
@@ -99,9 +92,10 @@ nav > img {
   justify-content: center;
   align-items: center;
   border-radius: 13px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
 }
+
 .cadastrar {
   width: 150px;
   height: 48px;
@@ -109,13 +103,14 @@ nav > img {
   justify-content: center;
   align-items: center;
   border-radius: 13px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
 }
 
 .entrar {
   color: #0B013C;
   border: 1px solid #8ba6d52b;
+  font-weight: 520;
 }
 
 .cadastrar {

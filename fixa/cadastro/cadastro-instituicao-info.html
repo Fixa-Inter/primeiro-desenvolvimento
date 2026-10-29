@@ -7,7 +7,6 @@
   <link rel="icon" href="../assets/logo-claro.svg">
   <link rel="stylesheet" href="../crud/home/fontes/fontes.css">
   <link rel="stylesheet" href="cadastro.css">
-  <script src="cadastro.js" defer></script>
 </head>
 <body>
   <main class="cadastro">
@@ -36,11 +35,10 @@
         <label for="tipo_instituicao">Tipo da instituição *</label>
         <select id="tipo_instituicao" name="tipo_instituicao" required>
           <option value="">Selecione o tipo</option>
-          <option value="escola-tecnica">Escola técnica</option>
-          <option value="ensino-medio">Escola de ensino médio</option>
-          <option value="faculdade-universidade">Faculdade / Universidade</option>
-          <option value="formacao-profissional">Centro de formação profissional</option>
-          <option value="outra">Outra</option>
+          <option value="1">Escola</option>
+          <option value="2">Faculdade</option>
+          <option value="3">Empresa</option>
+          <option value="4">Órgão Público</option>
         </select>
       </div>
 
@@ -49,7 +47,7 @@
         <input type="email" id="email_corporativo" name="email_corporativo" maxlength="50" autocomplete="email" placeholder="Ex: contato@suainstituicao.com.br" required>
       </div>
 
-      <button class="botao-principal" type="submit">Continuar</button>
+      <a class="botao-principal" href="cadastro-codigo.html">Continuar</a>
     </form>
 
     <p class="link-cadastro">Já é cadastrado? <a href="../crud/login/login.html">Entrar</a></p>

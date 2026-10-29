@@ -11,6 +11,29 @@ body {
   background-color: #F9F7FF;
   color: #0B013C;
   font-family: "Inter", sans-serif;
+
+  background-image:
+    url("/fixa/assets/gradiente1.svg"),
+    url("/fixa/assets/gradiente2.svg"),
+    url("/fixa/assets/gradiente1.svg"),
+    url("/fixa/assets/gradiente2.svg"),
+    url("/fixa/assets/gradiente1.svg"),
+    url("/fixa/assets/gradiente2.svg"),
+    url("/fixa/assets/gradiente1.svg"),
+    url("/fixa/assets/gradiente2.svg");
+
+  background-position:
+    left -325px top 6%,
+    right -325px top 17%,
+    left -325px top 29%,
+    right -325px top 40%,
+    left -325px top 52%,
+    right -325px top 63%,
+    left -325px top 75%,
+    right -325px top 86%;
+
+  background-size: 650px auto;
+  background-repeat: no-repeat;
 }
 
 img {
@@ -129,6 +152,13 @@ nav > img {
   border-color: #0B013C;
 }
 
+.azul{
+  color: #153D7D;
+  font-size: 19px;
+  font-weight: 600;
+  font-family: Inter, sans-serif;
+}
+
 .principal {
   width: 90%;
   max-width: 1300px;
@@ -165,6 +195,22 @@ nav > img {
   font-size: 17px;
   font-weight: 450;
   line-height: 27px;
+}
+
+.para-solicitantes{
+  padding-top: 20px;
+}
+
+.para-solicitantes a{
+  text-decoration: underline;
+}
+
+.para-solicitantes a:active{
+  color: #2E62B0;
+}
+
+.para-solicitantes a:after{
+  color: #2E62B0;
 }
 
 .saiba-mais-falar-equipe {
@@ -287,6 +333,10 @@ nav > img {
   line-height: 1.35;
 }
 
+#planos{
+  padding-bottom: 0px;
+}
+
 .texto-problema p {
   font-weight: 450;
 }
@@ -339,7 +389,8 @@ nav > img {
 .card2-problema:hover,
 .card3-problema:hover,
 .card4-problema:hover,
-.card-funcionalidade:hover {
+.card-funcionalidade:hover,
+.card-usuario:hover {
   border: solid 2px #153D7D;
 }
 
@@ -702,6 +753,7 @@ nav > img {
 .usuarios {
   margin-top: 0px;
   padding: 50px 70px 120px;
+  padding-bottom: 0px;
 }
 
 .usuarios-conteudo {
@@ -798,6 +850,7 @@ nav > img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 0px;
 }
 
 .planos > .p-usuarios {
@@ -823,7 +876,7 @@ nav > img {
   margin-top: 55px;
   padding: 6px;
   display: flex;
-  background-color: #E7E8F5;
+  background-color: #E6EEFA;
   border-radius: 30px;
 }
 
@@ -879,6 +932,14 @@ nav > img {
   color: #0B013C;
   border: 1px solid #E4E2F1;
   border-radius: 20px;
+}
+
+.plano-card:hover{
+  box-shadow: 0 10px 50px rgba(110, 150, 214, 0.977);
+}
+
+@keyframes aumentar{
+
 }
 
 .plano-card.destaque {
@@ -1009,6 +1070,7 @@ nav > img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 0px;
 }
 
 .faq-header {
@@ -1018,7 +1080,6 @@ nav > img {
 
 .faq-header p {
   margin: 0 0 10px;
-  color: #153D7D;
   font-size: 13px;
   font-weight: 700;
 }
@@ -1522,6 +1583,8 @@ summary:focus-visible,
     border-radius: 8px;
     font-size: 13px;
   }
+
+
 
   .problema,
   .funcionalidades,

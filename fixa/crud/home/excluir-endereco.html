@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir endereço | FIXA</title>
+    <link rel="icon" href="assets/simbolo-fixa.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="fontes/fontes.css">
+    <link rel="stylesheet" href="crud.css">
+    <link rel="stylesheet" href="excluir.css">
+  </head>
+  <body class="pagina-exclusao">
+    <main class="cartao confirmacao-exclusao" aria-labelledby="titulo-exclusao">
+      <div class="titulo-cartao">
+        <h1 id="titulo-exclusao">Excluir registro</h1>
+        <a class="fechar" href="enderecos.html" aria-label="Cancelar exclusão">×</a>
+      </div>
+      <form id="excluir-form" action="enderecos.html" method="post" aria-describedby="confirmacao-texto">
+        <input type="hidden" name="operacao" value="excluir">
+        <input type="hidden" name="id" value="">
+        <div class="corpo-formulario">
+          <p id="confirmacao-texto">Tem certeza que deseja excluir</p>
+        </div>
+        <div class="rodape-formulario">
+          <a class="botao botao-secundario" href="enderecos.html">Cancelar</a>
+          <a class="botao botao-excluir" href="enderecos.html">Excluir</a>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

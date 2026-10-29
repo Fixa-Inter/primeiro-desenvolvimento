@@ -7,9 +7,6 @@
     <link rel="icon" href="assets/simbolo-fixa.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="fontes/fontes.css" />
     <link rel="stylesheet" href="crud.css" />
-    <script src="JavaScript/config.js" defer></script>
-    <script src="JavaScript/entidades.js" defer></script>
-    <script src="JavaScript/dados.js" defer></script>
     <script src="JavaScript/crud.js" defer></script>
   </head>
   <body data-entidade="fotos-usuario">
@@ -199,10 +196,6 @@
           <p>Consulte, filtre e edite os registros de fotos de usuário.</p>
         </div>
         <div class="acoes">
-          <button type="button" id="desfazer" class="botao botao-secundario" disabled>
-            <span aria-hidden="true">↶</span>
-            Desfazer
-          </button>
           <a class="botao" id="novo" href="cadastro-foto-usuario.html">+ Novo</a>
         </div>
       </header>
@@ -210,7 +203,7 @@
         <section class="cartao lista" aria-label="Registros de fotos de usuário">
           <div class="barra-tabela">
             <strong id="contagem" role="status">1 registro</strong>
-            <form id="filtro-form" class="filtros" role="search">
+            <form id="filtro-form" class="filtros" role="search" action="foto-usuario.html" method="get">
               <label class="sr-only" for="campo-filtro">Campo</label>
               <select id="campo-filtro" name="campo">
                 <option value="id">ID</option>
@@ -229,7 +222,7 @@
                 placeholder="Valor"
                 required
               />
-              <button class="botao botao-secundario" type="submit">+ Filtro</button>
+              <button class="botao botao-secundario" type="button">+ Filtro</button>
             </form>
             <div class="pesquisa">
               <span aria-hidden="true">
@@ -253,7 +246,6 @@
               />
             </div>
           </div>
-          <div id="filtros-ativos" class="filtros-ativos" aria-label="Filtros ativos"></div>
           <div
             class="tabela-rolagem"
             tabindex="0"
@@ -299,18 +291,18 @@
                   <td class="coluna-relacionada">ana@escola.example</td>
                   <td class="coluna-acoes">
                     <div class="acoes-linha">
-                      <button disabled type="button" class="editar" data-acao="editar" data-id="1" aria-label="Editar registro #1">
+                      <a class="editar" href="editar-foto-usuario.html?id=1" aria-label="Editar registro #1">
                         <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                           <path d="M16 3l5 5L8 21H3v-5L16 3Z M14 5l5 5"></path>
                         </svg>
                         Editar
-                      </button>
-                      <button disabled type="button" class="excluir" data-acao="excluir" data-id="1" aria-label="Excluir registro #1">
+                      </a>
+                      <a class="excluir" href="excluir-foto-usuario.html?id=1" aria-label="Excluir registro #1">
                         <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                           <path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"></path>
                         </svg>
                         Excluir
-                      </button>
+                      </a>
                     </div>
                   </td>
                 </tr>
@@ -323,50 +315,6 @@
         <p class="mensagem" id="mensagem" role="status" aria-live="polite"></p>
       </main>
     </div>
-    <dialog id="registro-dialog" class="modal" aria-labelledby="titulo-formulario">
-      <div class="titulo-cartao">
-        <h2 id="titulo-formulario">Cadastrar registro</h2>
-        <button class="fechar" type="button" data-fechar aria-label="Fechar formulário">×</button>
-      </div>
-      <form
-        action="foto-usuario.html"
-        method="post"
-        aria-describedby="aviso-formulario"
-        id="registro-form"
-      >
-        <input type="hidden" name="id" value="" />
-        <input type="hidden" name="operacao" value="novo" />
-        <div class="corpo-formulario">
-          <p class="orientacao" id="aviso-formulario">Campos com * são obrigatórios.</p>
-          <div class="campo">
-            <label for="data_registro">Data de registro</label>
-            <input type="datetime-local" id="data_registro" name="data_registro" value="" />
-          </div>
-          <div class="campo">
-            <label for="url">URL da foto *</label>
-            <input
-              type="url"
-              id="url"
-              name="url"
-              maxlength="255"
-              placeholder="Ex: https://minhaescola.com.br/fotos/joao.jpg"
-              value=""
-              required="required"
-            />
-          </div>
-          <div class="campo">
-            <label for="fk_usuario_id">Usuário</label>
-            <select id="fk_usuario_id" name="fk_usuario_id">
-              <option value="">Sem vínculo</option>
-            </select>
-          </div>
-        </div>
-        <div class="rodape-formulario">
-          <button class="botao botao-secundario" data-fechar="" type="button">Cancelar</button>
-          <button type="submit" class="botao">Salvar</button>
-        </div>
-      </form>
-    </dialog>
     <dialog id="consulta-dialog" class="modal" aria-labelledby="titulo-consulta">
       <div class="titulo-cartao">
         <h2 id="titulo-consulta">Consultar registro</h2>
@@ -377,26 +325,5 @@
         <button type="button" class="botao botao-secundario" data-fechar>Fechar</button>
       </div>
     </dialog>
-    <dialog id="excluir-dialog" class="modal confirmacao" aria-labelledby="titulo-exclusao">
-      <div class="titulo-cartao">
-        <h2 id="titulo-exclusao">Excluir registro</h2>
-        <button class="fechar" type="button" data-fechar aria-label="Cancelar exclusão">×</button>
-      </div>
-      <form id="excluir-form" action="foto-usuario.html" method="post">
-        <input type="hidden" name="operacao" value="excluir" />
-        <input type="hidden" name="id" />
-        <div class="corpo-formulario">
-          <p id="confirmacao-texto"></p>
-          <p>Esta ação removerá o registro da lista.</p>
-        </div>
-        <div class="rodape-formulario">
-          <button type="button" class="botao botao-secundario" data-fechar>Cancelar</button>
-          <button type="submit" class="botao botao-excluir">Excluir</button>
-        </div>
-      </form>
-    </dialog>
-    <noscript>
-      <p class="sem-js">Ative o JavaScript para cadastrar e gerenciar registros nesta versão.</p>
-    </noscript>
   </body>
 </html>
