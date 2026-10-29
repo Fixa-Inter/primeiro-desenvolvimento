@@ -7,9 +7,6 @@
     <link rel="icon" href="assets/simbolo-fixa.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="fontes/fontes.css" />
     <link rel="stylesheet" href="crud.css" />
-    <script src="JavaScript/config.js" defer></script>
-    <script src="JavaScript/entidades.js" defer></script>
-    <script src="JavaScript/dados.js" defer></script>
     <script src="JavaScript/crud.js" defer></script>
   </head>
   <body data-entidade="contratos">
@@ -199,10 +196,6 @@
           <p>Consulte, filtre e edite os registros de contratos.</p>
         </div>
         <div class="acoes">
-          <button type="button" id="desfazer" class="botao botao-secundario" disabled>
-            <span aria-hidden="true">↶</span>
-            Desfazer
-          </button>
           <a class="botao" id="novo" href="cadastro-contrato.html">+ Novo</a>
         </div>
       </header>
@@ -210,7 +203,7 @@
         <section class="cartao lista" aria-label="Registros de contratos">
           <div class="barra-tabela">
             <strong id="contagem" role="status">1 registro</strong>
-            <form id="filtro-form" class="filtros" role="search">
+            <form id="filtro-form" class="filtros" role="search" action="contratos.html" method="get">
               <label class="sr-only" for="campo-filtro">Campo</label>
               <select id="campo-filtro" name="campo">
                 <option value="id">ID</option>
@@ -233,7 +226,7 @@
                 placeholder="Valor"
                 required
               />
-              <button class="botao botao-secundario" type="submit">+ Filtro</button>
+              <button class="botao botao-secundario" type="button">+ Filtro</button>
             </form>
             <div class="pesquisa">
               <span aria-hidden="true">
@@ -257,7 +250,6 @@
               />
             </div>
           </div>
-          <div id="filtros-ativos" class="filtros-ativos" aria-label="Filtros ativos"></div>
           <div
             class="tabela-rolagem"
             tabindex="0"
@@ -417,18 +409,18 @@
                   <td class="coluna-relacionada">Escola Exemplo</td>
                   <td class="coluna-acoes">
                     <div class="acoes-linha">
-                      <button disabled type="button" class="editar" data-acao="editar" data-id="1" aria-label="Editar registro #1">
+                      <a class="editar" href="editar-contrato.html?id=1" aria-label="Editar registro #1">
                         <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                           <path d="M16 3l5 5L8 21H3v-5L16 3Z M14 5l5 5"></path>
                         </svg>
                         Editar
-                      </button>
-                      <button disabled type="button" class="excluir" data-acao="excluir" data-id="1" aria-label="Excluir registro #1">
+                      </a>
+                      <a class="excluir" href="excluir-contrato.html?id=1" aria-label="Excluir registro #1">
                         <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                           <path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"></path>
                         </svg>
                         Excluir
-                      </button>
+                      </a>
                     </div>
                   </td>
                 </tr>
@@ -441,66 +433,6 @@
         <p class="mensagem" id="mensagem" role="status" aria-live="polite"></p>
       </main>
     </div>
-    <dialog id="registro-dialog" class="modal" aria-labelledby="titulo-formulario">
-      <div class="titulo-cartao">
-        <h2 id="titulo-formulario">Cadastrar registro</h2>
-        <button class="fechar" type="button" data-fechar aria-label="Fechar formulário">×</button>
-      </div>
-      <form
-        action="contratos.html"
-        method="post"
-        aria-describedby="aviso-formulario"
-        id="registro-form"
-      >
-        <input type="hidden" name="id" value="" />
-        <input type="hidden" name="operacao" value="novo" />
-        <div class="corpo-formulario">
-          <p class="orientacao" id="aviso-formulario">Campos com * são obrigatórios.</p>
-          <div class="campo">
-            <label for="data_inicio">Data de início</label>
-            <input type="date" id="data_inicio" name="data_inicio" value="" />
-          </div>
-          <div class="campo">
-            <label for="data_vencimento">Data de vencimento</label>
-            <input
-              type="date"
-              id="data_vencimento"
-              name="data_vencimento"
-              aria-describedby="ajuda-data_vencimento"
-              value=""
-            />
-            <small class="ajuda" id="ajuda-data_vencimento">
-              Deve ser posterior à data de início.
-            </small>
-          </div>
-          <div class="campo">
-            <label for="fk_plano_id">Plano</label>
-            <select id="fk_plano_id" name="fk_plano_id">
-              <option value="">Sem vínculo</option>
-            </select>
-          </div>
-          <div class="campo">
-            <label for="fk_endereco_id">Endereço</label>
-            <select id="fk_endereco_id" name="fk_endereco_id">
-              <option value="">Sem vínculo</option>
-            </select>
-          </div>
-          <div class="campo">
-            <label for="status_contrato">Status do contrato *</label>
-            <select id="status_contrato" name="status_contrato" required>
-              <option value="">Selecione</option>
-              <option value="1">Ativo</option>
-              <option value="2">Inativo</option>
-              <option value="3">Cancelado</option>
-            </select>
-          </div>
-        </div>
-        <div class="rodape-formulario">
-          <button class="botao botao-secundario" data-fechar="" type="button">Cancelar</button>
-          <button type="submit" class="botao">Salvar</button>
-        </div>
-      </form>
-    </dialog>
     <dialog id="consulta-dialog" class="modal" aria-labelledby="titulo-consulta">
       <div class="titulo-cartao">
         <h2 id="titulo-consulta">Consultar registro</h2>
@@ -511,26 +443,5 @@
         <button type="button" class="botao botao-secundario" data-fechar>Fechar</button>
       </div>
     </dialog>
-    <dialog id="excluir-dialog" class="modal confirmacao" aria-labelledby="titulo-exclusao">
-      <div class="titulo-cartao">
-        <h2 id="titulo-exclusao">Excluir registro</h2>
-        <button class="fechar" type="button" data-fechar aria-label="Cancelar exclusão">×</button>
-      </div>
-      <form id="excluir-form" action="contratos.html" method="post">
-        <input type="hidden" name="operacao" value="excluir" />
-        <input type="hidden" name="id" />
-        <div class="corpo-formulario">
-          <p id="confirmacao-texto"></p>
-          <p>Esta ação removerá o registro da lista.</p>
-        </div>
-        <div class="rodape-formulario">
-          <button type="button" class="botao botao-secundario" data-fechar>Cancelar</button>
-          <button type="submit" class="botao botao-excluir">Excluir</button>
-        </div>
-      </form>
-    </dialog>
-    <noscript>
-      <p class="sem-js">Ative o JavaScript para cadastrar e gerenciar registros nesta versão.</p>
-    </noscript>
   </body>
 </html>

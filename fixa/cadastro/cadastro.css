@@ -206,6 +206,7 @@ select:focus {
 
 .link-cadastro a:hover,
 .reenviar-codigo button:hover,
+.reenviar-codigo a:hover,
 .voltar-cadastro:hover {
   text-decoration: underline;
 }
@@ -248,7 +249,8 @@ select:focus {
   text-align: center;
 }
 
-.reenviar-codigo button {
+.reenviar-codigo button,
+.reenviar-codigo a {
   padding: 0;
   border: none;
   background-color: transparent;
@@ -268,27 +270,6 @@ select:focus {
 
 .codigo-inputs input[aria-invalid="true"] {
   border-color: #A92A2A;
-}
-
-.campo-senha {
-  position: relative;
-}
-
-.campo-senha input {
-  padding-right: 85px;
-}
-
-.mostrar-senha {
-  position: absolute;
-  top: 0;
-  right: 12px;
-  height: 52px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  color: #687487;
-  font-size: 14px;
-  cursor: pointer;
 }
 
 .regras-senha {

@@ -7,11 +7,10 @@
     <link rel="icon" href="assets/simbolo-fixa.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="fontes/fontes.css" />
     <link rel="stylesheet" href="crud.css" />
-    <script src="JavaScript/config.js" defer></script>
-    <script src="JavaScript/entidades.js" defer></script>
-    <script src="JavaScript/dados.js" defer></script>
     <script src="JavaScript/crud.js" defer></script>
-  </head>
+      <link rel="stylesheet" href="senha.css">
+    <script src="JavaScript/senha.js" defer></script>
+</head>
   <body data-entidade="instituicoes" data-operacao="novo">
     <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
     <aside class="menu-lateral" aria-label="Menu administrativo">
@@ -270,16 +269,25 @@
               </div>
               <div class="campo">
                 <label for="senha">Senha *</label>
-                <input
-                  type="password"
-                  id="senha"
-                  name="senha"
-                  autocomplete="new-password"
-                  minlength="6"
-                  placeholder="Digite uma senha segura"
-                  required
-                  aria-describedby="ajuda-senha"
-                />
+                <div class="campo-senha">
+                  <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    autocomplete="new-password"
+                    minlength="6"
+                    placeholder="Digite uma senha segura"
+                    required
+                    aria-describedby="ajuda-senha"
+                  />
+                  <button class="mostrar-senha" type="button" data-campo="senha" aria-controls="senha" aria-label="Mostrar senha" aria-pressed="false" title="Mostrar senha">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path class="risco-senha" d="m3 3 18 18"></path>
+                    </svg>
+                  </button>
+                </div>
                 <small class="ajuda" id="ajuda-senha">
                   Use pelo menos 6 caracteres.
                 </small>
@@ -287,7 +295,7 @@
             </div>
             <div class="rodape-formulario">
               <a class="botao botao-secundario" href="instituicoes.html">Cancelar</a>
-              <button type="submit" class="botao">Salvar</button>
+              <a class="botao" href="instituicoes.html">Salvar</a>
             </div>
           </form>
         </section>

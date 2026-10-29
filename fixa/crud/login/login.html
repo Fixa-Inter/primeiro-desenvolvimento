@@ -24,11 +24,13 @@
 <link rel="icon" href="assets/icon-escuro.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
 
 
+  <link rel="stylesheet" href="../home/senha.css">
+  <script src="../home/JavaScript/senha.js" defer></script>
 </head>
 
 <body>
 
-  <a href="/index.html" class="voltar">
+  <a href="../../../index.html" class="voltar">
     Voltar
   </a>
 
@@ -45,7 +47,7 @@
         para acessar o painel Fixa.
       </p>
 
-      <form action="../home/home.html" method="get" novalidate>
+      <form action="../home/home.html" method="post">
 
         <div class="campo">
 
@@ -56,6 +58,9 @@
           <input
             type="email"
             id="email"
+            name="email"
+            autocomplete="username"
+            required
             placeholder="seuemail@fixa.com.br"
           >
 
@@ -67,17 +72,29 @@
             Senha
           </label>
 
-          <input
-            type="password"
-            id="senha"
-            placeholder="Digite sua senha"
-          >
+          <div class="campo-senha">
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              autocomplete="current-password"
+              required
+              placeholder="Digite sua senha"
+            >
+            <button class="mostrar-senha" type="button" data-campo="senha" aria-controls="senha" aria-label="Mostrar senha" aria-pressed="false" title="Mostrar senha">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+                <path class="risco-senha" d="m3 3 18 18"></path>
+              </svg>
+            </button>
+          </div>
 
         </div>
 
-        <button type="submit">
+        <a class="botao-entrar" href="../home/home.html">
           Entrar
-        </button>
+        </a>
 
       </form>
 

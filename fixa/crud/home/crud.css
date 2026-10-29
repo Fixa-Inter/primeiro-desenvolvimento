@@ -338,24 +338,8 @@ input::placeholder {
   padding-left: 34px;
 }
 
-.filtros-ativos:empty {
-  display: none;
-}
 
-.filtros-ativos {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 20px 12px;
-  gap: 8px;
-}
 
-.filtro-chip {
-  padding: 6px 10px;
-  color: #193f7d;
-  background: #eef2fb;
-  border: 1px solid #dbe3f4;
-  border-radius: 20px;
-}
 
 .tabela-rolagem {
   width: 100%;
@@ -447,7 +431,8 @@ th.coluna-acoes {
   gap: 8px;
 }
 
-.acoes-linha button {
+.acoes-linha button,
+.acoes-linha a {
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -469,8 +454,10 @@ th.coluna-acoes {
   color: #dc292b;
 }
 
-.acoes-linha button:hover {
+.acoes-linha button:hover,
+.acoes-linha a:hover {
   filter: brightness(0.96);
+  text-decoration: none;
 }
 
 .consultar {
