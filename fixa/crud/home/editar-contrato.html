@@ -202,7 +202,7 @@
           <div class="titulo-cartao">
             <h2 id="titulo-formulario">Editar contrato</h2>
           </div>
-          <form
+          <form novalidate
             action="contratos.html"
             method="post"
             aria-describedby="aviso-formulario"
@@ -243,7 +243,7 @@
               </div>
               <div class="campo">
                 <label for="status_contrato">Status do contrato *</label>
-                <select id="status_contrato" name="status_contrato" required>
+                <select id="status_contrato" name="status_contrato">
                   <option value="">Selecione</option>
                   <option value="1">Ativo</option>
                   <option value="2">Inativo</option>
