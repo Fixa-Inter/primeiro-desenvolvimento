@@ -97,7 +97,7 @@ h1 {
 .etapas-cadastro {
   display: flex;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 62px;
 }
 
 .etapa {
@@ -365,5 +365,27 @@ button:focus-visible {
   .codigo-inputs input {
     height: 56px;
     font-size: 22px;
+  }
+}
+
+.passo-cadastro {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.nome-etapa {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  color: #193F7D;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .nome-etapa {
+    font-size: 12px;
   }
 }

@@ -203,7 +203,7 @@
         <section class="cartao lista" aria-label="Registros de instituições">
           <div class="barra-tabela">
             <strong id="contagem" role="status">1 registro</strong>
-            <form id="filtro-form" class="filtros" role="search" action="instituicoes.html" method="get">
+            <form novalidate id="filtro-form" class="filtros" role="search" action="instituicoes.html" method="get">
               <label class="sr-only" for="campo-filtro">Campo</label>
               <select id="campo-filtro" name="campo">
                 <option value="id">ID</option>
@@ -220,11 +220,9 @@
               <label class="sr-only" for="valor-filtro">Valor do filtro</label>
               <input
                 type="number"
-                step="1"
                 id="valor-filtro"
                 name="valor"
                 placeholder="Valor"
-                required
               />
               <button class="botao botao-secundario" type="button">+ Filtro</button>
             </form>

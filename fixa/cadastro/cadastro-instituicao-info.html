@@ -12,28 +12,28 @@
   <main class="cadastro">
     <a class="sair-cadastro" href="../../index.html" aria-label="Voltar ao site">×</a>
 
-    <div class="etapas-cadastro" aria-label="Etapas: instituição, código, senha e endereço">
-      <span class="etapa atual" aria-current="step">1</span>
+    <div class="etapas-cadastro" aria-label="Etapas: Instituição, E-mail, Senha e Endereço">
+      <div class="passo-cadastro"><span class="etapa atual" aria-current="step">1</span><span class="nome-etapa">Instituição</span></div>
       <span class="linha-etapa" aria-hidden="true"></span>
-      <span class="etapa">2</span>
+      <div class="passo-cadastro"><span class="etapa">2</span><span class="nome-etapa">E-mail</span></div>
       <span class="linha-etapa" aria-hidden="true"></span>
-      <span class="etapa">3</span>
+      <div class="passo-cadastro"><span class="etapa">3</span><span class="nome-etapa">Senha</span></div>
       <span class="linha-etapa" aria-hidden="true"></span>
-      <span class="etapa">4</span>
+      <div class="passo-cadastro"><span class="etapa">4</span><span class="nome-etapa">Endereço</span></div>
     </div>
 
     <h1>Cadastre sua instituição</h1>
     <p class="descricao-cadastro">Leva menos de 2 minutos. Depois enviaremos um código de verificação para o e-mail corporativo informado.</p>
 
-    <form action="cadastro-codigo.html" method="post">
+    <form novalidate action="cadastro-codigo.html" method="post">
       <div class="campo-cadastro">
         <label for="nome">Nome da instituição *</label>
-        <input type="text" id="nome" name="nome" maxlength="50" autocomplete="organization" placeholder="Ex: Instituto J&amp;F - Escola de Tecnologia" required>
+        <input type="text" id="nome" name="nome" autocomplete="organization" placeholder="Ex: Instituto J&amp;F - Escola de Tecnologia">
       </div>
 
       <div class="campo-cadastro">
         <label for="tipo_instituicao">Tipo da instituição *</label>
-        <select id="tipo_instituicao" name="tipo_instituicao" required>
+        <select id="tipo_instituicao" name="tipo_instituicao">
           <option value="">Selecione o tipo</option>
           <option value="1">Escola</option>
           <option value="2">Faculdade</option>
@@ -44,7 +44,7 @@
 
       <div class="campo-cadastro">
         <label for="email_corporativo">E-mail corporativo *</label>
-        <input type="email" id="email_corporativo" name="email_corporativo" maxlength="50" autocomplete="email" placeholder="Ex: contato@suainstituicao.com.br" required>
+        <input type="email" id="email_corporativo" name="email_corporativo" autocomplete="email" placeholder="Ex: contato@suainstituicao.com.br">
       </div>
 
       <a class="botao-principal" href="cadastro-codigo.html">Continuar</a>

@@ -17,16 +17,16 @@
     <h1>Confirme seus dados de instituição</h1>
     <p class="descricao-cadastro">Informe o e-mail e a senha da instituição para adicionar um novo endereço.</p>
 
-    <form action="cadastro-endereco-info.html" method="post">
+    <form novalidate action="cadastro-endereco-info.html" method="post">
       <div class="campo-cadastro">
         <label for="email_corporativo">E-mail da instituição *</label>
-        <input type="email" id="email_corporativo" name="email_corporativo" maxlength="50" autocomplete="username" placeholder="Ex: contato@dominio.com.br" required>
+        <input type="email" id="email_corporativo" name="email_corporativo" autocomplete="username" placeholder="Ex: contato@dominio.com.br">
       </div>
 
       <div class="campo-cadastro">
         <label for="senha">Senha *</label>
         <div class="campo-senha">
-          <input type="password" id="senha" name="senha" autocomplete="current-password" placeholder="Digite a senha da instituição" required>
+          <input type="password" id="senha" name="senha" autocomplete="current-password" placeholder="Digite a senha da instituição">
           <button class="mostrar-senha" type="button" data-campo="senha" aria-controls="senha" aria-label="Mostrar senha" aria-pressed="false" title="Mostrar senha">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path>
