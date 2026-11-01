@@ -204,7 +204,7 @@
           <div class="titulo-cartao">
             <h2 id="titulo-formulario">Editar usuário</h2>
           </div>
-          <form
+          <form novalidate
             action="usuarios.html"
             method="post"
             aria-describedby="aviso-formulario"
@@ -221,8 +221,6 @@
                   id="nome"
                   name="nome"
                   autocomplete="name"
-                  required="required"
-                  maxlength="50"
                   placeholder="Ex: João Pereira"
                   value=""
                 />
@@ -235,7 +233,6 @@
                     id="senha"
                     name="senha"
                     aria-describedby="ajuda-senha"
-                    minlength="6"
                     placeholder="Deixe em branco para manter a senha"
                     autocomplete="new-password"
                     value=""
@@ -262,9 +259,7 @@
                   type="email"
                   id="email"
                   name="email"
-                  required
                   aria-describedby="ajuda-email"
-                  maxlength="100"
                   placeholder="Ex: joao@suainstituicao.com.br"
                   autocomplete="email"
                   value=""
@@ -277,14 +272,13 @@
                   type="text"
                   id="cargo"
                   name="cargo"
-                  maxlength="50"
                   placeholder="Ex: Zelador"
                   value=""
                 />
               </div>
               <div class="campo">
                 <label for="tipo_acesso">Tipo de acesso *</label>
-                <select id="tipo_acesso" name="tipo_acesso" required>
+                <select id="tipo_acesso" name="tipo_acesso">
                   <option value="">Selecione</option>
                   <option value="1">Administrador</option>
                   <option value="2">Gestor</option>

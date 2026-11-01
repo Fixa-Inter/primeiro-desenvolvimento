@@ -204,7 +204,7 @@
           <div class="titulo-cartao">
             <h2 id="titulo-formulario">Cadastrar usuário</h2>
           </div>
-          <form
+          <form novalidate
             action="usuarios.html"
             method="post"
             aria-describedby="aviso-formulario"
@@ -221,8 +221,6 @@
                   id="nome"
                   name="nome"
                   autocomplete="name"
-                  required="required"
-                  maxlength="50"
                   placeholder="Ex: João Pereira"
                   value=""
                 />
@@ -235,11 +233,9 @@
                     id="senha"
                     name="senha"
                     aria-describedby="ajuda-senha"
-                    minlength="6"
                     placeholder="Digite uma senha segura"
                     autocomplete="new-password"
                     value=""
-                    required="required"
                   />
                   <button class="mostrar-senha" type="button" data-campo="senha" aria-controls="senha" aria-label="Mostrar senha" aria-pressed="false" title="Mostrar senha">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -263,9 +259,7 @@
                   type="email"
                   id="email"
                   name="email"
-                  required
                   aria-describedby="ajuda-email"
-                  maxlength="100"
                   placeholder="Ex: joao@suainstituicao.com.br"
                   autocomplete="email"
                   value=""
@@ -278,14 +272,13 @@
                   type="text"
                   id="cargo"
                   name="cargo"
-                  maxlength="50"
                   placeholder="Ex: Zelador"
                   value=""
                 />
               </div>
               <div class="campo">
                 <label for="tipo_acesso">Tipo de acesso *</label>
-                <select id="tipo_acesso" name="tipo_acesso" required>
+                <select id="tipo_acesso" name="tipo_acesso">
                   <option value="">Selecione</option>
                   <option value="1">Administrador</option>
                   <option value="2">Gestor</option>

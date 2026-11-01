@@ -12,14 +12,14 @@
   <main class="cadastro">
     <a class="sair-cadastro" href="../../index.html" aria-label="Voltar ao site">×</a>
 
-    <div class="etapas-cadastro" aria-label="Etapas: instituição, código, senha e endereço">
-      <span class="etapa concluida">1</span>
+    <div class="etapas-cadastro" aria-label="Etapas: Instituição, E-mail, Senha e Endereço">
+      <div class="passo-cadastro"><span class="etapa concluida">1</span><span class="nome-etapa">Instituição</span></div>
       <span class="linha-etapa concluida" aria-hidden="true"></span>
-      <span class="etapa atual" aria-current="step">2</span>
+      <div class="passo-cadastro"><span class="etapa atual" aria-current="step">2</span><span class="nome-etapa">E-mail</span></div>
       <span class="linha-etapa" aria-hidden="true"></span>
-      <span class="etapa">3</span>
+      <div class="passo-cadastro"><span class="etapa">3</span><span class="nome-etapa">Senha</span></div>
       <span class="linha-etapa" aria-hidden="true"></span>
-      <span class="etapa">4</span>
+      <div class="passo-cadastro"><span class="etapa">4</span><span class="nome-etapa">Endereço</span></div>
     </div>
 
     <h1>Confirme seu e-mail</h1>
@@ -27,22 +27,22 @@
 
 
 
-    <form action="cadastro-senha.html" method="post">
+    <form novalidate action="cadastro-senha.html" method="post">
       <fieldset class="codigo-area">
       <legend>Código de verificação *</legend>
       <div class="codigo-inputs">
-        <input type="text" id="codigo1" name="codigo1" inputmode="numeric" pattern="[0-9]" maxlength="1" aria-label="Dígito 1 do código" autocomplete="one-time-code" required>
-        <input type="text" id="codigo2" name="codigo2" inputmode="numeric" pattern="[0-9]" maxlength="1" aria-label="Dígito 2 do código" autocomplete="off" required>
-        <input type="text" id="codigo3" name="codigo3" inputmode="numeric" pattern="[0-9]" maxlength="1" aria-label="Dígito 3 do código" autocomplete="off" required>
-        <input type="text" id="codigo4" name="codigo4" inputmode="numeric" pattern="[0-9]" maxlength="1" aria-label="Dígito 4 do código" autocomplete="off" required>
-        <input type="text" id="codigo5" name="codigo5" inputmode="numeric" pattern="[0-9]" maxlength="1" aria-label="Dígito 5 do código" autocomplete="off" required>
-        <input type="text" id="codigo6" name="codigo6" inputmode="numeric" pattern="[0-9]" maxlength="1" aria-label="Dígito 6 do código" autocomplete="off" required>
+        <input type="text" id="codigo1" name="codigo1" inputmode="numeric" aria-label="Dígito 1 do código" autocomplete="one-time-code">
+        <input type="text" id="codigo2" name="codigo2" inputmode="numeric" aria-label="Dígito 2 do código" autocomplete="off">
+        <input type="text" id="codigo3" name="codigo3" inputmode="numeric" aria-label="Dígito 3 do código" autocomplete="off">
+        <input type="text" id="codigo4" name="codigo4" inputmode="numeric" aria-label="Dígito 4 do código" autocomplete="off">
+        <input type="text" id="codigo5" name="codigo5" inputmode="numeric" aria-label="Dígito 5 do código" autocomplete="off">
+        <input type="text" id="codigo6" name="codigo6" inputmode="numeric" aria-label="Dígito 6 do código" autocomplete="off">
       </div>
     </fieldset>
       <a class="botao-principal" href="cadastro-senha.html">Verificar código</a>
     </form>
 
-    <form class="reenviar-codigo" action="cadastro-codigo.html" method="post">
+    <form novalidate class="reenviar-codigo" action="cadastro-codigo.html" method="post">
       <span>Não recebeu?</span>
       <a href="cadastro-codigo.html">Reenviar e-mail</a>
     </form>

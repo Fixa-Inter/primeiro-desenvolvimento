@@ -1,929 +1,532 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>FIXA - Início</title>
-
-  <link rel="stylesheet" href="style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="icon" href="fixa/assets/logo-claro.svg" media="(prefers-color-scheme: light)">
-  <link rel="icon" href="fixa/assets/logo-escuro.svg" media="(prefers-color-scheme: dark)">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIXA - Início</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="fixa/assets/logo-claro.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="fixa/assets/logo-escuro.svg" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="fixa/assets/fontes.css">
 </head>
-
-<body>
-
-  <header id="topo">
-
-    <nav aria-label="Navegação principal">
-
-      <img src="fixa/assets/logo1.svg" alt="Logo Fixa">
-
-      <div class="nav-links">
-        <a href="#topo" class="inicio">Início</a>
-        <a href="fixa/sobre.html" class="normal">Sobre</a>
-        <a href="fixa/comofunciona.html" class="normal">Como funciona</a>
-        <a href="#planos" class="normal" id="planos-link">Planos</a>
-      </div>
-
-      <div class="nav-buttons">
-        <a class="entrar" href="/fixa/crud/login/login.html/fixa/">Entrar</a>
-        <a class="cadastrar" href="fixa/cadastro/cadastro-escolha.html">Cadastrar</a>
-      </div>
-
-      <details class="menu-mobile">
-
-        <summary aria-label="Abrir ou fechar menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </summary>
-
-        <div class="menu-mobile-links">
-          <a href="#topo">Início</a>
-          <a href="fixa/sobre.html">Sobre</a>
-          <a href="fixa/comofunciona.html">Como funciona</a>
-          <a href="#planos">Planos</a>
-          <a href="/fixa/crud/login/login.html">Entrar</a>
+  <body>
+    <header id="topo">
+      <nav aria-label="Navegação principal">
+        <img src="fixa/assets/logo1.svg" alt="Logo Fixa">
+        <div class="nav-links">
+          <a href="#topo" class="inicio">Início</a>
+          <a href="fixa/sobre.html" class="normal">Sobre</a>
+          <a href="fixa/comofunciona.html" class="normal">Como funciona</a>
+          <a href="#planos" class="normal" id="planos-link">Planos</a>
         </div>
-
-      </details>
-
-    </nav>
-
-    <section class="principal">
-
-      <div class="texto-header">
-
-        <h1>
-          Manutenção escolar <br>
-          sem papel, <span class="achismo">sem</span><br>
-          <span class="achismo">achismo,</span> sem <br>atraso
-        </h1>
-
-        <h4 class="azul">Sistema de chamados de manutenção para escolas.</h4>
-
-        <p>
-          O Fixa centraliza solicitações,
-          automatiza a triagem e oferece <br>
-          visibilidade completa
-          para equipes de manutenção e gestores <br>
-          escolares.
-        </p>
-
-        <div class="saiba-mais-falar-equipe">
-
-          <a class="saiba-mais" href="#planos">
-            Ver planos
-          </a>
-
-          <a class="falar-equipe" href="fixa/sobre.html#equipe">
-            Falar com a equipe
-          </a>
-
-
+        <div class="nav-buttons">
+          <a class="entrar" href="fixa/crud/login/login.html">Entrar</a>
+          <a class="cadastrar" href="fixa/cadastro/cadastro-escolha.html">Cadastrar</a>
         </div>
-
-        <p class="para-solicitantes">Para solicitantes, técnicos e gestores de manutenção. <a href="#equipe">Ver os perfis ↓</a></p>
-
-      </div>
-
-      <div class="foto-header">
-        <img src="fixa/assets/Imagem1.svg" alt="Imagem do sistema Fixa">
-      </div>
-
-    </section>
-
-    <section class="quebra-linha"><img src="fixa/assets/quebra-linha.svg" alt=""></section>
-
-    <section class="subir">
-      <a class="subir-seta" href="#topo" aria-label="Voltar ao topo">
-        <img src="fixa/assets/seta2.svg" alt="">
-      </a>
-    </section>
-
-  </header>
-
-  <section class="problema">
-
-    <div class="texto-problema">
-
-      <p class="p-problema">01 · O PROBLEMA</p>
-
-      <h3>
-        A manutenção ainda
-        funciona no <br>improviso
-      </h3>
-
-      <p>
-        Sem um fluxo estruturado, instituições enfrentam perdas de tempo, custos desnecessários e, <br>
-        em situações críticas, riscos à segurança das pessoas.
-      </p>
-
-    </div>
-
-    <div class="cards-problema">
-
-      <div class="card1-problema">
-
-        <img src="fixa/assets/card1img.svg" alt="">
-
-        <h5>Sem priorização clara</h5>
-
-        <p class="card-p">
-          Decisões sobre o que consertar <br>
-          primeiro dependem de achismo,<br>
-          mesmo quando o problema pode <br>
-          gerar inatividade de aulas.
-        </p>
-
-      </div>
-
-      <div class="card2-problema">
-
-        <img src="fixa/assets/card2img.svg" alt="">
-
-        <h5>Processos manuais e dispersos</h5>
-
-        <p class="card-p">
-          Solicitações em papel, planilhas <br>
-          soltas ou grupos de mensagem, <br>
-          sem histórico centralizado por <br>
-          equipamento.
-        </p>
-
-      </div>
-
-      <div class="card3-problema">
-
-        <img src="fixa/assets/card3img.svg" alt="">
-
-        <h5>Zero visibilidade da gestão</h5>
-
-        <p class="card-p">
-          O gestor não enxerga o status <br>
-          real das ordens de serviço nem o <br>
-          desempenho da equipe técnica <br>
-          em tempo real.
-        </p>
-
-      </div>
-
-      <div class="card4-problema">
-
-        <img src="fixa/assets/card4img.svg" alt="">
-
-        <h5>PMOC sem rastreabilidade</h5>
-
-        <p class="card-p">
-          Checklists obrigatórios de inspeção, <br>
-          como o PMOC do ar-condicionado, <br>
-          sem controle nem exportação para <br>
-          auditoria.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="quebra-linha2"><img src="/fixa/assets/quebra-linha2.svg" alt="">
-    <a href="#como-funciona" class="descer-quebra-linhas">
-      <img src="/fixa/assets/seta4.svg" alt="">
-    </a>
-  </section>
-
-  <section class="como-funciona" id="como-funciona">
-
-    <div class="como-funciona-texto">
-
-      <h6>02 · COMO FUNCIONA</h6>
-
-      <h3>
-        Do chamado à conclusão, em <br>
-        quatro etapas
-      </h3>
-
-    </div>
-
-    <img
-      src="fixa/assets/etapas.svg"
-      alt="Registrar solicitação, IA analisa, equipe resolve e gestão acompanha"
-      width="1000"
-    >
-
-    <ol class="etapas-mobile">
-
-      <li>
-        <span class="numero-etapa">1</span>
-        <h5>Registrar solicitação</h5>
-        <p>
-          O solicitante abre o problema pelo sistema ou conversa com o chatbot Manu.
-        </p>
-      </li>
-
-      <li>
-        <span class="numero-etapa">2</span>
-        <h5>IA analisa</h5>
-        <p>
-          Classificação automática por categoria e definição de prioridade.
-        </p>
-      </li>
-
-      <li>
-        <span class="numero-etapa">3</span>
-        <h5>Equipe resolve</h5>
-        <p>
-          Técnico recomendado por categoria, disponibilidade e turno executa e registra a solução.
-        </p>
-      </li>
-
-      <li>
-        <span class="numero-etapa">4</span>
-        <h5>Gestão acompanha</h5>
-        <p>
-          Dashboard consolidado com KPIs, Kanban da equipe e calendário de manutenção.
-        </p>
-      </li>
-
-    </ol>
-
-    <a class="funcionamento" href="fixa/comofunciona.html">
-      Ver funcionamento completo
-      <img src="fixa/assets/seta3.svg" alt="" width="20">
-    </a>
-
-  </section>
-
- <section class="quebra-linha"><img src="fixa/assets/quebra-linha.svg" alt=""></section>
-
-  <section class="antes-depois">
-
-    <div class="antes-depois-header">
-
-      <p class="label-antes-depoiss">03 · ANTES X DEPOIS</p>
-
-      <h3>
-        O que muda no dia a dia <br>
-        da instituição
-      </h3>
-
-    </div>
-
-    <div class="antes-depois-cards">
-
-      <div class="card-branco">
-
-        <p class="titulo-card">ANTES</p>
-
-        <div class="item-card">
-          <img src="fixa/assets/x.svg" alt="">
-          <span>Solicitações em papel, planilhas soltas ou mensagens</span>
+        <details class="menu-mobile">
+          <summary aria-label="Abrir ou fechar menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </summary>
+          <div class="menu-mobile-links">
+            <a href="#topo">Início</a>
+            <a href="fixa/sobre.html">Sobre</a>
+            <a href="fixa/comofunciona.html">Como funciona</a>
+            <a href="#planos">Planos</a>
+            <a href="fixa/crud/login/login.html">Entrar</a>
+          </div>
+        </details>
+      </nav>
+      <section class="principal">
+        <div class="texto-header">
+          <h1>Manutenção escolar sem papel, <span class="achismo">sem achismo,</span> sem atraso</h1>
+          <h4 class="azul">Sistema de chamados de manutenção para escolas.</h4>
+          <p>O Fixa centraliza solicitações, organiza a triagem e oferece visibilidade completa para equipes de manutenção e gestores escolares.</p>
+          <div class="saiba-mais-falar-equipe">
+            <a class="saiba-mais" href="#planos"> Ver planos </a>
+            <a class="falar-equipe" href="fixa/sobre.html#equipe"> Falar com a equipe </a>
+          </div>
+          <p class="para-solicitantes">Para solicitantes, técnicos e gestores de manutenção. <a href="#equipe">Ver os perfis ↓</a>
+          </p>
         </div>
-
-        <div class="item-card">
-          <img src="fixa/assets/x.svg" alt="">
-          <span>Priorização manual, sem critério consistente</span>
+        <div class="foto-header">
+          <img src="fixa/assets/imagem1.svg" alt="Imagem do sistema Fixa">
+        <div class="hero-celular">
+<div class="kanban-celular"><img src="fixa/assets/hero-quadro.svg" alt="Quadro de solicitações"></div>
+<div class="solicitacao-hero">
+<small>● SOLICITAÇÃO</small><p>“Ar-condicionado da sala 12 com vazamento constante.”</p>
+<span>Categoria: Refrigeração</span> <span>Local: Sala 12</span>
+</div>
+<div class="manu-fala">
+<div class="balao-manu">
+<p class="rotulo-manu">MANU · ASSISTENTE</p>
+<p>Já abri a solicitação. Quer ver seus status de serviço?</p>
+</div>
+<img src="fixa/assets/manu-ferramenta.svg" alt="Manu">
+</div>
+</div>
+</div>
+      </section>
+      <section class="quebra-linha">
+        <img src="fixa/assets/quebra-linha.svg" alt="">
+      </section>
+      <section class="subir">
+        <a class="subir-seta" href="#topo" aria-label="Voltar ao topo">
+          <img src="fixa/assets/seta2.svg" alt="">
+        </a>
+      </section>
+    </header>
+    <main>
+      <section class="problema">
+        <div class="texto-problema">
+          <p class="p-problema">01 · O PROBLEMA</p>
+          <h3> A manutenção ainda funciona no improviso </h3>
+          <p> Sem um fluxo estruturado, instituições enfrentam perdas de tempo, custos desnecessários e, em situações críticas, riscos à segurança das pessoas. </p>
         </div>
-
-        <div class="item-card">
-          <img src="fixa/assets/x.svg" alt="">
-          <span>Sem histórico por equipamento</span>
+        <div class="cards-problema">
+          <div class="card1-problema">
+            <img src="fixa/assets/card1img.svg" alt="">
+            <h5>Sem priorização clara</h5>
+            <p class="card-p"> Decisões sobre o que consertar primeiro dependem de achismo, mesmo quando o problema pode gerar inatividade de aulas. </p>
+          </div>
+          <div class="card2-problema">
+            <img src="fixa/assets/card2img.svg" alt="">
+            <h5>Processos manuais e dispersos</h5>
+            <p class="card-p"> Solicitações em papel, planilhas soltas ou grupos de mensagem, sem histórico centralizado por equipamento. </p>
+          </div>
+          <div class="card3-problema">
+            <img src="fixa/assets/card3img.svg" alt="">
+            <h5>Zero visibilidade da gestão</h5>
+            <p class="card-p"> O gestor não enxerga o status real das ordens de serviço nem o desempenho da equipe técnica em tempo real. </p>
+          </div>
+          <div class="card4-problema">
+            <img src="fixa/assets/card4img.svg" alt="">
+            <h5>PMOC sem rastreabilidade</h5>
+            <p class="card-p"> Checklists obrigatórios de inspeção, como o PMOC do ar-condicionado, sem controle nem exportação para auditoria. </p>
+          </div>
         </div>
-
-        <div class="item-card">
-          <img src="fixa/assets/x.svg" alt="">
-          <span>Auditoria de PMOC feita manualmente</span>
+      </section>
+      <div class="guia-manu">
+<img src="fixa/assets/bolinha-manu.svg" alt=""><p>Calma! Eu te mostro como o Fixa resolve isso.</p>
+<a href="#como-funciona" aria-label="Ir para a próxima seção"><img src="fixa/assets/seta4.svg" alt=""></a>
+</div>
+<section class="como-funciona" id="como-funciona">
+        <div class="como-funciona-texto">
+          <h6>02 · COMO FUNCIONA</h6>
+          <h3> Do chamado à conclusão, em quatro etapas </h3>
         </div>
-
-      </div>
-
-      <div class="card-azul">
-
-        <p class="titulo-card titulo-card-azul">COM O FIXA</p>
-
-        <div class="item-card">
-          <img src="fixa/assets/positivo.svg" alt="">
-          <span>Kanban centralizado, com status em tempo real</span>
+        <ol class="etapas">
+          <li>
+            <span class="numero-etapa">1</span>
+            <h5>Registrar solicitação</h5>
+            <p> O solicitante abre o problema pelo sistema ou conversa com o chatbot Manu. </p>
+          </li>
+          <li>
+            <span class="numero-etapa">2</span>
+            <h5>Gestão valida</h5>
+            <p>A gestão valida a demanda e define a prioridade.</p>
+          </li>
+          <li>
+            <span class="numero-etapa">3</span>
+            <h5>Equipe resolve</h5>
+            <p>Técnico atribuído por categoria, disponibilidade e turno executa e registra a solução.</p>
+          </li>
+          <li>
+            <span class="numero-etapa">4</span>
+            <h5>Gestão acompanha</h5>
+            <p> Dashboard consolidado com KPIs, Kanban da equipe e calendário de manutenção. </p>
+          </li>
+        </ol>
+        <a class="funcionamento" href="fixa/comofunciona.html"> Ver funcionamento completo <img src="fixa/assets/seta3.svg" alt="" width="20">
+        </a>
+      </section>
+      <section class="quebra-linha">
+        <img src="fixa/assets/quebra-linha.svg" alt="">
+      </section>
+      <section class="antes-depois">
+        <div class="antes-depois-header">
+          <p class="label-antes-depoiss">03 · ANTES X DEPOIS</p>
+          <h3> O que muda no dia a dia da instituição </h3>
         </div>
-
-        <div class="item-card">
-          <img src="fixa/assets/positivo.svg" alt="">
-          <span>Priorização automática por IA</span>
+        <div class="antes-depois-cards">
+          <div class="card-branco">
+            <p class="titulo-card">ANTES</p>
+            <div class="item-card">
+              <img src="fixa/assets/x.svg" alt="">
+              <span>Solicitações em papel, planilhas soltas ou mensagens</span>
+            </div>
+            <div class="item-card">
+              <img src="fixa/assets/x.svg" alt="">
+              <span>Priorização manual, sem critério consistente</span>
+            </div>
+            <div class="item-card">
+              <img src="fixa/assets/x.svg" alt="">
+              <span>Sem histórico por equipamento</span>
+            </div>
+            <div class="item-card">
+              <img src="fixa/assets/x.svg" alt="">
+              <span>Auditoria de PMOC feita manualmente</span>
+            </div>
+          </div>
+          <div class="card-azul">
+            <p class="titulo-card titulo-card-azul">COM O FIXA</p>
+            <div class="item-card">
+              <img src="fixa/assets/positivo.svg" alt="">
+              <span>Kanban centralizado, com status em tempo real</span>
+            </div>
+            <div class="item-card">
+              <img src="fixa/assets/positivo.svg" alt="">
+              <span>Prioridade definida por critérios claros</span>
+            </div>
+            <div class="item-card">
+              <img src="fixa/assets/positivo.svg" alt="">
+              <span>Histórico completo e exportável</span>
+            </div>
+            <div class="item-card">
+              <img src="fixa/assets/positivo.svg" alt="">
+              <span>Checklists PMOC digitais e exportáveis</span>
+            </div>
+          </div>
         </div>
-
-        <div class="item-card">
-          <img src="fixa/assets/positivo.svg" alt="">
-          <span>Histórico completo e exportável</span>
+      </section>
+      <section class="quebra-linha">
+        <img src="fixa/assets/quebra-linha.svg" alt="">
+      </section>
+      <section class="funcionalidades">
+        <div class="funcionalidades-header">
+          <p class="label-funcionalidades">04 · FUNCIONALIDADES</p>
+          <h3> Tudo que a operação de manutenção precisa </h3>
+          <p class="sub-funcionalidades"> Um único sistema para registrar, classificar, priorizar, executar e acompanhar. </p>
         </div>
-
-        <div class="item-card">
-          <img src="fixa/assets/positivo.svg" alt="">
-          <span>Checklists PMOC digitais e exportáveis</span>
+        <div class="grid-funcionalidades" tabindex="0" role="region" aria-label="Funcionalidades do Fixa" data-carrossel="">
+          <div class="card-funcionalidade">
+            <img src="fixa/assets/Kanbam.svg" alt="">
+            <h5>Kanban de solicitações</h5>
+            <p class="card-p"> Visualize todas, pendentes, em andamento, atrasadas e concluídas. </p>
+          </div>
+          <div class="card-funcionalidade">
+            <img src="fixa/assets/ia.svg" alt="">
+            <h5>Classificação de solicitações</h5>
+            <p class="card-p"> Cada solicitação é registrada com categoria e prioridade. </p>
+          </div>
+          <div class="card-funcionalidade">
+            <img src="fixa/assets/prioriza%C3%A7%C3%A3o.svg" alt="">
+            <h5>Priorização por impacto</h5>
+            <p class="card-p">Definida pela equipe, considerando urgência e impacto na instituição.</p>
+          </div>
+          <div class="card-funcionalidade">
+            <img src="fixa/assets/tecnicos.svg" alt="">
+            <h5>Técnicos disponíveis</h5>
+            <p class="card-p">Consulta por categoria, experiência, disponibilidade e turno.</p>
+          </div>
+          <div class="card-funcionalidade">
+            <img src="fixa/assets/Checklists.svg" alt="">
+            <h5>Checklists PMOC</h5>
+            <p class="card-p"> Modelos de inspeção para ar-condicionado e outros equipamentos. </p>
+          </div>
+          <div class="card-funcionalidade">
+            <img src="fixa/assets/dashboard.svg" alt="">
+            <h5>Dashboard de indicadores</h5>
+            <p class="card-p"> Individual para o técnico, consolidado para o gestor. </p>
+          </div>
+          <div class="card-funcionalidade">
+            <img src="fixa/assets/calendario.svg" alt="">
+            <h5>Calendário de manutenção</h5>
+            <p class="card-p"> Eventos, horários e localidades planejados em um só lugar. </p>
+          </div>
+          <div class="card-funcionalidade">
+            <img src="fixa/assets/chatbot.svg" alt="">
+            <h5>Chatbot Manu</h5>
+            <p class="card-p"> Abre e busca solicitações, lista OS e consulta técnicos. </p>
+          </div>
         </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="quebra-linha"><img src="fixa/assets/quebra-linha.svg" alt=""></section>
-
-  <section class="funcionalidades">
-
-    <div class="funcionalidades-header">
-
-      <p class="label-funcionalidades">04 · FUNCIONALIDADES</p>
-
-      <h3>
-        Tudo que a operação de manutenção<br>
-        precisa
-      </h3>
-
-      <p class="sub-funcionalidades">
-        Um único sistema para registrar, classificar, priorizar, executar e acompanhar.
-      </p>
-
-    </div>
-
-    <div
-      class="grid-funcionalidades"
-      tabindex="0"
-      role="region"
-      aria-label="Funcionalidades: role para ver todos os cartões"
-    >
-
-      <div class="card-funcionalidade">
-
-        <img src="fixa/assets/Kanbam.svg" alt="">
-        
-
-        <h5>Kanban de solicitações</h5>
-
-        <p class="card-p">
-          Visualize todas, pendentes, em andamento, atrasadas e concluídas.
-        </p>
-
-      </div>
-
-      <div class="card-funcionalidade">
-
-        <img src="fixa/assets/ia.svg" alt="">
-
-        <h5>Classificação de solicitações</h5>
-
-        <p class="card-p">
-          Cada solicitação é registrada com categoria e prioridade.
-        </p>
-
-      </div>
-
-      <div class="card-funcionalidade">
-
-       
-        <img src="fixa/assets/priorização.svg" alt="">
-    
-
-        <h5>Técnicos disponíveis</h5>
-
-        <p class="card-p">
-          Consulta por categoria, experiência, disponibilidade e turno.
-        </p>
-
-      </div>
-
-      <div class="card-funcionalidade">
-
-        <img src="fixa/assets/tecnicos.svg" alt="">
-      
-
-        <h5>Recomendação de técnicos</h5>
-
-        <p class="card-p">
-          Por categoria da demanda, experiência, disponibilidade e turno.
-        </p>
-
-      </div>
-
-      <div class="card-funcionalidade">
-
-        <img src="fixa/assets/Checklists.svg" alt="">
-        
-
-        <h5>Checklists PMOC</h5>
-
-        <p class="card-p">
-          Modelos de inspeção para ar-condicionado e outros equipamentos.
-        </p>
-
-      </div>
-
-      <div class="card-funcionalidade">
-
-        <img src="fixa/assets/dashboard.svg" alt="">
-        
-
-        <h5>Dashboard de indicadores</h5>
-
-        <p class="card-p">
-          Individual para o técnico, <br> consolidado para o gestor.
-        </p>
-
-      </div>
-
-      <div class="card-funcionalidade">
-
-        
-        <img src="fixa/assets/calendario.svg" alt="">
-       
-
-        <h5>Calendário de manutenção</h5>
-
-        <p class="card-p">
-          Eventos, horários e localidades planejados em um só lugar.
-        </p>
-
-      </div>
-
-      <div class="card-funcionalidade">
-
-        
-        <img src="fixa/assets/chatbot.svg" alt="">
-        
-
-        <h5>Chatbot Manu</h5>
-
-        <p class="card-p">
-          Abre e busca solicitações, lista OS e consulta técnicos.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="quebra-linha"><img src="fixa/assets/quebra-linha.svg" alt=""></section>
-
-  <section class="chatbot-manu" id="chatbot-manu">
-
-    <div class="imagem-manu"><img src="/fixa/assets/manu-foto.svg" alt="foto manu"></div>
-    
-    <div class="texto-imagem-manu">
-      <div class="texto-manu">
-        <p class="p-manu">05 · CHATBOT MANU</p>
-        <h3>Conheça a Manu, o chatbot do Fixa</h3>
-        <p class="sub-funcionalidades">Com a Manu você abre e busca solicitações, lista ordens de serviço, registra ocorrências, anexa fotos <br>
-        à OS, consulta técnicos disponíveis e registra feedback.
-        </p>
-        <div class="chat-com-manu">
-          <div class="dentro-chat-manu">
-            <div>
-              <div class="perfil-manu">
-                <img src="fixa/assets/bolinha-manu.svg" alt="manu-perfil"> 
-                <div class="perfil-manu-texto">
-                  <p class="manu">Manu</p>
-                  <div class="perfil-manu-texto-online">
-                    <img src="/fixa/assets/bola-verde.svg" alt="">
-                    <p>Assistente do Fixa · online</p>
+      <div class="controles-cards" aria-label="Navegação dos cartões">
+<button type="button" class="anterior" aria-label="Cartão anterior">←</button><div class="pontos-cards">
+<button type="button" data-indice="0" aria-label="Mostrar cartão 1"></button><button type="button" data-indice="1" aria-label="Mostrar cartão 2"></button><button type="button" data-indice="2" aria-label="Mostrar cartão 3"></button><button type="button" data-indice="3" aria-label="Mostrar cartão 4"></button><button type="button" data-indice="4" aria-label="Mostrar cartão 5"></button><button type="button" data-indice="5" aria-label="Mostrar cartão 6"></button><button type="button" data-indice="6" aria-label="Mostrar cartão 7"></button><button type="button" data-indice="7" aria-label="Mostrar cartão 8"></button>
+</div>
+<button type="button" class="proximo" aria-label="Próximo cartão">→</button>
+</div></section>
+      <section class="quebra-linha">
+        <img src="fixa/assets/quebra-linha.svg" alt="">
+      </section>
+      <section class="chatbot-manu" id="chatbot-manu">
+        <div class="imagem-manu">
+          <img src="fixa/assets/manu-foto.svg" alt="foto manu">
+        </div>
+        <div class="texto-imagem-manu">
+          <div class="texto-manu">
+            <p class="p-manu">05 · CHATBOT MANU</p>
+            <h3>Conheça a Manu, o chatbot do Fixa</h3>
+            <p class="sub-funcionalidades">Com a Manu você abre e busca solicitações, lista ordens de serviço, registra ocorrências, anexa fotos à OS, consulta técnicos disponíveis e registra feedback. </p>
+            <div class="chat-com-manu">
+              <div class="dentro-chat-manu">
+                <div>
+                  <div class="perfil-manu">
+                    <img src="fixa/assets/bolinha-manu.svg" alt="manu-perfil">
+                    <div class="perfil-manu-texto">
+                      <p class="manu">Manu</p>
+                      <div class="perfil-manu-texto-online">
+                        <img src="fixa/assets/bola-verde.svg" alt="">
+                        <p>Assistente do Fixa · online</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="conversas-manu">
+                  <div class="conversa">
+                    <p>O ar-condicionado da sala 12 está vazando.</p>
+                  </div>
+                  <div class="conversa2">
+                    <p>Solicitação #1042 registrada com sucesso.</p>
+                  </div>
+                  <div class="conversa2">
+                    <p>Quer anexar uma foto à OS ou ver suas ordens de serviço?</p>
+                  </div>
+                </div>
+                <div class="botoes-manu">
+                  <div class="botao-manu">
+                    <p>Listar minhas OS</p>
+                  </div>
+                  <div class="botao-manu">
+                    <p>Anexar foto à OS</p>
                   </div>
                 </div>
               </div>
             </div>
-            <hr>
-            <div class="conversas-manu">
-              <div class="conversa">
-                <p>O ar-condicionado da sala 12 está vazando.</p>
-              </div>
-              <div class="conversa2">
-                <p>Solicitação #1042 registrada com sucesso.</p>
-              </div>
-              <div class="conversa2">
-                <p>Quer anexar uma foto à OS ou ver suas ordens de serviço?</p>
+          </div>
+        </div>
+      </section>
+      <section class="quebra-linha">
+        <img src="fixa/assets/quebra-linha.svg" alt="">
+      </section>
+      <section class="usuarios" id="equipe">
+        <div class="usuarios-conteudo">
+          <div class="usuarios-header">
+            <p class="p-usuarios">06 · PARA QUEM É</p>
+            <h3>Um sistema, três perfis de uso</h3>
+          </div>
+          <div class="cards-usuarios">
+            <div class="card-usuario">
+              <img class="icone-usuario" src="fixa/assets/solicitante.svg" alt="">
+              <h5 class="h5-card-usuario">Solicitante</h5>
+              <p class="card-p"> Professores, inspetores e demais colaboradores que identificam um problema na instituição. </p>
+              <div class="lista-usuario">
+                <div class="item-usuario">
+                  <span></span>
+                  <p>Abre e acompanha solicitações</p>
+                </div>
+                <div class="item-usuario">
+                  <span></span>
+                  <p>Fala com o chatbot Manu</p>
+                </div>
+                <div class="item-usuario">
+                  <span></span>
+                  <p>Recebe atualizações em tempo real</p>
+                </div>
               </div>
             </div>
-            <div class="botoes-manu">
-              <div class="botao-manu">
-                <p>Listar minhas OS</p>
+            <div class="card-usuario">
+              <img class="icone-usuario" src="fixa/assets/tecnico.svg" alt="">
+              <h5 class="h5-card-usuario">Técnico de Manutenção</h5>
+              <p class="card-p"> Responsável por executar e registrar a resolução das ordens de serviço atribuídas. </p>
+              <div class="lista-usuario">
+                <div class="item-usuario">
+                  <span></span>
+                  <p>Gerencia seu Kanban pessoal</p>
+                </div>
+                <div class="item-usuario">
+                  <span></span>
+                  <p>Preenche checklists PMOC</p>
+                </div>
+                <div class="item-usuario">
+                  <span></span>
+                  <p>Acessa dashboard individual</p>
+                </div>
               </div>
-              <div class="botao-manu">
-                <p>Anexar foto à OS</p>
+            </div>
+            <div class="card-usuario">
+              <img class="icone-usuario" src="fixa/assets/gestor.svg" alt="">
+              <h5 class="h5-card-usuario">Gestor de Manutenção</h5>
+              <p class="card-p"> Supervisiona equipe, equipamentos e a operação completa da instituição. </p>
+              <div class="lista-usuario">
+                <div class="item-usuario">
+                  <span></span>
+                  <p>Cadastra técnicos e equipamentos</p>
+                </div>
+                <div class="item-usuario">
+                  <span></span>
+                  <p>Acompanha dashboard consolidado</p>
+                </div>
+                <div class="item-usuario">
+                  <span></span>
+                  <p>Planeja calendário de manutenção</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        
-      </div>
-    </div>
-
-  </section>
-
-  <section class="quebra-linha"><img src="fixa/assets/quebra-linha.svg" alt=""></section>
-
-  <section class="usuarios" id="equipe">
-
-    <div class="usuarios-conteudo">
-
-      <div class="usuarios-header">
-
-        <p class="p-usuarios">06 · PARA QUEM É</p>
-
-        <h3>Um sistema, três perfis de uso</h3>
-
-      </div>
-
-      <div class="cards-usuarios">
-
-        <div class="card-usuario">
-
-          <img class="icone-usuario" src="fixa/assets/solicitante.svg" alt="">
-
-          <h5 class="h5-card-usuario">Solicitante</h5>
-
-          <p class="card-p">
-            Professores, inspetores e demais colaboradores
-            <br>
-            que identificam um problema na instituição.
-          </p>
-
-          <div class="lista-usuario">
-
-            <div class="item-usuario">
-              <span></span>
-              <p>Abre e acompanha solicitações</p>
+      </section>
+      <div class="guia-manu">
+<img src="fixa/assets/bolinha-manu.svg" alt=""><p>Tem um plano certo para cada tamanho de escola.</p>
+<a href="#planos" aria-label="Ir para a próxima seção"><img src="fixa/assets/seta4.svg" alt=""></a>
+</div>
+<section class="planos" id="planos">
+        <p class="p-usuarios">07 · PLANOS</p>
+        <h3> Escolha o plano ideal para sua instituição </h3>
+        <input type="radio" name="periodo" id="mensal" checked>
+        <input type="radio" name="periodo" id="anual">
+        <div class="toggle-wrapper">
+          <div class="toggle-thumb"></div>
+          <label class="toggle-option option-mensal" for="mensal"> Mensal </label>
+          <label class="toggle-option option-anual" for="anual"> Anual </label>
+        </div>
+        <div class="planos-grid">
+          <div class="plano-card">
+            <div class="plano-nome">Básico</div>
+            <div class="plano-preco">
+              <span class="preco-mensal">R$ 199,00</span>
+              <span class="preco-anual">R$ 159,00</span>
+              <span>/mês</span>
             </div>
-
-            <div class="item-usuario">
-              <span></span>
-              <p>Fala com o chatbot Manu</p>
-            </div>
-
-            <div class="item-usuario">
-              <span></span>
-              <p>Recebe atualizações em tempo real</p>
-            </div>
-
+            <div class="plano-total total-anual">
+              <span class="riscado">R$ 2.388</span> R$ 1.908 cobrado anualmente </div>
+            <div class="plano-desc"> Para instituições de pequeno porte </div>
+            <ul class="plano-lista">
+              <li>Kanban de solicitações</li>
+              <li>Classificação de solicitações</li>
+              <li>1 unidade escolar</li>
+            </ul>
+            <a class="plano-btn" href="fixa/cadastro/cadastro-escolha.html">Começar</a>
           </div>
-
-        </div>
-
-        <div class="card-usuario">
-
-          <img class="icone-usuario" src="fixa/assets/tecnico.svg" alt="">
-
-          <h5 class="h5-card-usuario">Técnico de Manutenção</h5>
-
-          <p class="card-p">
-            Responsável por executar e registrar a resolução
-            <br>
-            das ordens de serviço atribuídas.
-          </p>
-
-          <div class="lista-usuario">
-
-            <div class="item-usuario">
-              <span></span>
-              <p>Gerencia seu Kanban pessoal</p>
+          <div class="plano-card destaque">
+            <span class="badge">Mais popular</span>
+            <div class="plano-nome">Padrão</div>
+            <div class="plano-preco">
+              <span class="preco-mensal">R$ 399,00</span>
+              <span class="preco-anual">R$ 319,00</span>
+              <span>/mês</span>
             </div>
-
-            <div class="item-usuario">
-              <span></span>
-              <p>Preenche checklists PMOC</p>
-            </div>
-
-            <div class="item-usuario">
-              <span></span>
-              <p>Acessa dashboard individual</p>
-            </div>
-
+            <div class="plano-total total-anual">
+              <span class="riscado">R$ 4.788</span> R$ 3.828 cobrado anualmente </div>
+            <div class="plano-desc"> Para instituições em crescimento </div>
+            <ul class="plano-lista">
+              <li>Funcionalidades do Básico</li>
+              <li>Priorização por impacto</li>
+              <li>Checklists PMOC</li>
+              <li>Dashboard consolidado</li>
+            </ul>
+            <a class="plano-btn" href="fixa/cadastro/cadastro-escolha.html">Começar</a>
           </div>
-
-        </div>
-
-        <div class="card-usuario">
-
-          <img class="icone-usuario" src="fixa/assets/gestor.svg" alt="">
-
-          <h5 class="h5-card-usuario">Gestor de Manutenção</h5>
-
-          <p class="card-p">
-            Supervisiona equipe, equipamentos e a operação
-            <br>
-            completa da instituição.
-          </p>
-
-          <div class="lista-usuario">
-
-            <div class="item-usuario">
-              <span></span>
-              <p>Cadastra técnicos e equipamentos</p>
+          <div class="plano-card">
+            <div class="plano-nome">Premium</div>
+            <div class="plano-preco">
+              <span class="preco-mensal">R$ 799,00</span>
+              <span class="preco-anual">R$ 639,00</span>
+              <span>/mês</span>
             </div>
-
-            <div class="item-usuario">
-              <span></span>
-              <p>Acompanha dashboard consolidado</p>
-            </div>
-
-            <div class="item-usuario">
-              <span></span>
-              <p>Planeja calendário de manutenção</p>
-            </div>
-
+            <div class="plano-total total-anual">
+              <span class="riscado">R$ 9.588</span> R$ 7.668 cobrado anualmente </div>
+            <div class="plano-desc"> Para redes com múltiplas unidades </div>
+            <ul class="plano-lista">
+              <li>Funcionalidades do Padrão</li>
+              <li>Chatbot Manu</li>
+              <li>Múltiplas unidades</li>
+              <li>Exportações avançadas</li>
+            </ul>
+            <a class="plano-btn" href="fixa/cadastro/cadastro-escolha.html">Começar</a>
           </div>
-
         </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="quebra-linha2"><img src="/fixa/assets/quebralinha3.svg" alt="">
-    <a href="#planos" class="descer-quebra-linhas">
-      <img src="/fixa/assets/seta4.svg" alt="">
-    </a>
-  </section>
-
-  <section class="planos" id="planos">
-
-    <p class="p-usuarios">07 · PLANOS</p>
-
-    <h3>
-      Escolha o plano ideal <br>
-      para sua instituição
-    </h3>
-
-    <input type="radio" name="periodo" id="mensal" checked>
-    <input type="radio" name="periodo" id="anual">
-
-    <div class="toggle-wrapper">
-
-      <div class="toggle-thumb"></div>
-
-      <label class="toggle-option option-mensal" for="mensal">
-        Mensal
-      </label>
-
-      <label class="toggle-option option-anual" for="anual">
-        Anual
-      </label>
-
-    </div>
-
-    <div class="planos-grid">
-
-      <div class="plano-card">
-
-        <div class="plano-nome">Básico</div>
-
-        <div class="plano-preco">
-          <span class="preco-mensal">R$ 199,00</span>
-          <span class="preco-anual">R$ 159,00</span>
-          <span>/mês</span>
+      </section>
+      <div class="guia-manu">
+<img src="fixa/assets/bolinha-manu.svg" alt=""><p>Ficou alguma dúvida? Separei as mais comuns.</p>
+<a href="#faq" aria-label="Ir para a próxima seção"><img src="fixa/assets/seta4.svg" alt=""></a>
+</div>
+<section class="faq-section" id="faq">
+        <div class="faq-header">
+          <p class="p-usuarios">08 · FAQ</p>
+          <h3>Perguntas frequentes</h3>
         </div>
-
-        <div class="plano-total total-anual">
-          <span class="riscado">R$ 2.388</span>
-          R$ 1.908 cobrado anualmente
+        <div class="faq-lista">
+          <details open="">
+            <summary><span>Como é definida a prioridade de um problema?</span>
+              <span class="faq-icone"></span>
+            </summary>
+            <div class="faq-resposta">A prioridade é definida pela equipe, com base em critérios como impacto nas aulas e risco às pessoas.</div>
+          </details>
+          <details>
+            <summary>
+              <span>É possível exportar os dados de manutenção?</span>
+              <span class="faq-icone"></span>
+            </summary>
+            <div class="faq-resposta"> Sim. Os dados registrados podem ser utilizados para relatórios, acompanhamento da gestão e auditorias. </div>
+          </details>
+          <details>
+            <summary>
+              <span>O sistema funciona em mais de uma unidade escolar?</span>
+              <span class="faq-icone"></span>
+            </summary>
+            <div class="faq-resposta"> Sim. O plano Premium permite administrar múltiplas unidades escolares dentro do mesmo sistema. </div>
+          </details>
+          <details>
+            <summary><span>Quem pode abrir uma solicitação?</span>
+              <span class="faq-icone"></span>
+            </summary>
+            <div class="faq-resposta"> Qualquer solicitante cadastrado pela instituição, como professores e inspetores, pode abrir uma nova solicitação pelo sistema ou pelo chatbot Manu. </div>
+          </details>
         </div>
-
-        <div class="plano-desc">
-          Para instituições de pequeno porte
-        </div>
-
-        <ul class="plano-lista">
-          <li>Kanban de solicitações</li>
-          <li>Classificação por IA</li>
-          <li>1 unidade escolar</li>
-        </ul>
-
-        <button class="plano-btn">Começar</button>
-
-      </div>
-
-      <div class="plano-card destaque">
-
-        <span class="badge">Mais popular</span>
-
-        <div class="plano-nome">Padrão</div>
-
-        <div class="plano-preco">
-          <span class="preco-mensal">R$ 399,00</span>
-          <span class="preco-anual">R$ 319,00</span>
-          <span>/mês</span>
-        </div>
-
-        <div class="plano-total total-anual">
-          <span class="riscado">R$ 4.788</span>
-          R$ 3.828 cobrado anualmente
-        </div>
-
-        <div class="plano-desc">
-          Para instituições em crescimento
-        </div>
-
-        <ul class="plano-lista">
-          <li>Funcionalidades do Básico</li>
-          <li>Priorização inteligente</li>
-          <li>Checklists PMOC</li>
-          <li>Dashboard consolidado</li>
-        </ul>
-
-        <button class="plano-btn">Começar</button>
-
-      </div>
-
-      <div class="plano-card">
-
-        <div class="plano-nome">Premium</div>
-
-        <div class="plano-preco">
-          <span class="preco-mensal">R$ 799,00</span>
-          <span class="preco-anual">R$ 639,00</span>
-          <span>/mês</span>
-        </div>
-
-        <div class="plano-total total-anual">
-          <span class="riscado">R$ 9.588</span>
-          R$ 7.668 cobrado anualmente
-        </div>
-
-        <div class="plano-desc">
-          Para redes com múltiplas unidades
-        </div>
-
-        <ul class="plano-lista">
-          <li>Funcionalidades do Padrão</li>
-          <li>Chatbot Manu</li>
-          <li>Múltiplas unidades</li>
-          <li>Exportações avançadas</li>
-        </ul>
-
-        <button class="plano-btn">Começar</button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="quebra-linha2"><img src="/fixa/assets/quebralinha4.svg" alt="">
-    <a href="#faq" class="descer-quebra-linhas">
-      <img src="/fixa/assets/seta4.svg" alt="">
-    </a>
-  </section>
-
-  <section class="faq-section" id="faq">
-
-    <div class="faq-header">
-      <p class="p-usuarios">08 · FAQ</p>
-      <h3>Perguntas frequentes</h3>
-    </div>
-
-    <div class="faq-lista">
-
-      <details open>
-
-        <summary>
-          <span>Como a IA decide a prioridade de um problema?</span>
-          <span class="faq-icone"></span>
-        </summary>
-
-        <div class="faq-resposta">
-          A IA considera informações como urgência, impacto, categoria da solicitação
-          e risco para ajudar na definição da prioridade.
-        </div>
-
-      </details>
-
-      <details>
-
-        <summary>
-          <span>É possível exportar os dados de manutenção?</span>
-          <span class="faq-icone"></span>
-        </summary>
-
-        <div class="faq-resposta">
-          Sim. Os dados registrados podem ser utilizados para relatórios,
-          acompanhamento da gestão e auditorias.
-        </div>
-
-      </details>
-
-      <details>
-
-        <summary>
-          <span>O sistema funciona em mais de uma unidade escolar?</span>
-          <span class="faq-icone"></span>
-        </summary>
-
-        <div class="faq-resposta">
-          Sim. O plano Premium permite administrar múltiplas unidades escolares
-          dentro do mesmo sistema.
-        </div>
-
-      </details>
-
-      <details>
-
-        <summary>
-          <span>Veja o fluxo completo, da solicitação ao dashboard de gestão.</span>
-          <span class="faq-icone"></span>
-        </summary>
-
-        <div class="faq-resposta">
-          Qualquer solicitante cadastrado pela instituição, como professores e inspetores,
-          pode abrir uma nova solicitação pelo sistema ou pelo chatbot Manu.
-        </div>
-
-      </details>
-
-    </div>
-
-  </section>
-
-  <footer class="footer">
-
-    <div class="footer-conteudo">
-
-      <div class="footer-topo">
-
-        <div class="footer-logo">
-          <img src="fixa/assets/logo-fixa-2.svg" alt="Logo Fixa">
-        </div>
-
-        <div class="footer-coluna">
-          <h4>PRODUTO</h4>
-          <a href="#topo">Início</a>
-          <a href="fixa/comofunciona.html">Como funciona</a>
-          <a href="#planos">Planos</a>
-        </div>
-
-        <div class="footer-coluna">
-          <h4>EMPRESA</h4>
-          <a href="fixa/sobre.html">Sobre</a>
-          <a href="#equipe">Equipe</a>
-          <a href="#faq">FAQ</a>
-        </div>
-
-        <div class="footer-coluna footer-contato">
-
-          <h4>CONTATO</h4>
-
-          <a href="https://instagram.com/fixatech.oficial" target="_blank">
-
-            <svg viewBox="0 0 24 24">
-              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-              <circle cx="12" cy="12" r="4"></circle>
-              <circle cx="17.5" cy="6.5" r="1"></circle>
-            </svg>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-conteudo">
+        <div class="footer-topo">
+          <div class="footer-logo">
+            <img src="fixa/assets/logo-fixa-2.svg" alt="Logo Fixa">
+          </div>
+          <div class="footer-coluna">
+            <h4>PRODUTO</h4>
+            <a href="#topo">Início</a>
+            <a href="fixa/comofunciona.html">Como funciona</a>
+            <a href="#planos">Planos</a>
+          </div>
+          <div class="footer-coluna">
+            <h4>EMPRESA</h4>
+            <a href="fixa/sobre.html">Sobre</a>
+            <a href="fixa/sobre.html#equipe">Equipe</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="footer-coluna footer-contato">
+            <h4>CONTATO</h4>
+            <a href="https://instagram.com/fixatech.oficial" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
 
             fixatech.oficial
 
           </a>
-
-          <a href="mailto:fixai.inter2026@gmail.com">
-
-            <svg viewBox="0 0 24 24">
-              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-              <path d="M4 7l8 6 8-6"></path>
-            </svg>
+            <a href="mailto:fixai.inter2026@gmail.com">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="M4 7l8 6 8-6"></path>
+              </svg>
 
             fixai.inter2026@gmail.com
 
           </a>
-
+          </div>
         </div>
-
+        <div class="footer-linha"></div>
+        <div class="footer-baixo">
+          <p>© 2026 Fixa | Todos os direitos reservados</p>
+          <a href="fixa/crud/login/login.html" class="area-restrita"> Área restrita </a>
+        </div>
       </div>
-
-      <div class="footer-linha"></div>
-
-      <div class="footer-baixo">
-
-        <p>© 2026 Fixa | Todos os direitos reservados</p>
-
-        <a href="/fixa/crud/login/login.html" class="area-restrita">
-          Área restrita
-        </a>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-  
-
+    </footer>
+  <script src="fixa/cards.js" defer></script>
 </body>
 </html>

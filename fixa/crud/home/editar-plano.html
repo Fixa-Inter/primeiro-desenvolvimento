@@ -202,7 +202,7 @@
           <div class="titulo-cartao">
             <h2 id="titulo-formulario">Editar plano</h2>
           </div>
-          <form
+          <form novalidate
             action="planos.html"
             method="post"
             aria-describedby="aviso-formulario"
@@ -219,10 +219,8 @@
                   id="nome"
                   name="nome"
                   autocomplete="name"
-                  maxlength="50"
                   placeholder="Ex: Plano Essencial"
                   value=""
-                  required="required"
                 />
               </div>
               <div class="campo">
@@ -231,10 +229,6 @@
                   type="number"
                   id="valor_mensal"
                   name="valor_mensal"
-                  required
-                  min="0"
-                  step="0.01"
-                  max="99999999.99"
                   placeholder="Ex: 299.90"
                   value=""
                 />
@@ -245,12 +239,8 @@
                   type="number"
                   id="duracao_meses"
                   name="duracao_meses"
-                  min="1"
-                  step="1"
-                  max="2147483647"
                   placeholder="Ex: 12"
                   value=""
-                  required="required"
                 />
               </div>
               <div class="campo">
@@ -258,7 +248,6 @@
                 <textarea
                   id="descricao"
                   name="descricao"
-                  maxlength="255"
                   placeholder="Ex: Até 3 usuários gestores, suporte prioritário."
                   rows="3"
                 ></textarea>

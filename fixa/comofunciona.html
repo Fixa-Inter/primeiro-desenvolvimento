@@ -1,753 +1,395 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>FIXA - Como Funciona</title>
-
-  <link
-    rel="stylesheet"
-    href="comofunciona.css"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <link
-    rel="icon"
-    href="assets/logo-claro.svg"
-    media="(prefers-color-scheme: light)"
-  >
-
-  <link
-    rel="icon"
-    href="assets/logo-escuro.svg"
-    media="(prefers-color-scheme: dark)"
-  >
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIXA - Como Funciona</title>
+    <link rel="stylesheet" href="comofunciona.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="assets/logo-claro.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="assets/logo-escuro.svg" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="assets/fontes.css">
 </head>
-
-<body>
-
-
-<header id="topo">
-
-  <nav>
-
-    <img
-      src="assets/logo1.svg"
-      alt="Logo Fixa"
-    >
-
-
-    <div class="nav-links">
-
-      <a
-        href="/index.html"
-        class="normal"
-      >
-        Início
+  <body>
+    <header id="topo">
+      <nav aria-label="Navegação principal">
+        <img src="assets/logo1.svg" alt="Logo Fixa">
+        <div class="nav-links">
+          <a href="../index.html#topo" class="normal">Início</a>
+          <a href="sobre.html" class="normal">Sobre</a>
+          <a href="comofunciona.html" class="inicio" aria-current="page">Como funciona</a>
+          <a href="../index.html#planos" class="normal" id="planos-link">Planos</a>
+        </div>
+        <div class="nav-buttons">
+          <a class="entrar" href="crud/login/login.html">Entrar</a>
+          <a class="cadastrar" href="cadastro/cadastro-escolha.html">Cadastrar</a>
+        </div>
+        <details class="menu-mobile">
+          <summary aria-label="Abrir ou fechar menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </summary>
+          <div class="menu-mobile-links">
+            <a href="../index.html#topo">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="comofunciona.html">Como funciona</a>
+            <a href="../index.html#planos">Planos</a>
+            <a href="crud/login/login.html">Entrar</a>
+          </div>
+        </details>
+      </nav>
+    </header>
+    <main>
+      <section class="index-como-funciona">
+        <div class="conteudo">
+          <p class="titulo-pequeno"> COMO FUNCIONA </p>
+          <h1> Um fluxo estruturado da solicitação ao dashboard de gestão </h1>
+          <p class="descricao">Conheça em detalhe como o Fixa conecta solicitantes, técnicos e gestores em um único sistema, com acompanhamento em cada etapa.</p>
+          <div class="manu-fala">
+            <div class="balao-manu">
+              <p class="rotulo-manu">MANU · ASSISTENTE</p>
+              <p>Eu abro solicitações e listo as ordens de serviço direto na conversa.</p>
+            </div>
+            <img src="assets/manu-ferramenta.svg" alt="Manu, assistente do Fixa">
+          </div>
+          <div class="imagem-dashboard">
+            <div class="dashboard-preview" role="img" aria-label="Exemplo de dashboard do gestor: 128 ordens de serviço, 14 atrasadas, 9 técnicos ativos e 92% concluídas no prazo.">
+              <div class="barra-dashboard">
+                <span>● ● ●</span>Dashboard do Gestor</div>
+              <div class="corpo-dashboard">
+                <div class="menu-dashboard">
+                  <strong>Visão geral</strong>
+                  <span>Kanban</span>
+                  <span>Equipe</span>
+                  <span>Equipamentos</span>
+                  <span>Calendário</span>
+                  <span>Relatórios</span>
+                </div>
+                <div class="painel-dashboard">
+                  <div class="indicadores-dashboard">
+                    <div>
+                      <strong>128</strong>
+                      <span>Ordens de serviço</span>
+                    </div>
+                    <div>
+                      <strong>14</strong>
+                      <span>Atrasadas</span>
+                    </div>
+                    <div>
+                      <strong>9</strong>
+                      <span>Técnicos ativos</span>
+                    </div>
+                    <div>
+                      <strong>92%</strong>
+                      <span>Concluídas no prazo</span>
+                    </div>
+                  </div>
+                  <div class="graficos-dashboard">
+                    <div class="barras-dashboard" aria-hidden="true">
+                      <span style="height: 60px"></span>
+                      <span style="height: 92px"></span>
+                      <span style="height: 50px"></span>
+                      <span style="height: 116px"></span>
+                      <span style="height: 70px"></span>
+                      <span style="height: 104px"></span>
+                      <span style="height: 66px"></span>
+                    </div>
+                    <div class="area-pizza" aria-hidden="true">
+                      <div class="pizza-dashboard"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="guia-manu">
+<img src="assets/bolinha-manu.svg" alt=""><p>Agora veja o caminho de cada chamado, passo a passo.</p>
+<a href="#fluxo" aria-label="Ir para a próxima seção"><img src="assets/seta4.svg" alt=""></a>
+</div>
+<section class="fluxo-completo" id="fluxo">
+        <p class="titulo-fluxo">01 · FLUXO COMPLETO</p>
+        <h2>O ciclo de vida de uma solicitação</h2>
+        <p class="descricao-fluxo">Da abertura à consulta no dashboard, cada etapa do processo é registrada e rastreável.</p>
+        <ol class="etapas-fluxo">
+          <li>
+            <span class="numero-etapa">1</span>
+            <span>Solicitação</span>
+          </li>
+          <li>
+            <span class="numero-etapa">2</span>
+            <span>Validação</span>
+          </li>
+          <li>
+            <span class="numero-etapa">3</span>
+            <span>Classificação</span>
+          </li>
+          <li>
+            <span class="numero-etapa">4</span>
+            <span>Priorização</span>
+          </li>
+          <li>
+            <span class="numero-etapa">5</span>
+            <span>Atribuição</span>
+          </li>
+          <li>
+            <span class="numero-etapa">6</span>
+            <span>Ordem de Serviço</span>
+          </li>
+          <li>
+            <span class="numero-etapa">7</span>
+            <span>Execução</span>
+          </li>
+          <li>
+            <span class="numero-etapa">8</span>
+            <span>Conclusão</span>
+          </li>
+          <li>
+            <span class="numero-etapa">9</span>
+            <span>Dashboard</span>
+          </li>
+        </ol>
+      </section>
+      <div class="conector" aria-hidden="true">
+        <img src="assets/quebra-linha.svg" alt="">
+      </div>
+      <section class="perfis" id="perfis">
+        <div class="perfis-conteudo">
+          <p class="titulo-perfis">02 · PERFIS DE ACESSO</p>
+          <h2> Cada perfil vê exatamente o que precisa </h2>
+          <p class="descricao-perfis"> Funcionalidades específicas para solicitante, técnico e gestor — sem excesso de informação. </p>
+          <div class="cards-perfis">
+            <div class="card-perfil">
+              <div class="icone-perfil">
+                <img src="assets/solicitante.svg" alt="">
+              </div>
+              <h3> Solicitante </h3>
+              <div class="lista-perfil">
+                <p>
+                  <span>—</span> Abre novos problemas </p>
+                <p>
+                  <span>—</span> Cancela solicitação sem técnico atribuído </p>
+                <p>
+                  <span>—</span> Acompanha status das ordens de serviço </p>
+                <p>
+                  <span>—</span> Interage com o chatbot Manu </p>
+                <p>
+                  <span>—</span> Recebe atualizações em tempo real </p>
+              </div>
+            </div>
+            <div class="card-perfil">
+              <div class="icone-perfil">
+                <img src="assets/tecnico.svg" alt="">
+              </div>
+              <h3> Técnico de Manutenção </h3>
+              <div class="lista-perfil">
+                <p>
+                  <span>—</span> Visualiza e organiza seu Kanban </p>
+                <p>
+                  <span>—</span>Recebe as OS atribuídas pelo gestor</p>
+                <p>
+                  <span>—</span> Filtra por data, prioridade e categoria </p>
+                <p>
+                  <span>—</span> Registra conclusão com evidência fotográfica </p>
+                <p>
+                  <span>—</span> Preenche checklists PMOC </p>
+              </div>
+            </div>
+            <div class="card-perfil">
+              <div class="icone-perfil">
+                <img src="assets/gestor.svg" alt="">
+              </div>
+              <h3> Gestor de Manutenção </h3>
+              <div class="lista-perfil">
+                <p>
+                  <span>—</span> Cadastra técnicos e equipamentos </p>
+                <p>
+                  <span>—</span> Valida demandas antes da execução </p>
+                <p>
+                  <span>—</span> Mapeia horários e calendário completo </p>
+                <p>
+                  <span>—</span> Acessa dashboard consolidado da equipe </p>
+                <p>
+                  <span>—</span> Gera relatórios de inspeção </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="guia-manu">
+<img src="assets/bolinha-manu.svg" alt=""><p>Agora veja o que a Manu faz por você.</p>
+<a href="#manu" aria-label="Ir para a próxima seção"><img src="assets/seta4.svg" alt=""></a>
+</div>
+<section class="inteligencia-artificial" id="manu">
+        <div class="ia-conteudo">
+          <p class="titulo-ia">03 · CHATBOT MANU</p>
+          <h2>A Manu no dia a dia da operação</h2>
+          <p class="descricao-ia">O chatbot do Fixa ajuda a abrir, buscar e modificar solicitações.</p>
+          <div class="manu-fala">
+            <div class="balao-manu">
+              <p class="rotulo-manu">MANU · ASSISTENTE</p>
+              <p>Eu consulto os técnicos disponíveis e busco solicitações semelhantes.</p>
+            </div>
+            <img src="assets/manu-ferramenta.svg" alt="Manu, assistente do Fixa">
+          </div>
+          <div class="cards-ia">
+            <div class="card-ia">
+              <div class="numero-ia"> 01 </div>
+              <h3>Solicitações</h3>
+              <p>Busca, cria e modifica solicitações direto na conversa.</p>
+            </div>
+            <div class="card-ia">
+              <div class="numero-ia"> 02 </div>
+              <h3>Ocorrências e fotos</h3>
+              <p>Busca e cria ocorrências e anexa fotos a uma OS específica.</p>
+            </div>
+            <div class="card-ia">
+              <div class="numero-ia"> 03 </div>
+              <h3>Técnicos e OS</h3>
+              <p>Lista ordens de serviço e consulta técnicos disponíveis.</p>
+            </div>
+            <div class="card-ia">
+              <div class="numero-ia"> 04 </div>
+              <h3>Feedback e FAQ</h3>
+              <p>Registra feedback e busca respostas no FAQ.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="conector" aria-hidden="true">
+        <img src="assets/quebra-linha.svg" alt="">
+      </div>
+      <section class="gestao-equipamentos" id="equipamentos">
+        <div class="gestao-conteudo">
+          <div class="gestao-texto">
+            <p class="titulo-gestao">04 · GESTÃO DE EQUIPAMENTOS</p>
+            <h2> Histórico e checklists em um só lugar </h2>
+            <div class="lista-gestao">
+              <div class="item-gestao">
+                <div class="icone-gestao">
+                  <img src="assets/equipamentos-cadastrados.svg" alt="">
+                </div>
+                <div>
+                  <h3> Equipamentos cadastrados </h3>
+                  <p> Escopo inicial em ar-condicionados, com expansão futura para bebedouros, escadas rolantes e iluminação. </p>
+                </div>
+              </div>
+              <div class="item-gestao">
+                <div class="icone-gestao">
+                  <img src="assets/ChecklistsPMOC.svg" alt="">
+                </div>
+                <div>
+                  <h3> Checklists PMOC </h3>
+                  <p> Modelos de inspeção com identificador único, disponíveis para preenchimento pelo técnico. </p>
+                </div>
+              </div>
+              <div class="item-gestao">
+                <div class="icone-gestao">
+                  <img src="assets/exporta%C3%A7%C3%A3o.svg" alt="">
+                </div>
+                <div>
+                  <h3> Exportação para auditoria </h3>
+                  <p> Checklists exportáveis em planilha para fins de conformidade legal. </p>
+                </div>
+              </div>
+              <div class="item-gestao">
+                <div class="icone-gestao">
+                  <img src="assets/historico.svg" alt="">
+                </div>
+                <div>
+                  <h3> Histórico completo </h3>
+                  <p> Toda tarefa concluída permanece disponível para consulta histórica por equipamento. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="imagem-gestao">
+            <ul class="lista-equipamentos">
+              <li>
+                <div>
+                  <h3>Ar-condicionado — Sala 12</h3>
+                  <p>PMOC · última inspeção há 12 dias</p>
+                </div>
+                <span class="status-equipamento ativo">Ativo</span>
+              </li>
+              <li>
+                <div>
+                  <h3>Ar-condicionado — Sala de Informática</h3>
+                  <p>PMOC · concluído</p>
+                </div>
+                <span class="status-equipamento inativo">Inativo</span>
+              </li>
+              <li>
+                <div>
+                  <h3>Ar-condicionado — Biblioteca</h3>
+                  <p>PMOC · pendente de preenchimento</p>
+                </div>
+                <span class="status-equipamento ativo">Ativo</span>
+              </li>
+              <li>
+                <div>
+                  <h3>Bebedouro — Pátio Central</h3>
+                  <p>Expansão futura</p>
+                </div>
+                <span class="status-equipamento inativo">Inativo</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <a href="#topo" class="subir-seta" aria-label="Voltar ao topo">
+        <img src="assets/seta2.svg" alt="Voltar ao topo">
       </a>
-
-      <a
-        href="sobre.html"
-        class="normal"
-      >
-        Sobre
-      </a>
-
-      <a
-        href="comofunciona.html"
-        class="ativo"
-      >
-        Como funciona
-      </a>
-
-      <a href="/index.html#planos" class="normal">Planos</a>
-      
-    </div>
-
-
-    <div class="nav-buttons">
-
-      <a
-        class="entrar"
-        href="crud/login/login.html"
-      >
-        Entrar
-      </a>
-
-      <a
-        class="cadastrar"
-        href="cadastro/cadastro-escolha.html"
-      >
-        Cadastrar
-      </a>
-
-    </div>
-
-  </nav>
-
-</header>
-
-
-<main>
-
-
-  <section class="index-como-funciona">
-
-    <div class="conteudo">
-
-      <p class="titulo-pequeno">
-        COMO FUNCIONA
-      </p>
-
-      <h1>
-        Um fluxo estruturado da <br>
-        solicitação ao dashboard <br>
-        de gestão
-      </h1>
-
-      <p class="descricao">
-        Conheça em detalhe como o Fixa conecta solicitantes, técnicos e <br>
-        gestores em um único sistema, com classificação por IA em cada etapa.
-      </p>
-
-
-      <div class="imagem-dashboard">
-
-        <img
-          src="assets/dashboardgestor.svg"
-          alt="Dashboard do Gestor"
-        >
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="fluxo-completo">
-
-    <img
-      src="assets/fluxocompleto.svg"
-      alt="Fluxo completo de uma solicitação"
-    >
-
-  </section>
-
-
-  <section class="perfis">
-
-    <div class="perfis-conteudo">
-
-      <p class="titulo-perfis">
-        PERFIS DE ACESSO
-      </p>
-
-      <h2>
-        Cada perfil vê exatamente o que <br>
-        precisa
-      </h2>
-
-      <p class="descricao-perfis">
-        Funcionalidades específicas para solicitante, técnico e gestor — sem excesso de <br>
-        informação.
-      </p>
-
-
-      <div class="cards-perfis">
-
-
-        <div class="card-perfil">
-
-          <div class="icone-perfil">
-
-            <img
-              src="assets/solicitante.svg"
-              alt=""
-            >
-
+    </main>
+    <footer class="footer">
+      <div class="footer-conteudo">
+        <div class="footer-topo">
+          <div class="footer-logo">
+            <img src="assets/logo-fixa-2.svg" alt="Logo Fixa">
           </div>
-
-          <h3>
-            Solicitante
-          </h3>
-
-          <div class="lista-perfil">
-
-            <p>
-              <span>—</span>
-              Abre novos problemas
-            </p>
-
-            <p>
-              <span>—</span>
-              Cancela solicitação sem técnico atribuído
-            </p>
-
-            <p>
-              <span>—</span>
-              Acompanha status das ordens de serviço
-            </p>
-
-            <p>
-              <span>—</span>
-              Interage com o chatbot Manu
-            </p>
-
-            <p>
-              <span>—</span>
-              Recebe atualizações em tempo real
-            </p>
-
+          <div class="footer-coluna">
+            <h4> PRODUTO </h4>
+            <a href="../index.html"> Início </a>
+            <a href="comofunciona.html"> Como funciona </a>
+            <a href="../index.html#planos"> Planos </a>
           </div>
-
-        </div>
-
-
-        <div class="card-perfil">
-
-          <div class="icone-perfil">
-
-            <img
-              src="assets/tecnico.svg"
-              alt=""
-            >
-
+          <div class="footer-coluna">
+            <h4> EMPRESA </h4>
+            <a href="sobre.html"> Sobre </a>
+            <a href="sobre.html#equipe"> Equipe </a>
+            <a href="../index.html#faq"> FAQ </a>
           </div>
-
-          <h3>
-            Técnico de Manutenção
-          </h3>
-
-          <div class="lista-perfil">
-
-            <p>
-              <span>—</span>
-              Visualiza e organiza seu Kanban
-            </p>
-
-            <p>
-              <span>—</span>
-              Recebe classificação e prioridade via IA
-            </p>
-
-            <p>
-              <span>—</span>
-              Filtra por data, prioridade e categoria
-            </p>
-
-            <p>
-              <span>—</span>
-              Registra conclusão com evidência fotográfica
-            </p>
-
-            <p>
-              <span>—</span>
-              Preenche checklists PMOC
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="card-perfil">
-
-          <div class="icone-perfil">
-
-            <img
-              src="assets/gestor.svg"
-              alt=""
-            >
-
-          </div>
-
-          <h3>
-            Gestor de Manutenção
-          </h3>
-
-          <div class="lista-perfil">
-
-            <p>
-              <span>—</span>
-              Cadastra técnicos e equipamentos
-            </p>
-
-            <p>
-              <span>—</span>
-              Valida demandas antes da execução
-            </p>
-
-            <p>
-              <span>—</span>
-              Mapeia horários e calendário completo
-            </p>
-
-            <p>
-              <span>—</span>
-              Acessa dashboard consolidado da equipe
-            </p>
-
-            <p>
-              <span>—</span>
-              Gera relatórios de inspeção
-            </p>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="inteligencia-artificial">
-
-    <div class="ia-conteudo">
-
-      <p class="titulo-ia">
-        INTELIGÊNCIA ARTIFICIAL
-      </p>
-
-      <h2>
-        A IA que organiza a operação
-      </h2>
-
-      <p class="descricao-ia">
-        Da leitura da solicitação até a recomendação do técnico ideal.
-      </p>
-
-
-      <div class="cards-ia">
-
-
-        <div class="card-ia">
-
-          <div class="numero-ia">
-            01
-          </div>
-
-          <h3>
-            Classificação
-          </h3>
-
-          <p>
-            Categoriza automaticamente cada solicitação assim que ela é registrada.
-          </p>
-
-        </div>
-
-
-        <div class="card-ia">
-
-          <div class="numero-ia">
-            02
-          </div>
-
-          <h3>
-            Priorização
-          </h3>
-
-          <p>
-            Define urgência com base em impacto nas aulas, risco e recorrência do problema.
-          </p>
-
-        </div>
-
-
-        <div class="card-ia">
-
-          <div class="numero-ia">
-            03
-          </div>
-
-          <h3>
-            Recomendação
-          </h3>
-
-          <p>
-            Sugere o técnico ideal por categoria, experiência, disponibilidade e turno.
-          </p>
-
-        </div>
-
-
-        <div class="card-ia">
-
-          <div class="numero-ia">
-            04
-          </div>
-
-          <h3>
-            Chatbot Manu
-          </h3>
-
-          <p>
-            Canal de comunicação do solicitante com o sistema, com atualizações em tempo real.
-          </p>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section class="gestao-equipamentos">
-
-    <div class="gestao-conteudo">
-
-
-      <div class="gestao-texto">
-
-        <p class="titulo-gestao">
-          GESTÃO DE EQUIPAMENTOS
-        </p>
-
-        <h2>
-          Histórico e checklists em um só <br>
-          lugar
-        </h2>
-
-
-        <div class="lista-gestao">
-
-
-          <div class="item-gestao">
-
-            <div class="icone-gestao">
-
-              <img
-                src="assets/equipamentos-cadastrados.svg"
-                alt=""
-              >
-
-            </div>
-
-            <div>
-
-              <h3>
-                Equipamentos cadastrados
-              </h3>
-
-              <p>
-                Escopo inicial em ar-condicionados, com expansão futura para bebedouros,
-                escadas rolantes e iluminação.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="item-gestao">
-
-            <div class="icone-gestao">
-
-              <img
-                src="assets/ChecklistsPMOC.svg"
-                alt=""
-              >
-
-            </div>
-
-            <div>
-
-              <h3>
-                Checklists PMOC
-              </h3>
-
-              <p>
-                Modelos de inspeção com identificador único, disponíveis para preenchimento
-                pelo técnico.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="item-gestao">
-
-            <div class="icone-gestao">
-
-              <img
-                src="assets/exportação.svg"
-                alt=""
-              >
-
-            </div>
-
-            <div>
-
-              <h3>
-                Exportação para auditoria
-              </h3>
-
-              <p>
-                Checklists exportáveis em planilha para fins de conformidade legal.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="item-gestao">
-
-            <div class="icone-gestao">
-
-              <img
-                src="assets/historico.svg"
-                alt=""
-              >
-
-            </div>
-
-            <div>
-
-              <h3>
-                Histórico completo
-              </h3>
-
-              <p>
-                Toda tarefa concluída permanece disponível para consulta histórica por
-                equipamento.
-              </p>
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-
-      <div class="imagem-gestao">
-
-        <img
-          src="assets/table.svg"
-          alt="Tabela de equipamentos"
-          class="table"
-        >
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <a
-    href="#topo"
-    class="subir-seta"
-  >
-
-    <img
-      src="assets/seta2.svg"
-      alt="Voltar ao topo"
-    >
-
-  </a>
-
-
-</main>
-
-
-<footer class="footer">
-
-  <div class="footer-conteudo">
-
-
-    <div class="footer-topo">
-
-
-      <div class="footer-logo">
-
-        <img
-          src="assets/logo-fixa-2.svg"
-          alt="Logo Fixa"
-        >
-
-      </div>
-
-
-      <div class="footer-coluna">
-
-        <h4>
-          PRODUTO
-        </h4>
-
-        <a href="/index.html">
-          Início
-        </a>
-
-        <a href="comofunciona.html">
-          Como funciona
-        </a>
-
-        <a href="/index.html#planos">
-          Planos
-        </a>
-
-      </div>
-
-
-      <div class="footer-coluna">
-
-        <h4>
-          EMPRESA
-        </h4>
-
-        <a href="sobre.html">
-          Sobre
-        </a>
-
-        <a href="sobre.html#equipe">
-          Equipe
-        </a>
-
-        <a href="/index.html#faq">
-          FAQ
-        </a>
-
-      </div>
-
-
-      <div class="footer-coluna footer-contato">
-
-        <h4>
-          CONTATO
-        </h4>
-
-
-        <a
-          href="https://instagram.com/fixatech.oficial"
-          target="_blank"
-        >
-
-          <svg viewBox="0 0 24 24">
-
-            <rect
-              x="3"
-              y="3"
-              width="18"
-              height="18"
-              rx="5"
-            ></rect>
-
-            <circle
-              cx="12"
-              cy="12"
-              r="4"
-            ></circle>
-
-            <circle
-              cx="17.5"
-              cy="6.5"
-              r="1"
-            ></circle>
-
-          </svg>
+          <div class="footer-coluna footer-contato">
+            <h4> CONTATO </h4>
+            <a href="https://instagram.com/fixatech.oficial" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
 
           fixatech.oficial
 
         </a>
-
-
-        <a href="mailto:fixai.inter2026@gmail.com">
-
-          <svg viewBox="0 0 24 24">
-
-            <rect
-              x="3"
-              y="5"
-              width="18"
-              height="14"
-              rx="2"
-            ></rect>
-
-            <path d="M4 7l8 6 8-6"></path>
-
-          </svg>
+            <a href="mailto:fixai.inter2026@gmail.com">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="M4 7l8 6 8-6"></path>
+              </svg>
 
           fixai.inter2026@gmail.com
 
         </a>
-
-
+          </div>
+        </div>
+        <div class="footer-linha"></div>
+        <div class="footer-baixo">
+          <p> © 2026 Fixa | Todos os direitos reservados </p>
+          <a href="crud/login/login.html" class="area-restrita"> Área restrita </a>
+        </div>
       </div>
-
-
-    </div>
-
-
-    <div class="footer-linha"></div>
-
-
-    <div class="footer-baixo">
-
-      <p>
-        © 2026 Fixa | Todos os direitos reservados
-      </p>
-
-      <a
-        href="crud/login/login.html"
-        class="area-restrita"
-      >
-        Área restrita
-      </a>
-
-    </div>
-
-
-  </div>
-
-</footer>
-
-
-
-
-
-
-</body>
-
+    </footer>
+  </body>
 </html>

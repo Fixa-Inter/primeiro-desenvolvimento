@@ -204,7 +204,7 @@
           <div class="titulo-cartao">
             <h2 id="titulo-formulario">Editar instituição</h2>
           </div>
-          <form
+          <form novalidate
             action="instituicoes.html"
             method="post"
             aria-describedby="aviso-formulario"
@@ -221,10 +221,8 @@
                   id="nome"
                   name="nome"
                   autocomplete="name"
-                  maxlength="50"
                   placeholder="Ex: Colégio Aurora"
                   value=""
-                  required="required"
                 />
               </div>
               <div class="campo">
@@ -233,11 +231,9 @@
                   type="email"
                   id="email_corporativo"
                   name="email_corporativo"
-                  maxlength="50"
                   placeholder="Ex: contato@suainstituicao.com.br"
                   autocomplete="email"
                   value=""
-                  required="required"
                 />
               </div>
               <div class="campo">
@@ -251,7 +247,6 @@
                   id="dominio_email"
                   name="dominio_email"
                   aria-describedby="ajuda-dominio_email"
-                  maxlength="100"
                   placeholder="Ex: aurora.edu.br"
                   value=""
                 />
@@ -259,7 +254,7 @@
               </div>
               <div class="campo">
                 <label for="tipo_instituicao">Tipo de instituição *</label>
-                <select id="tipo_instituicao" name="tipo_instituicao" required>
+                <select id="tipo_instituicao" name="tipo_instituicao">
                   <option value="">Selecione</option>
                   <option value="1">Escola</option>
                   <option value="2">Faculdade</option>
@@ -275,7 +270,6 @@
                     id="senha"
                     name="senha"
                     autocomplete="new-password"
-                    minlength="6"
                     placeholder="Deixe em branco para manter a senha"
                     aria-describedby="ajuda-senha"
                   />

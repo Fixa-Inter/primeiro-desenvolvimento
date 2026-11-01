@@ -204,7 +204,7 @@
           <div class="titulo-cartao">
             <h2 id="titulo-formulario">Cadastrar super administrador</h2>
           </div>
-          <form
+          <form novalidate
             action="super-admin.html"
             method="post"
             aria-describedby="aviso-formulario"
@@ -221,10 +221,8 @@
                   id="nome"
                   name="nome"
                   autocomplete="name"
-                  maxlength="100"
                   placeholder="Ex: Marina Alves"
                   value=""
-                  required="required"
                 />
               </div>
               <div class="campo">
@@ -233,9 +231,7 @@
                   type="email"
                   id="email"
                   name="email"
-                  required
                   aria-describedby="ajuda-email"
-                  maxlength="100"
                   placeholder="Ex: marina@fixa.com.br"
                   autocomplete="email"
                   value=""
@@ -249,9 +245,7 @@
                     type="password"
                     id="senha"
                     name="senha"
-                    required="required"
                     aria-describedby="ajuda-senha"
-                    minlength="6"
                     placeholder="Digite uma senha segura"
                     autocomplete="new-password"
                     value=""
