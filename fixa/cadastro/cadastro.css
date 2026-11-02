@@ -389,3 +389,11 @@ button:focus-visible {
     font-size: 12px;
   }
 }
+
+/* BALÃO DA MANU NA TELA DE ENDEREÇO */
+.manu-fala-cadastro { display:flex; align-items:center; gap:16px; margin-bottom:32px; }
+.manu-fala-cadastro .mascote-cadastro { margin-bottom:0; flex-shrink:0; }
+.balao-cadastro { position:relative; flex:1; min-width:0; padding:16px 20px; border-radius:20px; background:#153D7D; }
+.balao-cadastro::before { content:""; position:absolute; left:22px; bottom:-10px; border-style:solid; border-width:10px 10px 0 0; border-color:#153D7D transparent transparent transparent; }
+.balao-cadastro p { margin:0; font:500 14px/22px "DM Sans",sans-serif; color:#FFFFFF; }
+.balao-cadastro .rotulo-cadastro { margin-bottom:4px; font:600 11.5px/16px "Inter",sans-serif; letter-spacing:.7px; color:#C9D9F5; }
