@@ -1536,7 +1536,7 @@ nav { padding-right: max(32px, calc((100% - 1260px) / 2)); padding-left: max(32p
 .balao-manu .rotulo-manu { margin-bottom: 4px; font-family: "Inter", sans-serif; font-size: 11.5px; line-height: 16px; font-weight: 600; letter-spacing: .7px; color: #153D7D; }
 .manu-fala > img { width: 96px; flex-shrink: 0; }
 .guia-manu { width: 100%; padding: 26px 22px; display: flex; align-items: center; justify-content: center; gap: 10px; }
-.guia-manu > img { width: 48px; height: 48px; flex-shrink: 0; }
+.guia-manu > img, .guia-manu > a.guia-manu-img > img { width: 48px; height: 48px; flex-shrink: 0; }
 .guia-manu p { margin: 0; padding: 12px 18px; border: 1px solid #E4E2F1; border-radius: 24px; font-size: 13px; line-height: 20px; background: white; }
 .guia-manu > a { width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border-radius: 50%; background: #2E62B0; }
 .guia-manu > a img { width: 18px; height: 18px; }
@@ -1566,7 +1566,7 @@ nav { padding-right: max(32px, calc((100% - 1260px) / 2)); padding-left: max(32p
   .manu-fala > img { width: 80px; }
   .guia-manu { gap: 8px; padding: 24px 22px; }
   .guia-manu p { padding: 10px 12px; font-size: 12px; line-height: 18px; }
-  .guia-manu > img { width: 36px; height: 36px; }
+  .guia-manu > img, .guia-manu > a.guia-manu-img > img { width: 36px; height: 36px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -1760,7 +1760,7 @@ main h1, main h2, main h3, header h1 { text-wrap:initial; }
  .footer-baixo { gap:24px; }
  .guia-manu { padding:24px; min-height:108px; }
  .guia-manu p { font-size:12px; line-height:18px; }
- .guia-manu > img { width:32px; height:32px; }
+ .guia-manu > img, .guia-manu > a.guia-manu-img > img { width:32px; height:32px; }
  .guia-manu > a { width:28px; height:28px; }
  .guia-manu::before, .guia-manu::after { height:16px; }
  .conector, .quebra-linha { height:80px; }
@@ -1843,3 +1843,5 @@ main h1, main h2, main h3, header h1 { text-wrap:initial; }
  .kanban-celular img { width:100%; max-width:100%; margin:0; display:block; }
  .solicitacao-hero { margin-top:0; }
 }
+/* bolinha da Manu clicável */
+.guia-manu > a.guia-manu-img { display: block; flex-shrink: 0; border-radius: 50%; cursor: pointer; }

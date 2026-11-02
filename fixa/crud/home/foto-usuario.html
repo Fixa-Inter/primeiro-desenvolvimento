@@ -203,25 +203,6 @@
         <section class="cartao lista" aria-label="Registros de fotos de usuário">
           <div class="barra-tabela">
             <strong id="contagem" role="status">1 registro</strong>
-            <form novalidate id="filtro-form" class="filtros" role="search" action="foto-usuario.html" method="get">
-              <label class="sr-only" for="campo-filtro">Campo</label>
-              <select id="campo-filtro" name="campo">
-                <option value="id">ID</option>
-                <option value="fk_usuario_id">Usuário</option>
-              </select>
-              <label class="sr-only" for="operador-filtro">Operador</label>
-              <select id="operador-filtro" name="operador">
-                <option value="IGUAL">=</option>
-              </select>
-              <label class="sr-only" for="valor-filtro">Valor do filtro</label>
-              <input
-                type="number"
-                id="valor-filtro"
-                name="valor"
-                placeholder="Valor"
-              />
-              <button class="botao botao-secundario" type="button">+ Filtro</button>
-            </form>
             <div class="pesquisa">
               <span aria-hidden="true">
                 <svg

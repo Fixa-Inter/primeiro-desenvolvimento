@@ -206,16 +206,16 @@
             <form novalidate id="filtro-form" class="filtros" role="search" action="instituicoes.html" method="get">
               <label class="sr-only" for="campo-filtro">Campo</label>
               <select id="campo-filtro" name="campo">
-                <option value="id">ID</option>
-                <option value="nome">Nome</option>
-                <option value="email_corporativo">E-mail corporativo</option>
-                <option value="data_cadastro">Data de cadastro</option>
-                <option value="tipo_instituicao">Tipo de instituição</option>
-                <option value="dominio_email">Domínio do e-mail</option>
+                <option value="id" data-operadores="igual">ID</option>
+                <option value="nome" data-operadores="igual,contem">Nome</option>
+                <option value="email_corporativo" data-operadores="igual,contem">E-mail corporativo</option>
+                <option value="data_cadastro" data-operadores="igual,maior,maior_igual,menor,menor_igual">Data de cadastro</option>
+                <option value="tipo_instituicao" data-operadores="igual">Tipo de instituição</option>
+                <option value="dominio_email" data-operadores="igual,contem">Domínio do e-mail</option>
               </select>
               <label class="sr-only" for="operador-filtro">Operador</label>
               <select id="operador-filtro" name="operador">
-                <option value="IGUAL">=</option>
+                <option value="igual">=</option>
               </select>
               <label class="sr-only" for="valor-filtro">Valor do filtro</label>
               <input
