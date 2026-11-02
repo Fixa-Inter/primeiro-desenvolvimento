@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos em breve - FIXA</title>
+    <link rel="icon" href="assets/logo-escuro.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        html, body { margin: 0; min-height: 100%; }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: "Inter", sans-serif;
+            color: #FFFFFF;
+            background:
+                url("crud/login/assets/background.svg") center / cover no-repeat,
+                linear-gradient(160deg, #0B013C 0%, #0F2F66 55%, #153D7D 100%);
+        }
+        .topo {
+            padding: 28px 48px 0;
+        }
+        .topo a {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 14px;
+            border-radius: 12px;
+            background: #FFFFFF;
+        }
+        .topo img { height: 30px; display: block; }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 24px 64px;
+        }
+        .ilustracao {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+        .ilustracao::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(138, 183, 255, 0.45) 0%, rgba(138, 183, 255, 0) 70%);
+        }
+        .ilustracao::after {
+            content: "";
+            position: absolute;
+            inset: 26px;
+            border-radius: 50%;
+            background: #EEEDFA;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        }
+        .ilustracao img {
+            position: relative;
+            z-index: 1;
+            height: 220px;
+            width: auto;
+        }
+        .selo {
+            margin-top: 28px;
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(138, 183, 255, 0.16);
+            border: 1px solid rgba(138, 183, 255, 0.4);
+            color: #8AB7FF;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+        h1 {
+            margin: 18px 0 14px;
+            font-family: "Poppins", sans-serif;
+            font-size: 44px;
+            line-height: 1.15;
+            font-weight: 700;
+            max-width: 680px;
+        }
+        .descricao {
+            margin: 0;
+            max-width: 560px;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #C9D9F5;
+        }
+        .planos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 32px 0 36px;
+        }
+        .planos span {
+            padding: 9px 18px;
+            border-radius: 999px;
+            border: 1px dashed rgba(255, 255, 255, 0.35);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .botao {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            padding: 0 28px;
+            border-radius: 14px;
+            background: #FFFFFF;
+            color: #0B013C;
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            transition: transform .2s, box-shadow .2s;
+        }
+        .botao:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
+        }
+        .apoio {
+            margin: 22px 0 0;
+            font-size: 14px;
+            color: #A9B9DA;
+        }
+        .apoio a {
+            color: #8AB7FF;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .apoio a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .topo { padding: 20px 20px 0; }
+            h1 { font-size: 32px; }
+            .ilustracao { width: 200px; height: 200px; }
+            .ilustracao img { height: 170px; }
+            .ilustracao::after { inset: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topo">
+        <a href="../index.html" aria-label="FIXA - Página inicial">
+            <img src="assets/logo1.svg" alt="FIXA">
+        </a>
+    </header>
+
+    <main>
+        <div class="ilustracao">
+            <img src="assets/manu-ferramenta.svg" alt="Manu com uma ferramenta, em construção">
+        </div>
+
+        <span class="selo">Em breve</span>
+
+        <h1>Os planos do Fixa estão chegando</h1>
+
+        <p class="descricao">
+            Estamos preparando opções pensadas para escolas de todos os tamanhos.
+            Assim que estiverem prontas, você vai encontrar tudo aqui.
+        </p>
+
+        <div class="planos" aria-hidden="true">
+            <span>Essencial</span>
+            <span>Profissional</span>
+            <span>Premium</span>
+        </div>
+
+        <a class="botao" href="../index.html">Voltar para a página inicial</a>
+
+        <p class="apoio">
+            Enquanto isso, veja <a href="comofunciona.html">como o Fixa funciona</a>.
+        </p>
+    </main>
+</body>
+</html>
