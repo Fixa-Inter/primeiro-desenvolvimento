@@ -821,7 +821,7 @@ body:has(dialog[open]) {
 
 th.coluna-relacionada {
   color: #3b82f6;
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
 }
 
