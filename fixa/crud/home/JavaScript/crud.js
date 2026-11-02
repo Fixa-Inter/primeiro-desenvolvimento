@@ -130,4 +130,17 @@
   document.querySelectorAll("[data-fechar]").forEach(function (botao) {
     botao.addEventListener("click", function () { botao.closest("dialog").close(); });
   });
+
+  // Operadores disponíveis dependem do campo escolhido (definidos pelas views do banco).
+  const campoFiltro = document.getElementById("campo-filtro");
+  const operadorFiltro = document.getElementById("operador-filtro");
+  if (campoFiltro && operadorFiltro) {
+    const rotulosOperador = { igual: "=", contem: "Contém", maior: ">", maior_igual: "≥", menor: "<", menor_igual: "≤" };
+    function atualizarOperadores() {
+      const operadores = campoFiltro.selectedOptions[0].dataset.operadores.split(",");
+      operadorFiltro.replaceChildren(...operadores.map(function (op) { return new Option(rotulosOperador[op], op); }));
+    }
+    campoFiltro.addEventListener("change", atualizarOperadores);
+    atualizarOperadores();
+  }
 })();
