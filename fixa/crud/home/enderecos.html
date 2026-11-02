@@ -206,18 +206,17 @@
             <form novalidate id="filtro-form" class="filtros" role="search" action="enderecos.html" method="get">
               <label class="sr-only" for="campo-filtro">Campo</label>
               <select id="campo-filtro" name="campo">
-                <option value="id">ID</option>
-                <option value="rua">Rua</option>
-                <option value="bairro">Bairro</option>
-                <option value="cidade">Cidade</option>
-                <option value="estado">Estado (UF)</option>
-                <option value="cep">CEP</option>
-                <option value="cnpj">CNPJ</option>
-                <option value="fk_instituicao_id">Instituição</option>
+                <option value="id" data-operadores="igual,contem">ID</option>
+                <option value="nome" data-operadores="igual,contem">Nome</option>
+                <option value="rua" data-operadores="igual,contem">Rua</option>
+                <option value="bairro" data-operadores="igual,contem">Bairro</option>
+                <option value="cidade" data-operadores="igual,contem">Cidade</option>
+                <option value="estado" data-operadores="igual,contem">Estado</option>
+                <option value="cep" data-operadores="igual,contem">CEP</option>
               </select>
               <label class="sr-only" for="operador-filtro">Operador</label>
               <select id="operador-filtro" name="operador">
-                <option value="IGUAL">=</option>
+                <option value="igual">=</option>
               </select>
               <label class="sr-only" for="valor-filtro">Valor do filtro</label>
               <input

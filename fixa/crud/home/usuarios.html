@@ -206,20 +206,18 @@
             <form novalidate id="filtro-form" class="filtros" role="search" action="usuarios.html" method="get">
               <label class="sr-only" for="campo-filtro">Campo</label>
               <select id="campo-filtro" name="campo">
-                <option value="id">ID</option>
-                <option value="nome">Nome</option>
-                <option value="esta_ativo">Está ativo</option>
-                <option value="email">E-mail</option>
-                <option value="data_criacao">Data de criação</option>
-                <option value="cargo">Cargo</option>
-                <option value="fk_endereco_id">Endereço</option>
-                <option value="tipo_acesso">Tipo de acesso</option>
-                <option value="data_nascimento">Data de nascimento</option>
-                <option value="primeiro_acesso">Primeiro acesso</option>
+                <option value="id" data-operadores="igual">ID</option>
+                <option value="nome" data-operadores="igual,contem">Nome</option>
+                <option value="esta_ativo" data-operadores="igual">Está ativo</option>
+                <option value="email" data-operadores="igual,contem">E-mail</option>
+                <option value="cargo" data-operadores="igual,contem">Cargo</option>
+                <option value="tipo_acesso" data-operadores="igual">Tipo de acesso</option>
+                <option value="data_nascimento" data-operadores="igual,maior,maior_igual,menor,menor_igual">Data de nascimento</option>
+                <option value="primeiro_acesso" data-operadores="igual">Primeiro acesso</option>
               </select>
               <label class="sr-only" for="operador-filtro">Operador</label>
               <select id="operador-filtro" name="operador">
-                <option value="IGUAL">=</option>
+                <option value="igual">=</option>
               </select>
               <label class="sr-only" for="valor-filtro">Valor do filtro</label>
               <input

@@ -206,16 +206,14 @@
             <form novalidate id="filtro-form" class="filtros" role="search" action="contratos.html" method="get">
               <label class="sr-only" for="campo-filtro">Campo</label>
               <select id="campo-filtro" name="campo">
-                <option value="id">ID</option>
-                <option value="data_inicio">Data de início</option>
-                <option value="data_vencimento">Data de vencimento</option>
-                <option value="fk_endereco_id">Endereço</option>
-                <option value="fk_plano_id">Plano</option>
-                <option value="status_contrato">Status do contrato</option>
+                <option value="id" data-operadores="igual,contem">ID</option>
+                <option value="data_inicio" data-operadores="igual,maior,maior_igual,menor,menor_igual">Data de início</option>
+                <option value="data_vencimento" data-operadores="igual,maior,maior_igual,menor,menor_igual">Data de vencimento</option>
+                <option value="status_contrato" data-operadores="igual">Status do contrato</option>
               </select>
               <label class="sr-only" for="operador-filtro">Operador</label>
               <select id="operador-filtro" name="operador">
-                <option value="IGUAL">=</option>
+                <option value="igual">=</option>
               </select>
               <label class="sr-only" for="valor-filtro">Valor do filtro</label>
               <input

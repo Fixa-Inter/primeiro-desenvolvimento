@@ -206,16 +206,14 @@
             <form novalidate id="filtro-form" class="filtros" role="search" action="pagamentos.html" method="get">
               <label class="sr-only" for="campo-filtro">Campo</label>
               <select id="campo-filtro" name="campo">
-                <option value="id">ID</option>
-                <option value="valor">Valor (R$)</option>
-                <option value="data_pagamento">Data/hora do pagamento</option>
-                <option value="foi_realizado">Foi realizado</option>
-                <option value="fk_contrato_id">Contrato</option>
-                <option value="metodo_pagamento">Método de pagamento</option>
+                <option value="id" data-operadores="igual">ID</option>
+                <option value="valor" data-operadores="igual,maior,maior_igual,menor,menor_igual">Valor</option>
+                <option value="data_pagamento" data-operadores="igual,maior,maior_igual,menor,menor_igual">Data do pagamento</option>
+                <option value="foi_realizado" data-operadores="igual">Foi realizado</option>
               </select>
               <label class="sr-only" for="operador-filtro">Operador</label>
               <select id="operador-filtro" name="operador">
-                <option value="IGUAL">=</option>
+                <option value="igual">=</option>
               </select>
               <label class="sr-only" for="valor-filtro">Valor do filtro</label>
               <input
